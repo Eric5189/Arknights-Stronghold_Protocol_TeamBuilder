@@ -18,36 +18,21 @@
     <div id="panel-left">
 
       <div id="filter-bar">
-        <span class="filter-label">筛选</span>
-
-        <div class="filter-group">
-          <label for="filter-cost">费用</label>
-          <select id="filter-cost">
-            <option value="">全部</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
+        <div id="filter-section-cost">
+          <span class="filter-section-label">费用</span>
+          <div class="filter-tag-group" id="filter-tags-cost"></div>
         </div>
-
-        <div class="filter-group">
-          <label for="filter-main-trait">主羁绊</label>
-          <select id="filter-main-trait">
-            <option value="">全部</option>
-          </select>
+        <div id="filter-section-main">
+          <span class="filter-section-label">主羁绊</span>
+          <div class="filter-tag-group" id="filter-tags-main"></div>
         </div>
-
-        <div class="filter-group">
-          <label for="filter-sub-trait">子羁绊</label>
-          <select id="filter-sub-trait">
-            <option value="">全部</option>
-          </select>
+        <div id="filter-section-sub">
+          <span class="filter-section-label">子羁绊</span>
+          <div class="filter-tag-group" id="filter-tags-sub"></div>
         </div>
-
-        <button id="btn-reset-filter">重置</button>
+        <div id="filter-footer">
+          <button id="btn-reset-filter">重置筛选</button>
+        </div>
       </div>
 
       <div id="operator-count-bar"></div>

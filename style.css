@@ -48,48 +48,75 @@ main {
 /* Filter Bar */
 #filter-bar {
   background: #1f2937;
-  padding: 10px 14px;
+  padding: 8px 14px 6px;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  gap: 5px;
   border-bottom: 1px solid #374151;
   flex-shrink: 0;
 }
 
-.filter-label {
-  font-size: 0.8rem;
-  color: #9ca3af;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+#filter-section-cost,
+#filter-section-main,
+#filter-section-sub {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
 }
 
-.filter-group {
+.filter-section-label {
+  font-size: 0.72rem;
+  color: #6b7280;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-top: 4px;
+  min-width: 40px;
+  flex-shrink: 0;
+}
+
+.filter-tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* Single filter tag */
+.filter-tag {
+  font-size: 0.75rem;
+  padding: 2px 9px;
+  border-radius: 12px;
+  border: 1px solid #374151;
+  background: #111827;
+  color: #9ca3af;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+  line-height: 1.6;
+}
+
+.filter-tag:hover {
+  border-color: #6b7280;
+  color: #e5e7eb;
+}
+
+.filter-tag.active {
+  background: #1e3a5f;
+  border-color: #60a5fa;
+  color: #93c5fd;
+}
+
+/* cost tags get cost-colors when active */
+.filter-tag.active.cost-tag-1 { background: #374151; border-color: #9ca3af; color: #e5e7eb; }
+.filter-tag.active.cost-tag-2 { background: #064e3b; border-color: #6ee7b7; color: #6ee7b7; }
+.filter-tag.active.cost-tag-3 { background: #1e3a8a; border-color: #93c5fd; color: #93c5fd; }
+.filter-tag.active.cost-tag-4 { background: #3b0764; border-color: #c4b5fd; color: #c4b5fd; }
+.filter-tag.active.cost-tag-5 { background: #78350f; border-color: #fcd34d; color: #fcd34d; }
+.filter-tag.active.cost-tag-6 { background: #7f1d1d; border-color: #fca5a5; color: #fca5a5; }
+
+#filter-footer {
   display: flex;
   align-items: center;
-  gap: 5px;
-}
-
-.filter-group label {
-  font-size: 0.82rem;
-  color: #9ca3af;
-  white-space: nowrap;
-}
-
-select {
-  background: #111827;
-  color: #e5e7eb;
-  border: 1px solid #374151;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.82rem;
-  cursor: pointer;
-}
-
-select:focus {
-  outline: none;
-  border-color: #fbbf24;
+  padding-top: 2px;
 }
 
 button {

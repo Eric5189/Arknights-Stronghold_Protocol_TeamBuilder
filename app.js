@@ -13,6 +13,32 @@ let allOperators = [];
 let squad = [];
 let traitConfig = {};   // 从 traits_real.json 加载，key 为羁绊名称
 
+// 筛选状态（Set 表示已选中的值，空 Set = 全部显示）
+const activeFilters = {
+  cost:      new Set(),
+  mainTrait: new Set(),
+  subTrait:  new Set(),
+};
+
+function toggleFilterTag(category, value, el) {
+  if (activeFilters[category].has(value)) {
+    activeFilters[category].delete(value);
+    el.classList.remove('active');
+  } else {
+    activeFilters[category].add(value);
+    el.classList.add('active');
+  }
+  renderOperators();
+}
+
+function resetFilters() {
+  activeFilters.cost.clear();
+  activeFilters.mainTrait.clear();
+  activeFilters.subTrait.clear();
+  document.querySelectorAll('.filter-tag').forEach(el => el.classList.remove('active'));
+  renderOperators();
+}
+
 // ─── 启动 ────────────────────────────────────────────────────────────────────
 
 async function init() {
@@ -45,18 +71,10 @@ async function init() {
   renderOperators();
   renderSquad();
 
-  // 筛选事件
-  document.getElementById('filter-cost').addEventListener('change', renderOperators);
-  document.getElementById('filter-main-trait').addEventListener('change', renderOperators);
-  document.getElementById('filter-sub-trait').addEventListener('change', renderOperators);
+  // 筛选事件（现由标签点击处理， init 中只绑重置按钞）
 
   // 重置筛选
-  document.getElementById('btn-reset-filter').addEventListener('click', () => {
-    document.getElementById('filter-cost').value = '';
-    document.getElementById('filter-main-trait').value = '';
-    document.getElementById('filter-sub-trait').value = '';
-    renderOperators();
-  });
+  document.getElementById('btn-reset-filter').addEventListener('click', resetFilters);
 
   // 小队费用排序
   document.getElementById('btn-sort-squad').addEventListener('click', () => {
@@ -72,40 +90,51 @@ async function init() {
   });
 }
 
-// ─── 筛选下拉选项填充 ────────────────────────────────────────────────────────
+// ─── 筛选标签填充 ────────────────────────────────────────────────────────────
 
 function populateFilterOptions() {
-  const mainTraits = [...new Set(allOperators.flatMap(op => op.mainTrait))].sort();
-  const subTraits  = [...new Set(allOperators.flatMap(op => op.subTraits))].sort();
-
-  const mainSelect = document.getElementById('filter-main-trait');
-  mainTraits.forEach(t => {
-    const opt = document.createElement('option');
-    opt.value = t;
-    opt.textContent = t;
-    mainSelect.appendChild(opt);
+  // 费用 1–6
+  const costContainer = document.getElementById('filter-tags-cost');
+  [1, 2, 3, 4, 5, 6].forEach(c => {
+    const tag = document.createElement('span');
+    tag.className = `filter-tag cost-tag-${c}`;
+    tag.textContent = `${c}费`;
+    tag.addEventListener('click', () => toggleFilterTag('cost', String(c), tag));
+    costContainer.appendChild(tag);
   });
 
-  const subSelect = document.getElementById('filter-sub-trait');
+  const mainTraits = [...new Set(allOperators.flatMap(op => op.mainTrait))].sort();
+  const mainContainer = document.getElementById('filter-tags-main');
+  mainTraits.forEach(t => {
+    const tag = document.createElement('span');
+    tag.className = 'filter-tag';
+    tag.textContent = t;
+    tag.addEventListener('click', () => toggleFilterTag('mainTrait', t, tag));
+    mainContainer.appendChild(tag);
+  });
+
+  const subTraits = [...new Set(allOperators.flatMap(op => op.subTraits))].sort();
+  const subContainer = document.getElementById('filter-tags-sub');
   subTraits.forEach(t => {
-    const opt = document.createElement('option');
-    opt.value = t;
-    opt.textContent = t;
-    subSelect.appendChild(opt);
+    const tag = document.createElement('span');
+    tag.className = 'filter-tag';
+    tag.textContent = t;
+    tag.addEventListener('click', () => toggleFilterTag('subTrait', t, tag));
+    subContainer.appendChild(tag);
   });
 }
 
 // ─── 干员列表渲染 ────────────────────────────────────────────────────────────
 
 function getFilteredOperators() {
-  const costVal  = document.getElementById('filter-cost').value;
-  const mainVal  = document.getElementById('filter-main-trait').value;
-  const subVal   = document.getElementById('filter-sub-trait').value;
+  const costs = activeFilters.cost;
+  const mains = activeFilters.mainTrait;
+  const subs  = activeFilters.subTrait;
 
   return allOperators.filter(op => {
-    if (costVal && op.cost !== Number(costVal)) return false;
-    if (mainVal && !op.mainTrait.includes(mainVal)) return false;
-    if (subVal  && !op.subTraits.includes(subVal)) return false;
+    if (costs.size > 0 && !costs.has(String(op.cost))) return false;
+    if (mains.size > 0 && !op.mainTrait.some(t => mains.has(t))) return false;
+    if (subs.size  > 0 && !op.subTraits.some(t => subs.has(t)))  return false;
     return true;
   });
 }
