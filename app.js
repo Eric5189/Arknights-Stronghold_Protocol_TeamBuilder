@@ -349,7 +349,10 @@ function renderTraits() {
           const effectTitle = isFailed
             ? escAttr('在场2名及以上时失效')
             : activeTier > 0
-              ? escAttr(cfg.effects[activeTier - 1])
+              ? cfg.effects
+                  .slice(0, activeTier)
+                  .map((eff, i) => escAttr(`Lv${i + 1}（${cfg.thresholds[i]}人）: ${eff}`))
+                  .join('&#10;')
               : escAttr(`还需 ${cfg.thresholds[0] - effectiveCount} 人激活`);
 
           // 调和加成提示标签（仅主羁绊且有加成时显示）
