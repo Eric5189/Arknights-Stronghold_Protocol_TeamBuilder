@@ -11,7 +11,7 @@ const MAX_SQUAD_SIZE = 9;
 
 let allOperators = [];
 let squad = [];
-let traitConfig = {};   // 从 traits.json 加载，key 为羁绊名称
+let traitConfig = {};   // 从 traits_real.json 加载，key 为羁绊名称
 
 // ─── 启动 ────────────────────────────────────────────────────────────────────
 
@@ -28,7 +28,7 @@ async function init() {
       const raw = await traitsRes.json();
       // 将主羁绊和子羁绊展平为以 name 为 key 的查找表
       [...(raw['主羁绊'] || []), ...(raw['子羁绊'] || [])].forEach(t => {
-        traitConfig[t.name] = { thresholds: t.thresholds, effects: t.effects };
+        traitConfig[t.name] = { thresholds: t.thresholds, effects: t.effects, special: t.special || null };
       });
     }
   } catch (err) {
@@ -58,6 +58,12 @@ async function init() {
     renderOperators();
   });
 
+  // 小队费用排序
+  document.getElementById('btn-sort-squad').addEventListener('click', () => {
+    squad.sort((a, b) => a.cost - b.cost);
+    renderSquad();
+  });
+
   // 清空小队
   document.getElementById('btn-clear-squad').addEventListener('click', () => {
     squad = [];
@@ -69,7 +75,7 @@ async function init() {
 // ─── 筛选下拉选项填充 ────────────────────────────────────────────────────────
 
 function populateFilterOptions() {
-  const mainTraits = [...new Set(allOperators.map(op => op.mainTrait))].sort();
+  const mainTraits = [...new Set(allOperators.flatMap(op => op.mainTrait))].sort();
   const subTraits  = [...new Set(allOperators.flatMap(op => op.subTraits))].sort();
 
   const mainSelect = document.getElementById('filter-main-trait');
@@ -98,7 +104,7 @@ function getFilteredOperators() {
 
   return allOperators.filter(op => {
     if (costVal && op.cost !== Number(costVal)) return false;
-    if (mainVal && op.mainTrait !== mainVal)    return false;
+    if (mainVal && !op.mainTrait.includes(mainVal)) return false;
     if (subVal  && !op.subTraits.includes(subVal)) return false;
     return true;
   });
@@ -127,10 +133,10 @@ function renderOperators() {
     card.innerHTML = `
       <div class="op-header">
         <span class="op-name" title="${escAttr(op.name)}">${escHtml(op.name)}</span>
-        <span class="op-cost cost-${op.cost}">${op.cost}费</span>
+        <span class="op-cost cost-${op.cost}">${op.cost}阶</span>
       </div>
       <div class="op-traits">
-        <span class="trait main-trait">${escHtml(op.mainTrait)}</span>
+        ${op.mainTrait.map(t => `<span class="trait main-trait">${escHtml(t)}</span>`).join('')}
         ${subTraitHTML}
       </div>
       <button
@@ -213,6 +219,18 @@ function getActiveTier(count, thresholds) {
   return tier;
 }
 
+/**
+ * 处理特殊羁绊的档位计算：
+ *   solo    — 独行：恰好 1 人激活，2+ 人时失效（返回 -1 表示失效警告）
+ *   harmony — 调和：effectiveCount 已由调用方加过 bonus，正常计算即可
+ */
+function getActiveTierSpecial(cfg, effectiveCount, rawCount) {
+  if (cfg.special === 'solo') {
+    return rawCount === 1 ? 1 : rawCount >= 2 ? -1 : 0;
+  }
+  return getActiveTier(effectiveCount, cfg.thresholds);
+}
+
 /** 构建分段圆点进度 HTML */
 function buildPipsHTML(count, thresholds) {
   let html = '';
@@ -238,65 +256,98 @@ function renderTraits() {
     return;
   }
 
-  // 累计每种羁绊出现次数（主羁绊 + 子羁绊全部统计）
-  const traitCount = {};
+  // 分别统计主羁绊和子羁绊
+  const mainCount = {};
+  const subCount  = {};
   squad.forEach(op => {
-    traitCount[op.mainTrait] = (traitCount[op.mainTrait] || 0) + 1;
-    op.subTraits.forEach(t => {
-      traitCount[t] = (traitCount[t] || 0) + 1;
-    });
+    op.mainTrait.forEach(t => { mainCount[t] = (mainCount[t] || 0) + 1; });
+    op.subTraits.forEach(t => { subCount[t]  = (subCount[t]  || 0) + 1; });
   });
+
+  // 调和加成：每名携带【调和】子羁绊的干员，所有主羁绊计数 +1
+  const harmonyBonus = subCount['调和'] || 0;
 
   container.innerHTML = '';
 
-  Object.entries(traitCount)
-    .sort(([nameA, cntA], [nameB, cntB]) => {
-      // 先按激活档位降序，再按计数降序
-      const cfgA = traitConfig[nameA];
-      const cfgB = traitConfig[nameB];
-      const tierA = cfgA ? getActiveTier(cntA, cfgA.thresholds) : 0;
-      const tierB = cfgB ? getActiveTier(cntB, cfgB.thresholds) : 0;
-      if (tierB !== tierA) return tierB - tierA;
-      return cntB - cntA;
-    })
-    .forEach(([trait, count]) => {
-      const cfg        = traitConfig[trait];
-      const activeTier = cfg ? getActiveTier(count, cfg.thresholds) : 0;
-      const tierClass  = activeTier > 0 ? `tier-active tier-${activeTier}-active` : 'tier-inactive';
+  const renderSection = (label, entries, isMain) => {
+    if (entries.length === 0) return;
 
-      const row = document.createElement('div');
-      row.className = `trait-row ${tierClass}`;
+    const header = document.createElement('div');
+    header.className = 'trait-section-label';
+    header.textContent = label;
+    container.appendChild(header);
 
-      if (cfg) {
-        const maxThresh = cfg.thresholds[cfg.thresholds.length - 1];
-        const displayCount = Math.min(count, maxThresh);
-        const pipsHTML = buildPipsHTML(displayCount, cfg.thresholds);
-        const threshLabel = cfg.thresholds.join('/');
-        const tierBadge = activeTier > 0
-          ? `<span class="tier-badge tier-badge-${activeTier}">Lv ${activeTier}</span>`
-          : `<span class="tier-badge tier-badge-0">未激活</span>`;
-        // 当前激活档效果提示
-        const effectTitle = activeTier > 0
-          ? escAttr(cfg.effects[activeTier - 1])
-          : escAttr(`还需 ${cfg.thresholds[0] - count} 人激活`);
+    entries
+      .sort(([nameA, cntA], [nameB, cntB]) => {
+        const cfgA = traitConfig[nameA];
+        const cfgB = traitConfig[nameB];
+        const effA = isMain ? cntA + harmonyBonus : cntA;
+        const effB = isMain ? cntB + harmonyBonus : cntB;
+        const tierA = cfgA ? getActiveTierSpecial(cfgA, effA, cntA) : 0;
+        const tierB = cfgB ? getActiveTierSpecial(cfgB, effB, cntB) : 0;
+        if (tierB !== tierA) return tierB - tierA;
+        return effB - effA;
+      })
+      .forEach(([trait, count]) => {
+        const cfg          = traitConfig[trait];
+        const effectiveCount = isMain ? count + harmonyBonus : count;
+        const activeTier   = cfg ? getActiveTierSpecial(cfg, effectiveCount, count) : 0;
+        // activeTier === -1 表示「独行」2+人失效
+        const isFailed     = activeTier === -1;
+        const tierClass    = isFailed
+          ? 'tier-warn'
+          : activeTier > 0 ? `tier-active tier-${activeTier}-active` : 'tier-inactive';
 
-        row.innerHTML = `
-          <span class="trait-row-name">${escHtml(trait)}</span>
-          <div class="trait-pips" title="阈值：${threshLabel}">${pipsHTML}</div>
-          <span class="trait-thresh-label">${threshLabel}</span>
-          ${tierBadge}
-          <span class="trait-row-count" title="${effectTitle}">${count}</span>
-        `;
-      } else {
-        // 无阈值配置时降级显示
-        row.innerHTML = `
-          <span class="trait-row-name">${escHtml(trait)}</span>
-          <span class="trait-row-count">${count}</span>
-        `;
-      }
+        const row = document.createElement('div');
+        row.className = `trait-row ${tierClass}`;
 
-      container.appendChild(row);
-    });
+        if (cfg) {
+          const displayTier  = isFailed ? 0 : activeTier;
+          const maxThresh    = cfg.thresholds[cfg.thresholds.length - 1];
+          const displayCount = Math.min(effectiveCount, maxThresh);
+          const pipsHTML     = buildPipsHTML(displayCount, cfg.thresholds);
+          const threshLabel  = cfg.thresholds.join('/');
+
+          let tierBadge;
+          if (isFailed) {
+            tierBadge = `<span class="tier-badge tier-badge-warn">已失效</span>`;
+          } else if (activeTier > 0) {
+            tierBadge = `<span class="tier-badge tier-badge-${activeTier}">Lv ${activeTier}</span>`;
+          } else {
+            tierBadge = `<span class="tier-badge tier-badge-0">未激活</span>`;
+          }
+
+          const effectTitle = isFailed
+            ? escAttr('在场2名及以上时失效')
+            : activeTier > 0
+              ? escAttr(cfg.effects[activeTier - 1])
+              : escAttr(`还需 ${cfg.thresholds[0] - effectiveCount} 人激活`);
+
+          // 调和加成提示标签（仅主羁绊且有加成时显示）
+          const harmonyLabel = (isMain && harmonyBonus > 0)
+            ? `<span class="harmony-bonus" title="调和羁绊加成">+${harmonyBonus}</span>`
+            : '';
+
+          row.innerHTML = `
+            <span class="trait-row-name">${escHtml(trait)}</span>
+            <div class="trait-pips" title="阈值：${threshLabel}">${pipsHTML}</div>
+            <span class="trait-thresh-label">${threshLabel}</span>
+            ${tierBadge}
+            <span class="trait-row-count" title="${effectTitle}">${count}${harmonyLabel}</span>
+          `;
+        } else {
+          row.innerHTML = `
+            <span class="trait-row-name">${escHtml(trait)}</span>
+            <span class="trait-row-count">${count}</span>
+          `;
+        }
+
+        container.appendChild(row);
+      });
+  };
+
+  renderSection('主羁绊', Object.entries(mainCount), true);
+  renderSection('子羁绊', Object.entries(subCount), false);
 }
 
 // ─── 工具函数（防 XSS）────────────────────────────────────────────────────────
