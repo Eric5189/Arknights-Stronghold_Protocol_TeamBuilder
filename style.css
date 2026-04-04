@@ -680,6 +680,17 @@ button:hover {
 /* ===== Utility ===== */
 .hidden { display: none !important; }
 
+.btn-done {
+  background: #052e16;
+  border-color: #4ade80;
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.btn-done:hover {
+  background: #14532d;
+}
+
 /* ===== Ban Trait Panel (右侧禁用模式面板) ===== */
 #ban-trait-panel {
   flex: 1;

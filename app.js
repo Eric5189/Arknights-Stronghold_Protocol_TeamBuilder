@@ -293,6 +293,9 @@ async function init() {
     renderSquad();
   });
 
+  // 完成禁用，跳回组队模式
+  document.getElementById('btn-ban-done').addEventListener('click', () => setMode('squad'));
+
   // 清空羁绊禁用选择
   document.getElementById('btn-clear-ban-traits').addEventListener('click', () => {
     bannedTraits.main.clear();
