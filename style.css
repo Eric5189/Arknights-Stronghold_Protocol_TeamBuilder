@@ -23,10 +23,20 @@ header {
   flex-shrink: 0;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 header h1 {
   font-size: 1.2rem;
   color: #fbbf24;
   letter-spacing: 0.05em;
+}
+
+#mode-switcher {
+  margin-top: 0 !important;
 }
 
 /* ===== Main Layout (two columns) ===== */
@@ -165,6 +175,8 @@ button:hover {
   flex-direction: column;
   gap: 5px;
   transition: border-color 0.15s, transform 0.1s;
+  cursor: pointer;
+  position: relative;
 }
 
 .operator-card:hover {
@@ -175,6 +187,16 @@ button:hover {
 .operator-card.in-squad {
   border-color: #fbbf24;
   background: #1c2410;
+}
+
+.operator-card.in-squad::after {
+  content: '✓';
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 0.75rem;
+  color: #fbbf24;
+  pointer-events: none;
 }
 
 .op-header {
@@ -299,6 +321,29 @@ button:hover {
   padding: 3px 8px;
   background: #1f2937;
   border-color: #4b5563;
+}
+
+/* Unlock 9th slot label */
+#label-unlock-9 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+#label-unlock-9 input[type="checkbox"] {
+  accent-color: #fbbf24;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+}
+
+#label-unlock-9:has(input:checked) {
+  color: #fbbf24;
 }
 
 #squad-list {
@@ -516,3 +561,85 @@ button:hover {
 ::-webkit-scrollbar-track { background: #111827; }
 ::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+
+/* ===== Mode Switcher ===== */
+#mode-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mode-btn {
+  font-size: 0.78rem;
+  padding: 3px 12px;
+  border-radius: 14px;
+  background: #1f2937;
+  border: 1px solid #374151;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.mode-btn:hover {
+  background: #374151;
+  color: #e5e7eb;
+}
+
+.mode-btn.active {
+  background: #1e3a5f;
+  border-color: #60a5fa;
+  color: #93c5fd;
+}
+
+.mode-btn.active#btn-mode-ban {
+  background: #450a0a;
+  border-color: #ef4444;
+  color: #fca5a5;
+}
+
+.ban-count-badge {
+  font-size: 0.78rem;
+  color: #fca5a5;
+  background: #450a0a;
+  border: 1px solid #ef4444;
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+
+.ban-count-badge.hidden,
+#btn-clear-ban.hidden {
+  display: none;
+}
+
+/* Banned operator card */
+.operator-card.is-banned {
+  border-color: #ef4444;
+  background: #1c0404;
+  opacity: 0.7;
+  position: relative;
+  cursor: not-allowed;
+}
+
+.operator-card.is-banned .op-name {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.operator-card.is-banned .op-cost,
+.operator-card.is-banned .trait {
+  opacity: 0.45;
+}
+
+.ban-overlay-icon {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 0.85rem;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Ban mode: card hover hint */
+body.mode-ban .operator-card:not(.is-banned):hover {
+  border-color: #ef4444;
+}

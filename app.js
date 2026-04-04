@@ -7,11 +7,43 @@
  *   squad         — 当前小队（干员对象数组）
  */
 
-const MAX_SQUAD_SIZE = 9;
+const SQUAD_SIZE_DEFAULT = 8;
+const SQUAD_SIZE_MAX     = 9;
+
+// 当前小队上限，默认 8，解锁道具后为 9
+let squadMaxSize = SQUAD_SIZE_DEFAULT;
 
 let allOperators = [];
 let squad = [];
 let traitConfig = {};   // 从 traits_real.json 加载，key 为羁绊名称
+
+// 模式：'squad' | 'ban'
+let currentMode = 'squad';
+
+// 禁用干员集合（存 id），从 localStorage 恢复
+const bannedIds = new Set(JSON.parse(localStorage.getItem('tb_banned') || '[]'));
+
+function saveBanned() {
+  localStorage.setItem('tb_banned', JSON.stringify([...bannedIds]));
+}
+
+// 切换模式
+function setMode(mode) {
+  currentMode = mode;
+  document.getElementById('btn-mode-squad').classList.toggle('active', mode === 'squad');
+  document.getElementById('btn-mode-ban').classList.toggle('active', mode === 'ban');
+  document.body.classList.toggle('mode-ban', mode === 'ban');
+  const banBadge  = document.getElementById('ban-count-badge');
+  const clearBtn  = document.getElementById('btn-clear-ban');
+  banBadge.classList.toggle('hidden', mode === 'squad');
+  clearBtn.classList.toggle('hidden', mode === 'squad');
+  updateBanBadge();
+  renderOperators();
+}
+
+function updateBanBadge() {
+  document.getElementById('ban-count-num').textContent = bannedIds.size;
+}
 
 // 筛选状态（Set 表示已选中的值，空 Set = 全部显示）
 const activeFilters = {
@@ -71,7 +103,30 @@ async function init() {
   renderOperators();
   renderSquad();
 
-  // 筛选事件（现由标签点击处理， init 中只绑重置按钞）
+  // 解锁第9格
+  document.getElementById('chk-unlock-9').addEventListener('change', (e) => {
+    squadMaxSize = e.target.checked ? SQUAD_SIZE_MAX : SQUAD_SIZE_DEFAULT;
+    // 若解锁被取消且当前小队已有9人，移除最后一人
+    if (!e.target.checked && squad.length > squadMaxSize) {
+      squad.splice(squadMaxSize);
+    }
+    renderSquad();
+  });
+
+  // 模式切换
+  document.getElementById('btn-mode-squad').addEventListener('click', () => setMode('squad'));
+  document.getElementById('btn-mode-ban').addEventListener('click',   () => setMode('ban'));
+
+  // 清空禁用
+  document.getElementById('btn-clear-ban').addEventListener('click', () => {
+    bannedIds.clear();
+    saveBanned();
+    updateBanBadge();
+    // 把被禁用干员从小队中也移除
+    squad = squad.filter(op => !bannedIds.has(op.id));
+    renderOperators();
+    renderSquad();
+  });
 
   // 重置筛选
   document.getElementById('btn-reset-filter').addEventListener('click', resetFilters);
@@ -133,8 +188,8 @@ function getFilteredOperators() {
 
   return allOperators.filter(op => {
     if (costs.size > 0 && !costs.has(String(op.cost))) return false;
-    if (mains.size > 0 && !op.mainTrait.some(t => mains.has(t))) return false;
-    if (subs.size  > 0 && !op.subTraits.some(t => subs.has(t)))  return false;
+    if (mains.size > 0 && ![...mains].every(t => op.mainTrait.includes(t))) return false;
+    if (subs.size  > 0 && ![...subs].every(t => op.subTraits.includes(t)))  return false;
     return true;
   });
 }
@@ -151,13 +206,22 @@ function renderOperators() {
 
   filtered.forEach(op => {
     const inSquad = squadIds.has(op.id);
+    const isBanned = bannedIds.has(op.id);
 
     const card = document.createElement('div');
-    card.className = `operator-card${inSquad ? ' in-squad' : ''}`;
+    if (currentMode === 'ban') {
+      card.className = `operator-card${isBanned ? ' is-banned' : ''}`;
+    } else {
+      card.className = `operator-card${isBanned ? ' is-banned' : (inSquad ? ' in-squad' : '')}`;
+    }
 
     const subTraitHTML = op.subTraits
       .map(t => `<span class="trait sub-trait">${escHtml(t)}</span>`)
       .join('');
+
+    const banOverlay = isBanned
+      ? `<span class="ban-overlay-icon">🚫</span>`
+      : '';
 
     card.innerHTML = `
       <div class="op-header">
@@ -168,22 +232,34 @@ function renderOperators() {
         ${op.mainTrait.map(t => `<span class="trait main-trait">${escHtml(t)}</span>`).join('')}
         ${subTraitHTML}
       </div>
-      <button
-        class="op-action-btn${inSquad ? ' remove' : ''}"
-        data-id="${escAttr(op.id)}"
-      >${inSquad ? '✓ 移除' : '+ 加入'}</button>
+      ${banOverlay}
     `;
 
+    card.dataset.id = op.id;
+    if (currentMode === 'ban') {
+      card.addEventListener('click', () => toggleBan(op.id));
+    } else if (!isBanned) {
+      card.addEventListener('click', () => toggleSquad(op.id));
+    }
     container.appendChild(card);
   });
+}
 
-  // 事件委托，避免逐卡绑定
-  container.querySelectorAll('.op-action-btn').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.stopPropagation();
-      toggleSquad(btn.dataset.id);
-    });
-  });
+// ─── 禁用管理 ────────────────────────────────────────────────────────────────
+
+function toggleBan(id) {
+  if (bannedIds.has(id)) {
+    bannedIds.delete(id);
+  } else {
+    bannedIds.add(id);
+    // 如果该干员在小队中，同步移除
+    const idx = squad.findIndex(op => op.id === id);
+    if (idx >= 0) squad.splice(idx, 1);
+  }
+  saveBanned();
+  updateBanBadge();
+  renderOperators();
+  renderSquad();
 }
 
 // ─── 小队管理 ────────────────────────────────────────────────────────────────
@@ -194,8 +270,8 @@ function toggleSquad(id) {
   if (idx >= 0) {
     squad.splice(idx, 1);
   } else {
-    if (squad.length >= MAX_SQUAD_SIZE) {
-      alert(`小队最多 ${MAX_SQUAD_SIZE} 名干员！`);
+    if (squad.length >= squadMaxSize) {
+      alert(`小队最多 ${squadMaxSize} 名干员！`);
       return;
     }
     const op = allOperators.find(op => op.id === id);
@@ -212,7 +288,7 @@ function renderSquad() {
   const container = document.getElementById('squad-list');
   const badge     = document.getElementById('squad-count-badge');
 
-  badge.textContent = `${squad.length} / ${MAX_SQUAD_SIZE}`;
+  badge.textContent = `${squad.length} / ${squadMaxSize}`;
   container.innerHTML = '';
 
   if (squad.length === 0) {

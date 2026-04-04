@@ -65,7 +65,7 @@
 	{ "id": "61", "name": "歌蕾蒂娅", "cost": 4, "mainTrait": ["阿戈尔"], "subTraits": [] },
 	{ "id": "62", "name": "灵知", "cost": 4, "mainTrait": ["谢拉格"], "subTraits": ["灵巧"] },
 	{ "id": "63", "name": "莱恩哈特", "cost": 4, "mainTrait": [], "subTraits": ["精准", "迅捷"] },
-	{ "id": "64", "name": "缄默德克萨斯", "cost": 4, "mainTrait": ["叙拉古"], "subTraits": [] },
+	{ "id": "64", "name": "缄默德克萨斯", "cost": 4, "mainTrait": ["叙拉古"], "subTraits": ["突袭"] },
 	{ "id": "65", "name": "星熊", "cost": 4, "mainTrait": ["炎"], "subTraits": [] },
 	{ "id": "66", "name": "泥岩", "cost": 4, "mainTrait": [], "subTraits": ["独行"] },
 	{ "id": "67", "name": "焰尾", "cost": 4, "mainTrait": ["卡西米尔"], "subTraits": [] },

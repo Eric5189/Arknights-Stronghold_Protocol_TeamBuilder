@@ -10,6 +10,12 @@
 
   <header>
     <h1>卫戍协议小队规划工具</h1>
+    <div id="mode-switcher">
+      <button id="btn-mode-squad" class="mode-btn active">🗂 组队模式</button>
+      <button id="btn-mode-ban" class="mode-btn">🚫 禁用模式</button>
+      <span id="ban-count-badge" class="ban-count-badge hidden">已禁用 <span id="ban-count-num">0</span> 人</span>
+      <button id="btn-clear-ban" class="hidden">清空禁用</button>
+    </div>
   </header>
 
   <main>
@@ -47,7 +53,10 @@
       <div id="squad-panel">
         <div class="panel-header">
           <h2>当前小队</h2>
-          <span id="squad-count-badge">0 / 9</span>
+          <span id="squad-count-badge">0 / 8</span>
+          <label id="label-unlock-9" title="携带特殊道具后可解锁第9格">
+            <input type="checkbox" id="chk-unlock-9"> 人事部档案
+          </label>
           <button id="btn-sort-squad">按费用排序</button>
           <button id="btn-clear-squad">清空</button>
         </div>
