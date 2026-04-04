@@ -27,6 +27,25 @@ function saveBanned() {
   localStorage.setItem('tb_banned', JSON.stringify([...bannedIds]));
 }
 
+// 羁绊禁用：被选中的主/副羁绊名称集合（max 主3，副4）
+const bannedTraits = {
+  main: new Set(JSON.parse(localStorage.getItem('tb_banned_main_traits') || '[]')),
+  sub:  new Set(JSON.parse(localStorage.getItem('tb_banned_sub_traits')  || '[]')),
+};
+
+function saveBannedTraits() {
+  localStorage.setItem('tb_banned_main_traits', JSON.stringify([...bannedTraits.main]));
+  localStorage.setItem('tb_banned_sub_traits',  JSON.stringify([...bannedTraits.sub]));
+}
+
+/** 若干员所有羁绊词条均被 bannedTraits 覆盖，则该干员被自动禁用 */
+function isAutoBanned(op) {
+  if (bannedTraits.main.size === 0 && bannedTraits.sub.size === 0) return false;
+  const allOpTraits = [...op.mainTrait, ...op.subTraits];
+  if (allOpTraits.length === 0) return false;
+  return allOpTraits.every(t => bannedTraits.main.has(t) || bannedTraits.sub.has(t));
+}
+
 // 切换模式
 function setMode(mode) {
   currentMode = mode;
@@ -37,12 +56,19 @@ function setMode(mode) {
   const clearBtn  = document.getElementById('btn-clear-ban');
   banBadge.classList.toggle('hidden', mode === 'squad');
   clearBtn.classList.toggle('hidden', mode === 'squad');
+  // 禁用模式：显示羁绊禁用面板，隐藏小队/羁绊面板
+  document.getElementById('ban-trait-panel').classList.toggle('hidden', mode !== 'ban');
+  document.getElementById('squad-panel').classList.toggle('hidden', mode === 'ban');
+  document.getElementById('panel-right-resizer').classList.toggle('hidden', mode === 'ban');
+  document.getElementById('trait-panel').classList.toggle('hidden', mode === 'ban');
   updateBanBadge();
   renderOperators();
+  if (mode === 'ban') renderBanAutoOps();
 }
 
 function updateBanBadge() {
-  document.getElementById('ban-count-num').textContent = bannedIds.size;
+  const autoBannedExtra = allOperators.filter(op => isAutoBanned(op) && !bannedIds.has(op.id)).length;
+  document.getElementById('ban-count-num').textContent = bannedIds.size + autoBannedExtra;
 }
 
 // 筛选状态（Set 表示已选中的值，空 Set = 全部显示）
@@ -223,6 +249,7 @@ async function init() {
   }
 
   populateFilterOptions();
+  populateBanTraitTags();
   refreshFilterSectionStates();
   renderOperators();
   renderSquad();
@@ -244,16 +271,44 @@ async function init() {
   document.getElementById('btn-mode-squad').addEventListener('click', () => setMode('squad'));
   document.getElementById('btn-mode-ban').addEventListener('click',   () => setMode('ban'));
 
-  // 清空禁用
+  // 清空禁用（顶栏）：清空所有禁用来源
   document.getElementById('btn-clear-ban').addEventListener('click', () => {
+    const removedIds = new Set(bannedIds);
     bannedIds.clear();
     saveBanned();
+    // 禁用模式下同时清空羁绊禁用
+    if (currentMode === 'ban') {
+      bannedTraits.main.clear();
+      bannedTraits.sub.clear();
+      saveBannedTraits();
+      document.querySelectorAll('#ban-tags-main .ban-main-tag, #ban-tags-sub .ban-sub-tag').forEach(t => {
+        t.classList.remove('active', 'ban-tag-disabled');
+      });
+      updateBanTraitUI();
+      renderBanAutoOps();
+    }
+    squad = squad.filter(op => !removedIds.has(op.id));
     updateBanBadge();
-    // 把被禁用干员从小队中也移除
-    squad = squad.filter(op => !bannedIds.has(op.id));
     renderOperators();
     renderSquad();
   });
+
+  // 清空羁绊禁用选择
+  document.getElementById('btn-clear-ban-traits').addEventListener('click', () => {
+    bannedTraits.main.clear();
+    bannedTraits.sub.clear();
+    saveBannedTraits();
+    document.querySelectorAll('#ban-tags-main .ban-main-tag, #ban-tags-sub .ban-sub-tag').forEach(t => {
+      t.classList.remove('active', 'ban-tag-disabled');
+    });
+    updateBanTraitUI();
+    renderOperators();
+    renderBanAutoOps();
+    updateBanBadge();
+  });
+
+  // 隐藏已禁用干员开关
+  document.getElementById('chk-hide-banned').addEventListener('change', renderOperators);
 
   // 重置筛选
   document.getElementById('btn-reset-filter').addEventListener('click', resetFilters);
@@ -318,8 +373,10 @@ function getFilteredOperators() {
   const costs = activeFilters.cost;
   const mains = activeFilters.mainTrait;
   const subs  = activeFilters.subTrait;
+  const hideBanned = document.getElementById('chk-hide-banned')?.checked ?? false;
 
   return allOperators.filter(op => {
+    if (hideBanned && (bannedIds.has(op.id) || isAutoBanned(op))) return false;
     if (costs.size > 0 && !costs.has(String(op.cost))) return false;
     if (mains.size > 0 && ![...mains].every(t => op.mainTrait.includes(t))) return false;
     if (subs.size  > 0 && ![...subs].every(t => op.subTraits.includes(t)))  return false;
@@ -332,7 +389,7 @@ function renderOperators() {
   const container = document.getElementById('operator-list');
   const countBar  = document.getElementById('operator-count-bar');
 
-  countBar.textContent = `显示 ${filtered.length} / ${allOperators.length} 位干员`;
+  document.getElementById('operator-count-text').textContent = `显示 ${filtered.length} / ${allOperators.length} 位干员`;
   container.innerHTML = '';
 
   const squadIds = new Set(squad.map(op => op.id));
@@ -340,12 +397,14 @@ function renderOperators() {
   filtered.forEach(op => {
     const inSquad = squadIds.has(op.id);
     const isBanned = bannedIds.has(op.id);
+    const isTraitBanned = isAutoBanned(op);
+    const effectiveBanned = isBanned || isTraitBanned;
 
     const card = document.createElement('div');
     if (currentMode === 'ban') {
-      card.className = `operator-card${isBanned ? ' is-banned' : ''}`;
+      card.className = `operator-card${effectiveBanned ? ' is-banned' : ''}${isTraitBanned && !isBanned ? ' is-auto-banned' : ''}`;
     } else {
-      card.className = `operator-card${isBanned ? ' is-banned' : (inSquad ? ' in-squad' : '')}`;
+      card.className = `operator-card${effectiveBanned ? ' is-banned' : (inSquad ? ' in-squad' : '')}`;
     }
 
     const subTraitHTML = op.subTraits
@@ -354,7 +413,7 @@ function renderOperators() {
 
     const banOverlay = isBanned
       ? `<span class="ban-overlay-icon">🚫</span>`
-      : '';
+      : (isTraitBanned ? `<span class="ban-overlay-icon">🔒</span>` : '');
 
     card.innerHTML = `
       <div class="op-header">
@@ -370,11 +429,104 @@ function renderOperators() {
 
     card.dataset.id = op.id;
     if (currentMode === 'ban') {
-      card.addEventListener('click', () => toggleBan(op.id));
-    } else if (!isBanned) {
+      // 自动禁用的卡片不允许手动点击切换（羁绊决定）
+      if (!isTraitBanned) {
+        card.addEventListener('click', () => toggleBan(op.id));
+      }
+    } else if (!effectiveBanned) {
       card.addEventListener('click', () => toggleSquad(op.id));
     }
     container.appendChild(card);
+  });
+}
+
+// ─── 羁绊禁用管理 ───────────────────────────────────────────────────────────
+
+function populateBanTraitTags() {
+  const mainTraits = [...new Set(allOperators.flatMap(op => op.mainTrait))].sort();
+  const subTraits  = [...new Set(allOperators.flatMap(op => op.subTraits))].sort();
+
+  const mainContainer = document.getElementById('ban-tags-main');
+  mainContainer.innerHTML = '';
+  mainTraits.forEach(t => {
+    const tag = document.createElement('span');
+    tag.className = `filter-tag ban-main-tag${bannedTraits.main.has(t) ? ' active' : ''}`;
+    tag.textContent = t;
+    tag.dataset.trait = t;
+    tag.addEventListener('click', () => toggleBanTrait('main', t, tag));
+    mainContainer.appendChild(tag);
+  });
+
+  const subContainer = document.getElementById('ban-tags-sub');
+  subContainer.innerHTML = '';
+  subTraits.forEach(t => {
+    const tag = document.createElement('span');
+    tag.className = `filter-tag ban-sub-tag${bannedTraits.sub.has(t) ? ' active' : ''}`;
+    tag.textContent = t;
+    tag.dataset.trait = t;
+    tag.addEventListener('click', () => toggleBanTrait('sub', t, tag));
+    subContainer.appendChild(tag);
+  });
+
+  updateBanTraitUI();
+}
+
+function toggleBanTrait(type, trait, el) {
+  const set   = bannedTraits[type];
+  const limit = type === 'main' ? 3 : 4;
+  if (set.has(trait)) {
+    set.delete(trait);
+    el.classList.remove('active');
+  } else {
+    if (set.size >= limit) return;
+    set.add(trait);
+    el.classList.add('active');
+  }
+  saveBannedTraits();
+  // 将因羁绊变更而被自动禁用的干员从小队中移除
+  squad = squad.filter(op => !isAutoBanned(op));
+  updateBanTraitUI();
+  renderOperators();
+  renderSquad();
+  renderBanAutoOps();
+  updateBanBadge();
+}
+
+function updateBanTraitUI() {
+  document.getElementById('ban-main-count').textContent = bannedTraits.main.size;
+  document.getElementById('ban-sub-count').textContent  = bannedTraits.sub.size;
+  document.querySelectorAll('#ban-tags-main .ban-main-tag').forEach(el => {
+    const atLimit = bannedTraits.main.size >= 3 && !bannedTraits.main.has(el.dataset.trait);
+    el.classList.toggle('ban-tag-disabled', atLimit);
+  });
+  document.querySelectorAll('#ban-tags-sub .ban-sub-tag').forEach(el => {
+    const atLimit = bannedTraits.sub.size >= 4 && !bannedTraits.sub.has(el.dataset.trait);
+    el.classList.toggle('ban-tag-disabled', atLimit);
+  });
+}
+
+function renderBanAutoOps() {
+  const container = document.getElementById('ban-auto-ops');
+  const countEl   = document.getElementById('ban-auto-count');
+  const autoBanned = allOperators.filter(isAutoBanned);
+  countEl.textContent = autoBanned.length;
+  if (autoBanned.length === 0) {
+    container.innerHTML = '<p class="empty-hint">暂无自动禁用干员</p>';
+    return;
+  }
+  container.innerHTML = '';
+  autoBanned.forEach(op => {
+    const item = document.createElement('div');
+    item.className = 'ban-auto-op-item';
+    item.innerHTML = `
+      <span class="op-cost cost-${op.cost}">${op.cost}</span>
+      <span class="ban-auto-op-name">${escHtml(op.name)}</span>
+      <span class="ban-auto-op-traits">
+        ${op.mainTrait.map(t => `<span class="trait main-trait">${escHtml(t)}</span>`).join('')}
+        ${op.subTraits.map(t => `<span class="trait sub-trait">${escHtml(t)}</span>`).join('')}
+      </span>
+    `;
+    container.appendChild(item);
   });
 }
 
@@ -408,7 +560,8 @@ function toggleSquad(id) {
       return;
     }
     const op = allOperators.find(op => op.id === id);
-    if (op) squad.push(op);
+    if (!op || bannedIds.has(op.id) || isAutoBanned(op)) return;
+    squad.push(op);
   }
 
   renderOperators();

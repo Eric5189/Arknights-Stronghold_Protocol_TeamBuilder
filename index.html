@@ -41,7 +41,12 @@
         </div>
       </div>
 
-      <div id="operator-count-bar"></div>
+      <div id="operator-count-bar">
+        <span id="operator-count-text"></span>
+        <label id="label-hide-banned">
+          <input type="checkbox" id="chk-hide-banned"> 隐藏已禁用
+        </label>
+      </div>
 
       <div id="operator-list"></div>
 
@@ -49,6 +54,28 @@
 
     <!-- ===== 右侧面板：小队 + 羁绊统计 ===== -->
     <div id="panel-right">
+
+      <!-- 羁绊禁用面板（禁用模式下替代小队面板） -->
+      <div id="ban-trait-panel" class="hidden">
+        <div class="panel-header">
+          <h2>羁绊禁用</h2>
+          <button id="btn-clear-ban-traits">清空选择</button>
+        </div>
+        <div id="ban-trait-selector">
+          <div class="ban-trait-section">
+            <div class="ban-trait-section-title">主羁绊 &nbsp;<span id="ban-main-count">0</span>/3</div>
+            <div class="filter-tag-group" id="ban-tags-main"></div>
+          </div>
+          <div class="ban-trait-section">
+            <div class="ban-trait-section-title">副羁绊 &nbsp;<span id="ban-sub-count">0</span>/4</div>
+            <div class="filter-tag-group" id="ban-tags-sub"></div>
+          </div>
+        </div>
+        <div id="ban-trait-result">
+          <div class="ban-trait-result-title">自动禁用干员 &nbsp;<span id="ban-auto-count">0</span> 人</div>
+          <div id="ban-auto-ops"><p class="empty-hint">暂无自动禁用干员</p></div>
+        </div>
+      </div>
 
       <div id="squad-panel">
         <div class="panel-header">
