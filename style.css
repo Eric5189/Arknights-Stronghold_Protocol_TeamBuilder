@@ -67,21 +67,60 @@ main {
 }
 
 #filter-section-cost,
-#filter-section-main,
-#filter-section-sub {
+.filter-section {
   display: flex;
   align-items: flex-start;
   gap: 6px;
 }
 
-.filter-section-label {
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-section summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.filter-section summary::-webkit-details-marker,
+.filter-section summary::marker {
+  display: none;
+}
+
+.filter-section summary::before {
+  content: '▶';
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  transform: rotate(0deg);
+  transition: transform 0.18s ease;
+  color: #9ca3af;
+}
+
+.filter-section[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.filter-summary-hint {
   font-size: 0.72rem;
   color: #6b7280;
-  font-weight: bold;
+  margin-left: auto;
   white-space: nowrap;
-  padding-top: 4px;
-  min-width: 40px;
-  flex-shrink: 0;
+}
+
+.filter-section.has-active summary {
+  color: #93c5fd;
+}
+
+.filter-section:not([open]) .filter-tag-group {
+  display: none;
 }
 
 .filter-tag-group {
@@ -281,9 +320,19 @@ button:hover {
   overflow: hidden;
 }
 
+#panel-right-resizer {
+  height: 10px;
+  cursor: row-resize;
+  background: linear-gradient(180deg, transparent 40%, #374151 50%, transparent 60%);
+  margin: 0 10px;
+  border-radius: 999px;
+  touch-action: none;
+}
+
 /* Squad Panel (top half of right) */
 #squad-panel {
-  flex: 0 0 45%;
+  height: var(--squad-panel-height, 45%);
+  flex: none;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #374151;
@@ -304,6 +353,22 @@ button:hover {
   font-size: 0.95rem;
   flex: 1;
   color: #e5e7eb;
+}
+
+#label-hide-inactive {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+}
+
+#label-hide-inactive input {
+  cursor: pointer;
+  accent-color: #fbbf24;
 }
 
 #squad-count-badge {
@@ -349,27 +414,53 @@ button:hover {
 #squad-list {
   flex: 1;
   overflow-y: auto;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  padding: 8px 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 6px;
+  align-content: start;
 }
 
-/* Squad Member Chip */
-.squad-chip {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+/* Squad Member Card */
+.squad-card {
   background: #1f2937;
   border: 1px solid #374151;
-  border-radius: 20px;
-  padding: 3px 4px 3px 8px;
-  font-size: 0.82rem;
+  border-radius: 6px;
+  padding: 5px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.squad-chip-name {
+.squad-card-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.squad-card-name {
+  flex: 1;
+  font-size: 0.78rem;
+  font-weight: bold;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.squad-card .op-cost {
+  font-size: 0.62rem;
+  padding: 1px 4px;
+  flex-shrink: 0;
+}
+
+.squad-card .op-traits {
+  min-height: 0;
+  gap: 2px;
+}
+
+.squad-card .trait {
+  font-size: 0.6rem;
+  padding: 1px 4px;
 }
 
 .squad-remove-btn {
@@ -377,10 +468,11 @@ button:hover {
   border: none;
   color: #6b7280;
   cursor: pointer;
-  padding: 0 3px;
-  font-size: 0.85rem;
+  padding: 0 2px;
+  font-size: 0.75rem;
   line-height: 1;
   border-radius: 50%;
+  flex-shrink: 0;
   transition: color 0.15s, background 0.15s;
 }
 
@@ -642,4 +734,261 @@ button:hover {
 /* Ban mode: card hover hint */
 body.mode-ban .operator-card:not(.is-banned):hover {
   border-color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  body {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  /* 响应式标题：高度不足时隐藏或缩小 */
+  @media (max-height: 650px) {
+    header {
+      padding: 6px 12px;
+    }
+
+    header h1 {
+      font-size: 0.9rem;
+      margin-bottom: 2px;
+    }
+
+    #mode-switcher {
+      gap: 6px;
+    }
+
+    .mode-btn {
+      font-size: 0.72rem;
+      padding: 3px 10px;
+    }
+
+    .ban-count-badge {
+      font-size: 0.72rem;
+      padding: 2px 8px;
+    }
+  }
+
+  @media (max-height: 550px) {
+    header {
+      padding: 4px 10px;
+    }
+
+    header h1 {
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+    }
+
+    #mode-switcher {
+      gap: 4px;
+    }
+
+    .mode-btn {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+    }
+
+    .ban-count-badge {
+      font-size: 0.7rem;
+      padding: 1px 6px;
+    }
+  }
+
+  @media (max-height: 450px) {
+    header {
+      display: none;
+    }
+  }
+
+  main {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #panel-left,
+  #panel-right {
+    width: 100%;
+  }
+
+  #panel-left {
+    flex: 0 1 auto;
+    border-right: none;
+    border-bottom: 1px solid #374151;
+    overflow: hidden;
+  }
+
+  #filter-bar {
+    overflow-y: auto;
+    max-height: 35vh;
+  }
+
+  #panel-right {
+    flex: 1 0 240px;
+    border-top: none;
+  }
+
+  #filter-bar,
+  .panel-header {
+    gap: 8px;
+  }
+
+  #filter-section-cost,
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-section-label {
+    min-width: auto;
+    width: 100%;
+    font-size: 0.68rem;
+  }
+
+  .filter-tag {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+  }
+
+  .filter-summary-hint {
+    font-size: 0.65rem;
+  }
+
+  .filter-section summary {
+    padding: 2px 0;
+  }
+
+  #operator-count-bar {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+
+  #panel-right {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 240px;
+    flex: 1 0 240px;
+  }
+
+  #squad-panel,
+  #trait-panel {
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #squad-panel {
+    height: var(--squad-panel-height, 180px);
+    flex: none;
+    min-height: 100px;
+  }
+
+  #panel-right-resizer {
+    height: 8px;
+    cursor: row-resize;
+    background: linear-gradient(180deg, transparent 40%, #374151 50%, transparent 60%);
+    margin: 0 8px;
+    border-radius: 999px;
+    touch-action: none;
+    display: block; /* 在手机端显示拖拽条 */
+  }
+
+  #squad-list,
+  #trait-list {
+    overflow-y: auto;
+    min-height: 0;
+    flex: 1 1 0;
+  }
+
+  #trait-panel {
+    flex: 1 1 auto;
+    min-height: 120px;
+  }
+
+  .panel-header {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+  }
+
+  .panel-header h2 {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+  }
+
+  #squad-count-badge,
+  #label-unlock-9,
+  #btn-sort-squad,
+  #btn-clear-squad {
+    flex: 0 0 auto;
+  }
+
+  #label-unlock-9 {
+    white-space: nowrap;
+    font-size: 0.7rem;
+  }
+
+  #btn-sort-squad,
+  #btn-clear-squad {
+    padding: 6px 8px;
+    font-size: 0.78rem;
+  }
+
+  #operator-list {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    padding: 8px;
+    gap: 8px;
+    max-height: 20vh;
+    overflow-y: auto;
+  }
+
+  .operator-card {
+    padding: 6px;
+    font-size: 0.88rem;
+  }
+
+  .operator-card .op-name {
+    font-size: 0.88rem;
+  }
+
+  .op-action-btn,
+  button {
+    min-height: 36px;
+    padding: 8px 10px;
+    font-size: 0.82rem;
+  }
+
+  #trait-list {
+    padding: 8px 10px;
+    gap: 4px;
+  }
+
+  .trait-row {
+    padding: 4px 8px;
+  }
+
+  .trait-row-name {
+    font-size: 0.78rem;
+    min-width: 50px;
+  }
+
+  .trait-thresh-label {
+    font-size: 0.65rem;
+    min-width: 24px;
+  }
+
+  .tier-badge {
+    font-size: 0.65rem;
+    padding: 1px 4px;
+  }
+
+  .trait-row-count {
+    font-size: 0.75rem;
+    padding: 1px 6px;
+  }
 }

@@ -52,6 +52,26 @@ const activeFilters = {
   subTrait:  new Set(),
 };
 
+function getFilterSummaryHint(category, isOpen) {
+  const count = activeFilters[category]?.size || 0;
+  if (count > 0) return `已选 ${count}`;
+  return isOpen ? '点击收起' : '点击展开';
+}
+
+function refreshFilterSectionStates() {
+  document.querySelectorAll('details.filter-section').forEach(section => {
+    const category = section.dataset.category;
+    if (!category) return;
+    const hint = section.querySelector('.filter-summary-hint');
+    const count = activeFilters[category]?.size || 0;
+    const isOpen = section.open;
+    if (hint) {
+      hint.textContent = getFilterSummaryHint(category, isOpen);
+    }
+    section.classList.toggle('has-active', count > 0);
+  });
+}
+
 function toggleFilterTag(category, value, el) {
   if (activeFilters[category].has(value)) {
     activeFilters[category].delete(value);
@@ -61,14 +81,117 @@ function toggleFilterTag(category, value, el) {
     el.classList.add('active');
   }
   renderOperators();
+  refreshFilterSectionStates();
 }
 
 function resetFilters() {
   activeFilters.cost.clear();
   activeFilters.mainTrait.clear();
   activeFilters.subTrait.clear();
-  document.querySelectorAll('.filter-tag').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.filter-tag.active').forEach(tag => {
+    tag.classList.remove('active');
+  });
   renderOperators();
+  refreshFilterSectionStates();
+}
+
+function setupRightPanelResize() {
+  const resizer = document.getElementById('panel-right-resizer');
+  const panelRight = document.getElementById('panel-right');
+  if (!resizer || !panelRight) return;
+
+  let resizing = false;
+  let startY = 0;
+  let startHeight = 0;
+
+  const clampHeight = height => Math.max(100, Math.min(height, window.innerHeight * 0.6));
+
+  const beginResize = e => {
+    if (e.pointerType === 'mouse' || e.pointerType === 'touch' || e.pointerType === 'pen') {
+      resizing = true;
+      startY = e.clientY;
+      const squadPanel = document.getElementById('squad-panel');
+      startHeight = squadPanel ? squadPanel.getBoundingClientRect().height : 180;
+      resizer.setPointerCapture(e.pointerId);
+      e.preventDefault();
+    }
+  };
+
+  const onResize = e => {
+    if (!resizing) return;
+    const delta = e.clientY - startY;
+    const newHeight = clampHeight(startHeight + delta);
+    document.documentElement.style.setProperty('--squad-panel-height', `${newHeight}px`);
+  };
+
+  const stopResize = () => {
+    if (!resizing) return;
+    resizing = false;
+  };
+
+  resizer.addEventListener('pointerdown', beginResize);
+  document.addEventListener('pointermove', onResize);
+  document.addEventListener('pointerup', stopResize);
+  document.addEventListener('pointercancel', stopResize);
+}
+
+function setupPanelResize() {
+  // 右侧面板内部垂直拖拽
+  setupRightPanelResize();
+
+  // 动态高度分配
+  const adjustPanelHeights = () => {
+    if (window.innerWidth > 768) {
+      // PC端：使用固定比例
+      return;
+    }
+
+    // 手机端动态调整逻辑保持不变
+    const viewportHeight = window.innerHeight;
+    const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+    const filterBarHeight = document.querySelector('#filter-bar')?.offsetHeight || 0;
+    const operatorCountHeight = document.querySelector('#operator-count-bar')?.offsetHeight || 0;
+
+    // 计算左侧面板占用的高度
+    const leftPanelUsedHeight = headerHeight + filterBarHeight + operatorCountHeight + 20; // 20px for margins
+    const availableHeight = viewportHeight - leftPanelUsedHeight;
+
+    // 确保最小可用高度
+    const minAvailableHeight = 300; // 最小需要300px用于右侧面板
+    const effectiveAvailableHeight = Math.max(minAvailableHeight, availableHeight);
+
+    // 动态分配右侧面板高度
+    const squadMinHeight = 100;
+    const traitMinHeight = 120;
+    const resizerHeight = 8;
+    const totalMinHeight = squadMinHeight + traitMinHeight + resizerHeight;
+
+    if (effectiveAvailableHeight >= totalMinHeight) {
+      // 有足够空间，动态分配
+      const squadHeight = Math.max(squadMinHeight, Math.floor(effectiveAvailableHeight * 0.4));
+      const traitHeight = effectiveAvailableHeight - squadHeight - resizerHeight;
+
+      if (traitHeight >= traitMinHeight) {
+        document.documentElement.style.setProperty('--squad-panel-height', `${squadHeight}px`);
+      } else {
+        // 羁绊统计空间不足，压缩小队面板
+        const adjustedSquadHeight = effectiveAvailableHeight - traitMinHeight - resizerHeight;
+        document.documentElement.style.setProperty('--squad-panel-height', `${Math.max(squadMinHeight, adjustedSquadHeight)}px`);
+      }
+    } else {
+      // 空间严重不足，设置最小值
+      document.documentElement.style.setProperty('--squad-panel-height', `${squadMinHeight}px`);
+    }
+  };
+
+  // 监听窗口大小变化
+  window.addEventListener('resize', adjustPanelHeights);
+  window.addEventListener('orientationchange', () => {
+    setTimeout(adjustPanelHeights, 100); // 等待方向改变完成
+  });
+
+  // 初始调整
+  adjustPanelHeights();
 }
 
 // ─── 启动 ────────────────────────────────────────────────────────────────────
@@ -100,6 +223,7 @@ async function init() {
   }
 
   populateFilterOptions();
+  refreshFilterSectionStates();
   renderOperators();
   renderSquad();
 
@@ -112,6 +236,9 @@ async function init() {
     }
     renderSquad();
   });
+
+  // 隐藏未激活羁绊开关
+  document.getElementById('chk-hide-inactive').addEventListener('change', renderTraits);
 
   // 模式切换
   document.getElementById('btn-mode-squad').addEventListener('click', () => setMode('squad'));
@@ -130,6 +257,12 @@ async function init() {
 
   // 重置筛选
   document.getElementById('btn-reset-filter').addEventListener('click', resetFilters);
+
+  document.querySelectorAll('details.filter-section').forEach(section => {
+    section.addEventListener('toggle', refreshFilterSectionStates);
+  });
+
+  setupPanelResize();
 
   // 小队费用排序
   document.getElementById('btn-sort-squad').addEventListener('click', () => {
@@ -292,20 +425,29 @@ function renderSquad() {
   container.innerHTML = '';
 
   if (squad.length === 0) {
-    container.innerHTML = '<p class="empty-hint">点击干员卡片的「加入」按钮</p>';
+    container.innerHTML = '<p class="empty-hint">点击干员卡片来加入</p>';
     renderTraits();
     return;
   }
 
   squad.forEach(op => {
-    const chip = document.createElement('div');
-    chip.className = 'squad-chip';
-    chip.innerHTML = `
-      <span class="op-cost cost-${op.cost}" style="font-size:0.68rem;padding:1px 5px;">${op.cost}</span>
-      <span class="squad-chip-name">${escHtml(op.name)}</span>
-      <button class="squad-remove-btn" data-id="${escAttr(op.id)}" title="移除">✕</button>
+    const card = document.createElement('div');
+    card.className = 'squad-card';
+    const subTraitHTML = op.subTraits
+      .map(t => `<span class="trait sub-trait">${escHtml(t)}</span>`)
+      .join('');
+    card.innerHTML = `
+      <div class="squad-card-header">
+        <span class="op-cost cost-${op.cost}">${op.cost}</span>
+        <span class="squad-card-name" title="${escAttr(op.name)}">${escHtml(op.name)}</span>
+        <button class="squad-remove-btn" data-id="${escAttr(op.id)}" title="移除">✕</button>
+      </div>
+      <div class="op-traits">
+        ${op.mainTrait.map(t => `<span class="trait main-trait">${escHtml(t)}</span>`).join('')}
+        ${subTraitHTML}
+      </div>
     `;
-    container.appendChild(chip);
+    container.appendChild(card);
   });
 
   container.querySelectorAll('.squad-remove-btn').forEach(btn => {
@@ -355,6 +497,7 @@ function buildPipsHTML(count, thresholds) {
 
 function renderTraits() {
   const container = document.getElementById('trait-list');
+  const hideInactive = document.getElementById('chk-hide-inactive')?.checked ?? false;
 
   if (squad.length === 0) {
     container.innerHTML = '<p class="empty-hint">小队为空</p>';
@@ -399,6 +542,7 @@ function renderTraits() {
         const activeTier   = cfg ? getActiveTierSpecial(cfg, effectiveCount, count) : 0;
         // activeTier === -1 表示「独行」2+人失效
         const isFailed     = activeTier === -1;
+        if (hideInactive && activeTier === 0) return;
         const tierClass    = isFailed
           ? 'tier-warn'
           : activeTier > 0 ? `tier-active tier-${activeTier}-active` : 'tier-inactive';

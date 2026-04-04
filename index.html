@@ -24,18 +24,18 @@
     <div id="panel-left">
 
       <div id="filter-bar">
-        <div id="filter-section-cost">
-          <span class="filter-section-label">费用</span>
+        <details class="filter-section filter-section-cost" data-category="cost" open>
+          <summary class="filter-section-label">费用<span class="filter-summary-hint"></span></summary>
           <div class="filter-tag-group" id="filter-tags-cost"></div>
-        </div>
-        <div id="filter-section-main">
-          <span class="filter-section-label">主羁绊</span>
+        </details>
+        <details class="filter-section filter-section-main" data-category="mainTrait" open>
+          <summary class="filter-section-label">主羁绊<span class="filter-summary-hint"></span></summary>
           <div class="filter-tag-group" id="filter-tags-main"></div>
-        </div>
-        <div id="filter-section-sub">
-          <span class="filter-section-label">子羁绊</span>
+        </details>
+        <details class="filter-section filter-section-sub" data-category="subTrait" open>
+          <summary class="filter-section-label">子羁绊<span class="filter-summary-hint"></span></summary>
           <div class="filter-tag-group" id="filter-tags-sub"></div>
-        </div>
+        </details>
         <div id="filter-footer">
           <button id="btn-reset-filter">重置筛选</button>
         </div>
@@ -61,13 +61,18 @@
           <button id="btn-clear-squad">清空</button>
         </div>
         <div id="squad-list">
-          <p class="empty-hint">点击干员卡片的「加入」按钮</p>
+          <p class="empty-hint">点击干员卡片来加入</p>
         </div>
       </div>
+
+      <div id="panel-right-resizer" role="separator" aria-label="调整当前小队和羁绊统计区域高度"></div>
 
       <div id="trait-panel">
         <div class="panel-header">
           <h2>羁绊统计</h2>
+          <label id="label-hide-inactive" title="隐藏未激活的羁绊">
+            <input type="checkbox" id="chk-hide-inactive"> 仅显示已激活
+          </label>
         </div>
         <div id="trait-list">
           <p class="empty-hint">小队为空</p>
