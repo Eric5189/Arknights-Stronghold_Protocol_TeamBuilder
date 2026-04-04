@@ -1,0 +1,445 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  background: #111827;
+  color: #e5e7eb;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ===== Header ===== */
+header {
+  background: #1f2937;
+  padding: 10px 20px;
+  border-bottom: 2px solid #374151;
+  flex-shrink: 0;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  color: #fbbf24;
+  letter-spacing: 0.05em;
+}
+
+/* ===== Main Layout (two columns) ===== */
+main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ===== Left Panel ===== */
+#panel-left {
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #374151;
+  overflow: hidden;
+}
+
+/* Filter Bar */
+#filter-bar {
+  background: #1f2937;
+  padding: 10px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #374151;
+  flex-shrink: 0;
+}
+
+.filter-label {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-group label {
+  font-size: 0.82rem;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+select {
+  background: #111827;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #fbbf24;
+}
+
+button {
+  background: #374151;
+  color: #e5e7eb;
+  border: 1px solid #4b5563;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.15s;
+}
+
+button:hover {
+  background: #4b5563;
+}
+
+/* Operator count info bar */
+#operator-count-bar {
+  padding: 4px 14px;
+  font-size: 0.75rem;
+  color: #6b7280;
+  background: #1f2937;
+  border-bottom: 1px solid #374151;
+  flex-shrink: 0;
+}
+
+/* Operator Grid */
+#operator-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  align-content: start;
+}
+
+/* ===== Operator Card ===== */
+.operator-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: border-color 0.15s, transform 0.1s;
+}
+
+.operator-card:hover {
+  border-color: #6b7280;
+  transform: translateY(-1px);
+}
+
+.operator-card.in-squad {
+  border-color: #fbbf24;
+  background: #1c2410;
+}
+
+.op-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.op-name {
+  font-size: 0.9rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Cost badge colors */
+.op-cost {
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 1px 5px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.cost-1 { background: #4b5563; color: #e5e7eb; }
+.cost-2 { background: #065f46; color: #6ee7b7; }
+.cost-3 { background: #1e3a8a; color: #93c5fd; }
+.cost-4 { background: #4c1d95; color: #c4b5fd; }
+.cost-5 { background: #78350f; color: #fcd34d; }
+.cost-6 { background: #7f1d1d; color: #fca5a5; }
+
+/* Trait tags on card */
+.op-traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  min-height: 20px;
+}
+
+.trait {
+  font-size: 0.68rem;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.main-trait {
+  background: #1e3a5f;
+  color: #93c5fd;
+}
+
+.sub-trait {
+  background: #1f2937;
+  color: #9ca3af;
+  border: 1px solid #374151;
+}
+
+/* Add/Remove button on card */
+.op-action-btn {
+  margin-top: 4px;
+  width: 100%;
+  padding: 4px;
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.op-action-btn.remove {
+  background: #450a0a;
+  border-color: #991b1b;
+  color: #fca5a5;
+}
+
+.op-action-btn.remove:hover {
+  background: #7f1d1d;
+}
+
+/* ===== Right Panel ===== */
+#panel-right {
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Squad Panel (top half of right) */
+#squad-panel {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #374151;
+  overflow: hidden;
+}
+
+.panel-header {
+  background: #1f2937;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #374151;
+  flex-shrink: 0;
+}
+
+.panel-header h2 {
+  font-size: 0.95rem;
+  flex: 1;
+  color: #e5e7eb;
+}
+
+#squad-count-badge {
+  background: #111827;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  color: #fbbf24;
+  font-weight: bold;
+  border: 1px solid #374151;
+}
+
+#btn-clear-squad {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  background: #1f2937;
+  border-color: #4b5563;
+}
+
+#squad-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 6px;
+}
+
+/* Squad Member Chip */
+.squad-chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 20px;
+  padding: 3px 4px 3px 8px;
+  font-size: 0.82rem;
+}
+
+.squad-chip-name {
+  white-space: nowrap;
+}
+
+.squad-remove-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0 3px;
+  font-size: 0.85rem;
+  line-height: 1;
+  border-radius: 50%;
+  transition: color 0.15s, background 0.15s;
+}
+
+.squad-remove-btn:hover {
+  color: #ef4444;
+  background: #1f0000;
+}
+
+/* ===== Trait Panel (bottom half of right) ===== */
+#trait-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#trait-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trait-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  background: #1f2937;
+  border-radius: 5px;
+  border-left: 3px solid #374151;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+/* Tier activation border colors */
+.trait-row.tier-inactive  { border-left-color: #374151; }
+.trait-row.tier-1-active  { border-left-color: #4ade80; background: #052e16cc; }
+.trait-row.tier-2-active  { border-left-color: #60a5fa; background: #1e3a5fcc; }
+.trait-row.tier-3-active  { border-left-color: #fbbf24; background: #451a03cc; }
+
+.trait-row-name {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  min-width: 60px;
+  flex-shrink: 0;
+}
+
+.trait-row.tier-active .trait-row-name {
+  color: #e5e7eb;
+  font-weight: bold;
+}
+
+/* ===== Pip dots ===== */
+.trait-pips {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.pip {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid #374151;
+  background: #111827;
+  flex-shrink: 0;
+}
+
+/* Filled pip colors per tier */
+.pip.tier-1.filled { background: #4ade80; border-color: #4ade80; box-shadow: 0 0 4px #4ade8088; }
+.pip.tier-2.filled { background: #60a5fa; border-color: #60a5fa; box-shadow: 0 0 4px #60a5fa88; }
+.pip.tier-3.filled { background: #fbbf24; border-color: #fbbf24; box-shadow: 0 0 4px #fbbf2488; }
+
+.pip-sep {
+  width: 2px;
+  height: 10px;
+  background: #4b5563;
+  border-radius: 1px;
+  flex-shrink: 0;
+  margin: 0 1px;
+}
+
+/* Threshold label e.g. "3/6" */
+.trait-thresh-label {
+  font-size: 0.7rem;
+  color: #6b7280;
+  flex-shrink: 0;
+  min-width: 28px;
+}
+
+/* Tier activation badge */
+.tier-badge {
+  font-size: 0.68rem;
+  font-weight: bold;
+  padding: 1px 6px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.tier-badge-0 { background: #1f2937; color: #4b5563; border: 1px solid #374151; }
+.tier-badge-1 { background: #052e16; color: #4ade80; border: 1px solid #4ade80; }
+.tier-badge-2 { background: #1e3a5f; color: #60a5fa; border: 1px solid #60a5fa; }
+.tier-badge-3 { background: #451a03; color: #fbbf24; border: 1px solid #fbbf24; }
+
+.trait-row-count {
+  background: #111827;
+  color: #fbbf24;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 1px 8px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  margin-left: auto;
+  flex-shrink: 0;
+  cursor: default;
+}
+
+/* ===== Shared ===== */
+.empty-hint {
+  color: #4b5563;
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 24px 12px;
+  width: 100%;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #111827; }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #4b5563; }

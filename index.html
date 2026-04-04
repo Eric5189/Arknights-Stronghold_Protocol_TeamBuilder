@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>卫戍协议小队规划工具</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>卫戍协议小队规划工具</h1>
+  </header>
+
+  <main>
+
+    <!-- ===== 左侧面板：筛选 + 干员列表 ===== -->
+    <div id="panel-left">
+
+      <div id="filter-bar">
+        <span class="filter-label">筛选</span>
+
+        <div class="filter-group">
+          <label for="filter-cost">费用</label>
+          <select id="filter-cost">
+            <option value="">全部</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-main-trait">主羁绊</label>
+          <select id="filter-main-trait">
+            <option value="">全部</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-sub-trait">子羁绊</label>
+          <select id="filter-sub-trait">
+            <option value="">全部</option>
+          </select>
+        </div>
+
+        <button id="btn-reset-filter">重置</button>
+      </div>
+
+      <div id="operator-count-bar"></div>
+
+      <div id="operator-list"></div>
+
+    </div>
+
+    <!-- ===== 右侧面板：小队 + 羁绊统计 ===== -->
+    <div id="panel-right">
+
+      <div id="squad-panel">
+        <div class="panel-header">
+          <h2>当前小队</h2>
+          <span id="squad-count-badge">0 / 9</span>
+          <button id="btn-clear-squad">清空</button>
+        </div>
+        <div id="squad-list">
+          <p class="empty-hint">点击干员卡片的「加入」按钮</p>
+        </div>
+      </div>
+
+      <div id="trait-panel">
+        <div class="panel-header">
+          <h2>羁绊统计</h2>
+        </div>
+        <div id="trait-list">
+          <p class="empty-hint">小队为空</p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

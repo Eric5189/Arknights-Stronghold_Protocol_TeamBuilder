@@ -1,0 +1,18 @@
+[
+  { "id": "1",  "name": "隐现",   "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "2",  "name": "角峰",   "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "3",  "name": "惊蛰",   "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "4",  "name": "深巡",   "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "5",  "name": "刺玫",   "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "6",  "name": "普罗旺斯", "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "7",  "name": "德克萨斯", "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "8",  "name": "跃跃",   "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "9",  "name": "古米",   "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "10", "name": "艾丝黛尔", "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "11", "name": "波登可", "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "12", "name": "格雷伊", "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "13", "name": "深靛",   "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "14", "name": "宴",     "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "15", "name": "野鬃",   "cost": 1, "mainTrait": "", "subTraits": [] },
+  { "id": "16", "name": "雷蛇",   "cost": 1, "mainTrait": "", "subTraits": [] }
+]
