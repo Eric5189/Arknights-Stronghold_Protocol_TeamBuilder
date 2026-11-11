@@ -1,119 +1,7315 @@
 [
-	{ "id": "1",  "name": "隐现",   "cost": 1, "mainTrait": ["拉特兰"], "subTraits": ["迅捷"] },
-	{ "id": "2",  "name": "角峰",   "cost": 1, "mainTrait": ["谢拉格"], "subTraits": ["坚守"] },
-	{ "id": "3",  "name": "惊蛰",   "cost": 1, "mainTrait": ["炎"], "subTraits": [] },
-	{ "id": "4",  "name": "深巡",   "cost": 1, "mainTrait": ["阿戈尔"], "subTraits": [] },
-	{ "id": "5",  "name": "刺玫",   "cost": 1, "mainTrait": ["维多利亚"], "subTraits": ["助力"] },
-	{ "id": "6",  "name": "普罗旺斯", "cost": 1, "mainTrait": ["叙拉古"], "subTraits": [] },
-	{ "id": "7",  "name": "德克萨斯", "cost": 1, "mainTrait": ["叙拉古"], "subTraits": ["独行"] },
-	{ "id": "8",  "name": "跃跃",   "cost": 1, "mainTrait": [], "subTraits": ["精准"] },
-	{ "id": "9",  "name": "古米",   "cost": 1, "mainTrait": [], "subTraits": ["坚守"] },
-	{ "id": "10", "name": "艾丝黛尔", "cost": 1, "mainTrait": ["萨尔贡"], "subTraits": [] },
-	{ "id": "11", "name": "波登可", "cost": 1, "mainTrait": [], "subTraits": ["助力"] },
-	{ "id": "12", "name": "格雷伊", "cost": 1, "mainTrait": [], "subTraits": ["灵巧"] },
-	{ "id": "13", "name": "深靛",   "cost": 1, "mainTrait": [], "subTraits": ["精准", "奥术"] },
-	{ "id": "14", "name": "宴",     "cost": 1, "mainTrait": [], "subTraits": ["突袭"] },
-	{ "id": "15", "name": "野鬃",   "cost": 1, "mainTrait": ["卡西米尔"], "subTraits": ["迅捷"] },
-	{ "id": "16", "name": "雷蛇",   "cost": 1, "mainTrait": [], "subTraits": ["不屈"] },
-
-	{ "id": "17", "name": "送葬人", "cost": 2, "mainTrait": ["拉特兰"], "subTraits": ["精准"] },
-	{ "id": "18", "name": "赫默", "cost": 2, "mainTrait": [], "subTraits": ["远见"] },
-	{ "id": "19", "name": "小满", "cost": 2, "mainTrait": ["炎"], "subTraits": ["灵巧"] },
-	{ "id": "20", "name": "哈洛德", "cost": 2, "mainTrait": ["维多利亚","谢拉格"], "subTraits": [] },
-	{ "id": "21", "name": "莎草", "cost": 2, "mainTrait": ["萨尔贡"], "subTraits": [] },
-	{ "id": "22", "name": "幽灵鲨", "cost": 2, "mainTrait": ["阿戈尔"], "subTraits": [] },
-	{ "id": "23", "name": "泡泡", "cost": 2, "mainTrait": ["萨尔贡"], "subTraits": ["坚守"] },
-	{ "id": "24", "name": "休谟斯", "cost": 2, "mainTrait": [], "subTraits": ["突袭"] },
-	{ "id": "25", "name": "洛洛", "cost": 2, "mainTrait": ["维多利亚"], "subTraits": ["奥术"] },
-	{ "id": "26", "name": "风丸", "cost": 2, "mainTrait": [], "subTraits": ["奇迹"] },
-	{ "id": "27", "name": "砾", "cost": 2, "mainTrait": ["卡西米尔"], "subTraits": ["不屈"] },
-	{ "id": "28", "name": "蒂比", "cost": 2, "mainTrait": [], "subTraits": ["迅捷", "灵巧"] },
-	{ "id": "29", "name": "调香师", "cost": 2, "mainTrait": [], "subTraits": ["助力", "协防干员"] },
-	{ "id": "30", "name": "拉普兰德", "cost": 2, "mainTrait": ["叙拉古"], "subTraits": [] },
-	{ "id": "31", "name": "折桠", "cost": 2, "mainTrait": [], "subTraits": ["坚守", "独行"] },
-	{ "id": "32", "name": "灰毫", "cost": 2, "mainTrait": ["卡西米尔"], "subTraits": ["坚守"] },
-	{ "id": "33", "name": "锡人", "cost": 2, "mainTrait": [], "subTraits": ["迅捷", "投资人"] },
-
-	{ "id": "34", "name": "能天使", "cost": 3, "mainTrait": ["拉特兰"], "subTraits": ["奇迹"] },
-	{ "id": "35", "name": "断崖", "cost": 3, "mainTrait": [], "subTraits": ["灵巧"] },
-	{ "id": "36", "name": "诗怀雅", "cost": 3, "mainTrait": ["炎"], "subTraits": ["远见"] },
-	{ "id": "37", "name": "琳琅诗怀雅", "cost": 3, "mainTrait": ["炎"], "subTraits": ["投资人"] },
-	{ "id": "38", "name": "斯卡蒂", "cost": 3, "mainTrait": ["阿戈尔"], "subTraits": ["坚守", "突袭"] },
-	{ "id": "39", "name": "菲莱", "cost": 3, "mainTrait": ["萨尔贡"], "subTraits": [] },
-	{ "id": "40", "name": "薄绿", "cost": 3, "mainTrait": ["维多利亚"], "subTraits": [] },
-	{ "id": "41", "name": "海霓", "cost": 3, "mainTrait": ["阿戈尔"], "subTraits": ["奥术"] },
-	{ "id": "42", "name": "松果", "cost": 3, "mainTrait": [], "subTraits": ["迅捷", "协防干员"] },
-	{ "id": "43", "name": "雪猎", "cost": 3, "mainTrait": ["谢拉格"], "subTraits": ["精准"] },
-	{ "id": "44", "name": "瑕光", "cost": 3, "mainTrait": ["卡西米尔"], "subTraits": ["突袭"] },
-	{ "id": "45", "name": "至简", "cost": 3, "mainTrait": ["萨尔贡"], "subTraits": ["灵巧"] },
-	{ "id": "46", "name": "初雪", "cost": 3, "mainTrait": ["谢拉格"], "subTraits": ["远见"] },
-	{ "id": "47", "name": "蛇屠箱", "cost": 3, "mainTrait": [], "subTraits": ["坚守", "不屈"] },
-	{ "id": "48", "name": "流星", "cost": 3, "mainTrait": ["卡西米尔"], "subTraits": ["独行"] },
-	{ "id": "49", "name": "忍冬", "cost": 3, "mainTrait": ["叙拉古"], "subTraits": ["迅捷"] },
-	{ "id": "50", "name": "伺夜", "cost": 3, "mainTrait": ["叙拉古"], "subTraits": ["奇迹"] },
-	{ "id": "51", "name": "耶拉", "cost": 3, "mainTrait": ["谢拉格"], "subTraits": ["助力"] },
-	{ "id": "52", "name": "空弦", "cost": 3, "mainTrait": ["拉特兰"], "subTraits": ["灵巧"] },
-
-	{ "id": "53", "name": "信仰搅拌机", "cost": 4, "mainTrait": ["拉特兰"], "subTraits": ["坚守"] },
-	{ "id": "54", "name": "莫斯提马", "cost": 4, "mainTrait": ["拉特兰"], "subTraits": ["奥术"] },
-	{ "id": "55", "name": "伊内丝", "cost": 4, "mainTrait": [], "subTraits": ["远见"] },
-	{ "id": "56", "name": "寒芒克洛丝", "cost": 4, "mainTrait": [], "subTraits": ["精准"] },
-	{ "id": "57", "name": "风笛", "cost": 4, "mainTrait": ["维多利亚"], "subTraits": ["远见", "不屈"] },
-	{ "id": "58", "name": "水月", "cost": 4, "mainTrait": ["阿戈尔"], "subTraits": ["独行"] },
-	{ "id": "59", "name": "阿罗玛", "cost": 4, "mainTrait": ["叙拉古"], "subTraits": ["奥术"] },
-	{ "id": "60", "name": "凯瑟琳", "cost": 4, "mainTrait": ["维多利亚"], "subTraits": ["灵巧"] },
-	{ "id": "61", "name": "歌蕾蒂娅", "cost": 4, "mainTrait": ["阿戈尔"], "subTraits": [] },
-	{ "id": "62", "name": "灵知", "cost": 4, "mainTrait": ["谢拉格"], "subTraits": ["灵巧"] },
-	{ "id": "63", "name": "莱恩哈特", "cost": 4, "mainTrait": [], "subTraits": ["精准", "迅捷"] },
-	{ "id": "64", "name": "缄默德克萨斯", "cost": 4, "mainTrait": ["叙拉古"], "subTraits": ["突袭"] },
-	{ "id": "65", "name": "星熊", "cost": 4, "mainTrait": ["炎"], "subTraits": [] },
-	{ "id": "66", "name": "泥岩", "cost": 4, "mainTrait": [], "subTraits": ["独行"] },
-	{ "id": "67", "name": "焰尾", "cost": 4, "mainTrait": ["卡西米尔"], "subTraits": [] },
-	{ "id": "68", "name": "远牙", "cost": 4, "mainTrait": ["卡西米尔"], "subTraits": ["精准"] },
-	{ "id": "69", "name": "白面鸮", "cost": 4, "mainTrait": [], "subTraits": ["灵巧", "助力"] },
-	{ "id": "70", "name": "银灰", "cost": 4, "mainTrait": ["谢拉格"], "subTraits": [] },
-	{ "id": "71", "name": "百炼嘉维尔", "cost": 4, "mainTrait": ["萨尔贡"], "subTraits": [] },
-	{ "id": "72", "name": "卡涅利安", "cost": 4, "mainTrait": ["萨尔贡"], "subTraits": ["助力"] },
-	{ "id": "73", "name": "魔王", "cost": 4, "mainTrait": [], "subTraits": ["协防干员"] },
-	{ "id": "74", "name": "华法琳", "cost": 4, "mainTrait": [], "subTraits": ["奇迹"] },
-
-	{ "id": "75", "name": "妮芙", "cost": 5, "mainTrait": [], "subTraits": ["迅捷"] },
-	{ "id": "76", "name": "圣约送葬人", "cost": 5, "mainTrait": ["拉特兰"], "subTraits": ["远见"] },
-	{ "id": "77", "name": "缇缇", "cost": 5, "mainTrait": ["萨尔贡"], "subTraits": ["精准"] },
-	{ "id": "78", "name": "烛煌", "cost": 5, "mainTrait": ["炎","维多利亚"], "subTraits": [] },
-	{ "id": "79", "name": "乌尔比安", "cost": 5, "mainTrait": ["阿戈尔"], "subTraits": [] },
-	{ "id": "80", "name": "隐德来希", "cost": 5, "mainTrait": [], "subTraits": ["灵巧", "不屈"] },
-	{ "id": "81", "name": "史尔特尔", "cost": 5, "mainTrait": [], "subTraits": ["奥术", "突袭"] },
-	{ "id": "82", "name": "号角", "cost": 5, "mainTrait": ["维多利亚"], "subTraits": [] },
-	{ "id": "83", "name": "铃兰", "cost": 5, "mainTrait": ["叙拉古"], "subTraits": ["协防干员"] },
-	{ "id": "84", "name": "塞雷娅", "cost": 5, "mainTrait": [], "subTraits": ["坚守", "独行"] },
-	{ "id": "85", "name": "夕", "cost": 5, "mainTrait": ["炎"], "subTraits": ["奥术"] },
-	{ "id": "86", "name": "归溟幽灵鲨", "cost": 5, "mainTrait": ["阿戈尔"], "subTraits": ["不屈"] },
-	{ "id": "87", "name": "凛御银灰", "cost": 5, "mainTrait": ["谢拉格"], "subTraits": ["迅捷", "投资人"] },
-	{ "id": "88", "name": "引星棘刺", "cost": 5, "mainTrait": [], "subTraits": ["迅捷", "奇迹"] },
-	{ "id": "89", "name": "山", "cost": 5, "mainTrait": [], "subTraits": ["投资人"] },
-	{ "id": "90", "name": "玛恩纳", "cost": 5, "mainTrait": ["卡西米尔"], "subTraits": [] },
-	{ "id": "91", "name": "安洁莉娜", "cost": 5, "mainTrait": ["叙拉古"], "subTraits": ["奇迹"] },
-	{ "id": "92", "name": "寒檀", "cost": 5, "mainTrait": [], "subTraits": ["远见"] },
-	{ "id": "93", "name": "录武官", "cost": 5, "mainTrait": ["炎"], "subTraits": ["奇迹"] },
-
-	{ "id": "94", "name": "蕾缪安", "cost": 6, "mainTrait": ["拉特兰"], "subTraits": ["精准"] },
-	{ "id": "95", "name": "圣聆初雪", "cost": 6, "mainTrait": ["谢拉格"], "subTraits": ["奥术"] },
-	{ "id": "96", "name": "余", "cost": 6, "mainTrait": ["炎"], "subTraits": ["坚守"] },
-	{ "id": "97", "name": "浊心斯卡蒂", "cost": 6, "mainTrait": ["阿戈尔"], "subTraits": [] },
-	{ "id": "98", "name": "异客", "cost": 6, "mainTrait": ["萨尔贡"], "subTraits": ["精准", "迅捷"] },
-	{ "id": "99", "name": "佩佩", "cost": 6, "mainTrait": ["萨尔贡"], "subTraits": ["不屈"] },
-	{ "id": "100", "name": "维娜·维多利亚", "cost": 6, "mainTrait": ["维多利亚"], "subTraits": ["奇迹"] },
-	{ "id": "101", "name": "焰影苇草", "cost": 6, "mainTrait": ["维多利亚"], "subTraits": ["精准"] },
-	{ "id": "102", "name": "塑心", "cost": 6, "mainTrait": ["拉特兰"], "subTraits": [] },
-	{ "id": "103", "name": "缪尔赛思", "cost": 6, "mainTrait": [], "subTraits": ["调和"] },
-	{ "id": "104", "name": "迷迭香", "cost": 6, "mainTrait": [], "subTraits": ["精准", "远见", "协防干员"] },
-	{ "id": "105", "name": "新约能天使", "cost": 6, "mainTrait": ["拉特兰"], "subTraits": [] },
-	{ "id": "106", "name": "流明", "cost": 6, "mainTrait": [], "subTraits": ["助力"] },
-	{ "id": "107", "name": "仇白", "cost": 6, "mainTrait": ["炎"], "subTraits": ["突袭"] },
-	{ "id": "108", "name": "溯光星源", "cost": 6, "mainTrait": [], "subTraits": ["灵巧", "奥术"] },
-	{ "id": "109", "name": "耀骑士临光", "cost": 6, "mainTrait": ["卡西米尔"], "subTraits": ["突袭"] },
-	{ "id": "110", "name": "荒芜拉普兰德", "cost": 6, "mainTrait": ["叙拉古"], "subTraits": [] },
-	{ "id": "111", "name": "锏", "cost": 6, "mainTrait": ["谢拉格","卡西米尔"], "subTraits": ["迅捷"] },
-	{ "id": "112", "name": "纯烬艾雅法拉", "cost": 6, "mainTrait": [], "subTraits": ["助力"] }
+  {
+    "id": "1",
+    "name": "折光",
+    "cost": 2,
+    "mainTrait": [
+      "莱塔尼亚"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<休整期结束时>使已激活的【莱塔尼亚】层数+4",
+      "elite": "<休整期结束时>使已激活的【莱塔尼亚】层数+8"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使已激活的【莱塔尼亚】层数+4",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_205_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使已激活的【莱塔尼亚】层数+8",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_205_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_499_kaitou",
+      "chessId": "chess_char_2_01_a",
+      "eliteChessId": "chess_char_2_01_b"
+    }
+  },
+  {
+    "id": "2",
+    "name": "车尔尼",
+    "cost": 3,
+    "mainTrait": [
+      "莱塔尼亚"
+    ],
+    "subTraits": [
+      "坚守"
+    ],
+    "effects": {
+      "normal": "<获得时>获得一件“莱塔尼亚小鼓”",
+      "elite": "<获得时>获得两件“莱塔尼亚小鼓”"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得一件“莱塔尼亚小鼓”",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_210_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得两件“莱塔尼亚小鼓”",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_210_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4047_pianst",
+      "chessId": "chess_char_3_01_a",
+      "eliteChessId": "chess_char_3_01_b"
+    }
+  },
+  {
+    "id": "3",
+    "name": "黑键",
+    "cost": 4,
+    "mainTrait": [
+      "莱塔尼亚"
+    ],
+    "subTraits": [
+      "精准"
+    ],
+    "effects": {
+      "normal": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】【精准】层数+1（每回合至多叠加8层）",
+      "elite": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】【精准】层数+2（每回合至多叠加16层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】【精准】层数+1（每回合至多叠加8层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_08_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】【精准】层数+2（每回合至多叠加16层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_08_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4046_ebnhlz",
+      "chessId": "chess_char_4_01_a",
+      "eliteChessId": "chess_char_4_01_b"
+    }
+  },
+  {
+    "id": "4",
+    "name": "卡涅利安",
+    "cost": 3,
+    "mainTrait": [
+      "莱塔尼亚",
+      "萨尔贡"
+    ],
+    "subTraits": [
+      "迅捷"
+    ],
+    "effects": {
+      "normal": "<获得时>获得一件“迅捷作战粮”",
+      "elite": "<获得时>获得两件“迅捷作战粮”"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得一件“迅捷作战粮”",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_07_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得两件“迅捷作战粮”",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_07_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_426_billro",
+      "chessId": "chess_char_3_02_a",
+      "eliteChessId": "chess_char_3_02_b"
+    }
+  },
+  {
+    "id": "5",
+    "name": "艾雅法拉",
+    "cost": 4,
+    "mainTrait": [
+      "莱塔尼亚"
+    ],
+    "subTraits": [
+      "奥术"
+    ],
+    "effects": {
+      "normal": "<战斗中>【莱塔尼亚】【奥术】每叠加2层，本干员技力自然回复速度+0.02/秒，攻击力+1%",
+      "elite": "<战斗中>【莱塔尼亚】【奥术】每叠加1层，本干员技力自然回复速度+0.02/秒，攻击力+1%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【莱塔尼亚】【奥术】每叠加2层，本干员技力自然回复速度+0.02/秒，攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_09_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【莱塔尼亚】【奥术】每叠加1层，本干员技力自然回复速度+0.02/秒，攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_09_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_180_amgoat",
+      "chessId": "chess_char_4_02_a",
+      "eliteChessId": "chess_char_4_02_b"
+    }
+  },
+  {
+    "id": "6",
+    "name": "纯烬艾雅法拉",
+    "cost": 5,
+    "mainTrait": [
+      "莱塔尼亚"
+    ],
+    "subTraits": [
+      "聚合",
+      "远见"
+    ],
+    "effects": {
+      "normal": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】【聚合】层数+2（每场战斗至多叠加20层）",
+      "elite": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】【聚合】层数+4（每场战斗至多叠加40层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】【聚合】层数+2（每场战斗至多叠加20层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_10_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】【聚合】层数+4（每场战斗至多叠加40层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_10_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1016_agoat2",
+      "chessId": "chess_char_5_01_a",
+      "eliteChessId": "chess_char_5_01_b"
+    }
+  },
+  {
+    "id": "7",
+    "name": "折桠",
+    "cost": 1,
+    "mainTrait": [
+      "乌萨斯"
+    ],
+    "subTraits": [
+      "不屈"
+    ],
+    "effects": {
+      "normal": "<进入休整期时>转化2层【乌萨斯】临时层数为固定层数",
+      "elite": "<进入休整期时>转化4层【乌萨斯】临时层数为固定层数"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<进入休整期时>转化2层【乌萨斯】临时层数为固定层数",
+          "eventType": "SERVER_BATTLE_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_CONVERT_TEMP_BOND",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_184_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<进入休整期时>转化4层【乌萨斯】临时层数为固定层数",
+          "eventType": "SERVER_BATTLE_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_CONVERT_TEMP_BOND",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_184_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4207_branch",
+      "chessId": "chess_char_1_01_a",
+      "eliteChessId": "chess_char_1_01_b"
+    }
+  },
+  {
+    "id": "8",
+    "name": "乌啾",
+    "cost": 3,
+    "mainTrait": [
+      "乌萨斯"
+    ],
+    "subTraits": [
+      "聚合"
+    ],
+    "effects": {
+      "normal": "<进入休整期时>场上每有一名【乌萨斯】干员，转化1层【乌萨斯】临时层数为固定层数",
+      "elite": "<进入休整期时>场上每有一名【乌萨斯】干员，转化2层【乌萨斯】临时层数为固定层数"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<进入休整期时>场上每有一名【乌萨斯】干员，转化1层【乌萨斯】临时层数为固定层数",
+          "eventType": "SERVER_BATTLE_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_CONVERT_TEMP_BOND_BY_BOND_CHAR",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_21_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<进入休整期时>场上每有一名【乌萨斯】干员，转化2层【乌萨斯】临时层数为固定层数",
+          "eventType": "SERVER_BATTLE_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_CONVERT_TEMP_BOND_BY_BOND_CHAR",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_21_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4224_turdus",
+      "chessId": "chess_char_3_03_a",
+      "eliteChessId": "chess_char_3_03_b"
+    }
+  },
+  {
+    "id": "9",
+    "name": "赫拉格",
+    "cost": 4,
+    "mainTrait": [
+      "乌萨斯"
+    ],
+    "subTraits": [
+      "突袭"
+    ],
+    "effects": {
+      "normal": "<战斗中>部署时使已激活的【乌萨斯】【突袭】层数+4（每场战斗至多叠加12层）",
+      "elite": "<战斗中>部署时使已激活的【乌萨斯】【突袭】层数+8（每场战斗至多叠加24层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>部署时使已激活的【乌萨斯】【突袭】层数+4（每场战斗至多叠加12层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_16_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>部署时使已激活的【乌萨斯】【突袭】层数+8（每场战斗至多叠加24层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_16_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_188_helage",
+      "chessId": "chess_char_4_03_a",
+      "eliteChessId": "chess_char_4_03_b"
+    }
+  },
+  {
+    "id": "10",
+    "name": "维伊",
+    "cost": 4,
+    "mainTrait": [
+      "乌萨斯"
+    ],
+    "subTraits": [
+      "奥术"
+    ],
+    "effects": {
+      "normal": "<战斗中>【乌萨斯】每叠加2层，本干员攻击速度+1",
+      "elite": "<战斗中>【乌萨斯】每叠加1层，本干员攻击速度+1"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【乌萨斯】每叠加2层，本干员攻击速度+1",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_24_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【乌萨斯】每叠加1层，本干员攻击速度+1",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_24_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4226_veen",
+      "chessId": "chess_char_4_04_a",
+      "eliteChessId": "chess_char_4_04_b"
+    }
+  },
+  {
+    "id": "11",
+    "name": "怒潮凛冬",
+    "cost": 5,
+    "mainTrait": [
+      "乌萨斯"
+    ],
+    "subTraits": [
+      "奇迹"
+    ],
+    "effects": {
+      "normal": "<战斗中>【乌萨斯】【奇迹】每叠加10层，本干员技力自然回复速度+0.1/秒，攻击力+1%",
+      "elite": "<战斗中>【乌萨斯】【奇迹】每叠加10层，本干员技力自然回复速度+0.2/秒，攻击力+2%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【乌萨斯】【奇迹】每叠加10层，本干员技力自然回复速度+0.1/秒，攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_189_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【乌萨斯】【奇迹】每叠加10层，本干员技力自然回复速度+0.2/秒，攻击力+2%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_189_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1051_headb2",
+      "chessId": "chess_char_5_02_a",
+      "eliteChessId": "chess_char_5_02_b"
+    }
+  },
+  {
+    "id": "12",
+    "name": "蓝毒",
+    "cost": 2,
+    "mainTrait": [
+      "伊比利亚"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<战斗中>【伊比利亚】每叠加2层，本干员攻击力+1%",
+      "elite": "<战斗中>【伊比利亚】每叠加1层，本干员攻击力+1%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【伊比利亚】每叠加2层，本干员攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_26_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【伊比利亚】每叠加1层，本干员攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_26_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_129_bluep",
+      "chessId": "chess_char_2_02_a",
+      "eliteChessId": "chess_char_2_02_b"
+    }
+  },
+  {
+    "id": "13",
+    "name": "海沫",
+    "cost": 3,
+    "mainTrait": [
+      "伊比利亚"
+    ],
+    "subTraits": [
+      "不屈"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>自身售出价格+1（自身售出价格至多为4）",
+      "elite": "<休整期结束时>自身售出价格+2（自身售出价格至多为8）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>自身售出价格+1（自身售出价格至多为4）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_SELF_SELL_PRICE_DELTA",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_27_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>自身售出价格+2（自身售出价格至多为8）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_SELF_SELL_PRICE_DELTA",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_27_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4066_highmo",
+      "chessId": "chess_char_3_04_a",
+      "eliteChessId": "chess_char_3_04_b"
+    }
+  },
+  {
+    "id": "14",
+    "name": "旅骨",
+    "cost": 3,
+    "mainTrait": [
+      "伊比利亚"
+    ],
+    "subTraits": [
+      "精准"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使自身及身前一格干员已激活的盟约叠加等同于其售出价格的层数",
+      "elite": "<休整期结束时>使自身及身前一格干员已激活的盟约叠加等同于其售出价格2倍的层数"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使自身及身前一格干员已激活的盟约叠加等同于其售出价格的层数",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_POSITION_COUNT_SELL_PRICE",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_28_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使自身及身前一格干员已激活的盟约叠加等同于其售出价格2倍的层数",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_POSITION_COUNT_SELL_PRICE",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_28_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4232_hbound",
+      "chessId": "chess_char_3_05_a",
+      "eliteChessId": "chess_char_3_05_b"
+    }
+  },
+  {
+    "id": "15",
+    "name": "艾丽妮",
+    "cost": 5,
+    "mainTrait": [
+      "伊比利亚"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<战斗中>周围12格每有一名敌人被击倒自身回复3点技力",
+      "elite": "<战斗中>周围12格每有一名敌人被击倒自身回复6点技力"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>周围12格每有一名敌人被击倒自身回复3点技力",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_167_a"
+          ]
+        },
+        {
+          "text": null,
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_169_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>周围12格每有一名敌人被击倒自身回复6点技力",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_167_b"
+          ]
+        },
+        {
+          "text": null,
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_169_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4009_irene",
+      "chessId": "chess_char_5_03_a",
+      "eliteChessId": "chess_char_5_03_b"
+    }
+  },
+  {
+    "id": "16",
+    "name": "温蒂",
+    "cost": 4,
+    "mainTrait": [
+      "伊比利亚"
+    ],
+    "subTraits": [
+      "坚守"
+    ],
+    "effects": {
+      "normal": "售出价格为3",
+      "elite": "售出价格为6"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "售出价格为3",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_SELF_SELL_PRICE_FIXED",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_30_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "售出价格为6",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_SELF_SELL_PRICE_FIXED",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_30_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_400_weedy",
+      "chessId": "chess_char_4_05_a",
+      "eliteChessId": "chess_char_4_05_b"
+    }
+  },
+  {
+    "id": "17",
+    "name": "流明",
+    "cost": 4,
+    "mainTrait": [
+      "伊比利亚"
+    ],
+    "subTraits": [
+      "聚合"
+    ],
+    "effects": {
+      "normal": "<战斗结束时>每有一名存活的我方干员，使已激活的【伊比利亚】【聚合】层数+1",
+      "elite": "<战斗结束时>每有一名存活的我方干员，使已激活的【伊比利亚】【聚合】层数+2"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗结束时>每有一名存活的我方干员，使已激活的【伊比利亚】【聚合】层数+1",
+          "eventType": "SERVER_BATTLE_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_ACTIVATED_BOND_BY_ALIVE_CHAR",
+          "triggers": [
+            "战斗结束时"
+          ],
+          "sourceIds": [
+            "garrison_31_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗结束时>每有一名存活的我方干员，使已激活的【伊比利亚】【聚合】层数+2",
+          "eventType": "SERVER_BATTLE_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_ACTIVATED_BOND_BY_ALIVE_CHAR",
+          "triggers": [
+            "战斗结束时"
+          ],
+          "sourceIds": [
+            "garrison_31_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4042_lumen",
+      "chessId": "chess_char_4_06_a",
+      "eliteChessId": "chess_char_4_06_b"
+    }
+  },
+  {
+    "id": "18",
+    "name": "棘刺",
+    "cost": 5,
+    "mainTrait": [
+      "伊比利亚"
+    ],
+    "subTraits": [
+      "奥术"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使已激活的【伊比利亚】叠加等同于场上所有干员售出价格的层数（每回合至多叠加12层）",
+      "elite": "<休整期结束时>使已激活的【伊比利亚】叠加等同于场上所有干员售出价格2倍的层数（每回合至多叠加24层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使已激活的【伊比利亚】叠加等同于场上所有干员售出价格的层数（每回合至多叠加12层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_BOARD_SELL_PRICE",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_32_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使已激活的【伊比利亚】叠加等同于场上所有干员售出价格2倍的层数（每回合至多叠加24层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_BOARD_SELL_PRICE",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_32_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_293_thorns",
+      "chessId": "chess_char_5_04_a",
+      "eliteChessId": "chess_char_5_04_b"
+    }
+  },
+  {
+    "id": "19",
+    "name": "引星棘刺",
+    "cost": 6,
+    "mainTrait": [
+      "伊比利亚"
+    ],
+    "subTraits": [
+      "迅捷"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使已激活的【伊比利亚】【迅捷】层数+12",
+      "elite": "<休整期结束时>使已激活的【伊比利亚】【迅捷】层数+24"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使已激活的【伊比利亚】【迅捷】层数+12",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_33_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使已激活的【伊比利亚】【迅捷】层数+24",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_33_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1039_thorn2",
+      "chessId": "chess_char_6_01_a",
+      "eliteChessId": "chess_char_6_01_b"
+    }
+  },
+  {
+    "id": "20",
+    "name": "风絮",
+    "cost": 3,
+    "mainTrait": [
+      "炎"
+    ],
+    "subTraits": [
+      "聚合"
+    ],
+    "effects": {
+      "normal": "<休整期结束时> 本回合每获得过一名干员，使已激活的【炎】【聚合】层数+2（每回合至多叠加16层）",
+      "elite": "<休整期结束时> 本回合每获得过一名干员，使已激活的【炎】【聚合】层数+4（每回合至多叠加32层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>本回合每获得过一名干员(已获得{showtag_value_1}名)，使已激活的【炎】【聚合】层数+2（每回合至多叠加16层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_36_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>本回合每获得过一名干员(已获得{showtag_value_1}名)，使已激活的【炎】【聚合】层数+4（每回合至多叠加32层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_36_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4222_taraxa",
+      "chessId": "chess_char_3_06_a",
+      "eliteChessId": "chess_char_3_06_b"
+    }
+  },
+  {
+    "id": "21",
+    "name": "余",
+    "cost": 4,
+    "mainTrait": [
+      "炎"
+    ],
+    "subTraits": [
+      "坚守"
+    ],
+    "effects": {
+      "normal": "<战斗中>周围八格每有一名敌人触发元素损伤爆发使自身已激活的盟约层数+1（每回合至多叠加8层）",
+      "elite": "<战斗中>周围八格每有一名敌人触发元素损伤爆发使自身已激活的盟约层数+2（每回合至多叠加16层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>周围八格每有一名敌人触发元素损伤爆发使自身已激活的盟约层数+1（每回合至多叠加8层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_38_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>周围八格每有一名敌人触发元素损伤爆发使自身已激活的盟约层数+2（每回合至多叠加16层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_38_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_2026_yu",
+      "chessId": "chess_char_4_07_a",
+      "eliteChessId": "chess_char_4_07_b"
+    }
+  },
+  {
+    "id": "22",
+    "name": "黍",
+    "cost": 5,
+    "mainTrait": [
+      "炎"
+    ],
+    "subTraits": [
+      "远见"
+    ],
+    "effects": {
+      "normal": "<获得时>【炎】层数+8，【远见】层数+4",
+      "elite": "<获得时>【炎】层数+16，【远见】层数+8"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【炎】层数+8，【远见】层数+4",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_202_a"
+          ]
+        },
+        {
+          "text": "<获得时>【远见】层数+4",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_216_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【炎】层数+16，【远见】层数+8",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_202_b"
+          ]
+        },
+        {
+          "text": "<获得时>【远见】层数+8",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_216_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_2025_shu",
+      "chessId": "chess_char_5_05_a",
+      "eliteChessId": "chess_char_5_05_b"
+    }
+  },
+  {
+    "id": "23",
+    "name": "烛煌",
+    "cost": 6,
+    "mainTrait": [
+      "炎",
+      "维多利亚"
+    ],
+    "subTraits": [
+      "迅捷"
+    ],
+    "effects": {
+      "normal": "<战斗中>攻击范围内每有一名敌人触发元素损伤爆发使已激活的【炎】【维多利亚】层数+1（每回合至多叠加12层）",
+      "elite": "<战斗中>攻击范围内每有一名敌人触发元素损伤爆发使已激活的【炎】【维多利亚】层数+2（每回合至多叠加24层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人触发元素损伤爆发使已激活的【炎】【维多利亚】层数+1（每回合至多叠加12层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_41_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人触发元素损伤爆发使已激活的【炎】【维多利亚】层数+2（每回合至多叠加24层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_41_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1040_blaze2",
+      "chessId": "chess_char_6_02_a",
+      "eliteChessId": "chess_char_6_02_b"
+    }
+  },
+  {
+    "id": "24",
+    "name": "艾丝黛尔",
+    "cost": 1,
+    "mainTrait": [
+      "萨尔贡"
+    ],
+    "subTraits": [
+      "独行"
+    ],
+    "effects": {
+      "normal": "<战斗中>每次开启技能时使已激活的【萨尔贡】层数+1（每回合至多叠加2层）",
+      "elite": "<战斗中>每次开启技能时使已激活的【萨尔贡】层数+2（每回合至多叠加4层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>每次开启技能时使已激活的【萨尔贡】层数+1（每回合至多叠加2层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_42_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>每次开启技能时使已激活的【萨尔贡】层数+2（每回合至多叠加4层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_42_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_127_estell",
+      "chessId": "chess_char_1_02_a",
+      "eliteChessId": "chess_char_1_02_b"
+    }
+  },
+  {
+    "id": "25",
+    "name": "泡泡",
+    "cost": 2,
+    "mainTrait": [
+      "萨尔贡"
+    ],
+    "subTraits": [
+      "坚守"
+    ],
+    "effects": {
+      "normal": "<战斗中>每次开启技能时使已激活的【萨尔贡】【坚守】层数+2（每回合至多叠加4层）",
+      "elite": "<战斗中>每次开启技能时使已激活的【萨尔贡】【坚守】层数+4（每回合至多叠加8层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>每次开启技能时使已激活的【萨尔贡】【坚守】层数+2（每回合至多叠加4层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_43_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>每次开启技能时使已激活的【萨尔贡】【坚守】层数+4（每回合至多叠加8层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_43_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_381_bubble",
+      "chessId": "chess_char_2_03_a",
+      "eliteChessId": "chess_char_2_03_b"
+    }
+  },
+  {
+    "id": "26",
+    "name": "莎草",
+    "cost": 2,
+    "mainTrait": [
+      "萨尔贡"
+    ],
+    "subTraits": [
+      "聚合"
+    ],
+    "effects": {
+      "normal": "<战斗中>每次开启技能时使身前一格干员回复2点技力",
+      "elite": "<战斗中>每次开启技能时使身前一格干员回复4点技力"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>每次开启技能时使身前一格干员回复2点技力",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_44_a"
+          ]
+        },
+        {
+          "text": "使身前一格干员回复2点技力",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_233_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>每次开启技能时使身前一格干员回复4点技力",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_44_b"
+          ]
+        },
+        {
+          "text": "使身前一格干员回复4点技力",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_233_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4139_papyrs",
+      "chessId": "chess_char_2_04_a",
+      "eliteChessId": "chess_char_2_04_b"
+    }
+  },
+  {
+    "id": "27",
+    "name": "森蚺",
+    "cost": 4,
+    "mainTrait": [
+      "萨尔贡"
+    ],
+    "subTraits": [
+      "不屈"
+    ],
+    "effects": {
+      "normal": "<战斗中>部署时使已激活的【萨尔贡】【不屈】盟约层数+4（每回合至多叠加12层）",
+      "elite": "<战斗中>部署时使已激活的【萨尔贡】【不屈】盟约层数+8（每回合至多叠加24层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>部署时使已激活的【萨尔贡】【不屈】盟约层数+4（每回合至多叠加12层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_162_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>部署时使已激活的【萨尔贡】【不屈】盟约层数+8（每回合至多叠加24层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_162_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_416_zumama",
+      "chessId": "chess_char_4_08_a",
+      "eliteChessId": "chess_char_4_08_b"
+    }
+  },
+  {
+    "id": "28",
+    "name": "佩佩",
+    "cost": 5,
+    "mainTrait": [
+      "萨尔贡"
+    ],
+    "subTraits": [
+      "灵巧"
+    ],
+    "effects": {
+      "normal": "<战斗中>周围八格每有一名敌人或干员进入沉睡或眩晕时使自身及身后一格干员已激活的盟约层数+1（每回合至多叠加9层）",
+      "elite": "<战斗中>周围八格每有一名敌人或干员进入沉睡或眩晕时使自身及身后一格干员已激活的盟约层数+2（每回合至多叠加18层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>周围八格每有一名敌人或干员进入沉睡或眩晕时使自身及身后一格干员已激活的盟约层数+1（每回合至多叠加9层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_49_a"
+          ]
+        },
+        {
+          "text": "<战斗中>周围八格每有一名敌人或干员进入沉睡或眩晕时使身后一格干员已激活的盟约层数+1（每回合至多叠加9层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_237_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>周围八格每有一名敌人或干员进入沉睡或眩晕时使自身及身后一格干员已激活的盟约层数+2（每回合至多叠加18层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_49_b",
+            "garrison_237_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4058_pepe",
+      "chessId": "chess_char_5_06_a",
+      "eliteChessId": "chess_char_5_06_b"
+    }
+  },
+  {
+    "id": "29",
+    "name": "极光",
+    "cost": 3,
+    "mainTrait": [
+      "谢拉格"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<获得时> 【谢拉格】层数+1（每次触发后升级，至多叠加12层）",
+      "elite": "<获得时> 【谢拉格】层数+1（每次触发后升级，至多叠加12层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【谢拉格】层数+{showtag_value_1}（每次触发后升级，至多叠加12层）",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND_UPGRADE_LAYER",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_50_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【谢拉格】层数+{showtag_value_1}（每次触发后升级，至多叠加12层）",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND_UPGRADE_LAYER",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_50_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_422_aurora",
+      "chessId": "chess_char_3_07_a",
+      "eliteChessId": "chess_char_3_07_b"
+    }
+  },
+  {
+    "id": "30",
+    "name": "雪猎",
+    "cost": 2,
+    "mainTrait": [
+      "谢拉格"
+    ],
+    "subTraits": [
+      "精准"
+    ],
+    "effects": {
+      "normal": "<获得时>【谢拉格】【精准】层数+4",
+      "elite": "<获得时>【谢拉格】【精准】层数+8"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【谢拉格】【精准】层数+4",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_51_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【谢拉格】【精准】层数+8",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_51_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4211_snhunt",
+      "chessId": "chess_char_2_05_a",
+      "eliteChessId": "chess_char_2_05_b"
+    }
+  },
+  {
+    "id": "31",
+    "name": "耶拉",
+    "cost": 3,
+    "mainTrait": [
+      "谢拉格"
+    ],
+    "subTraits": [
+      "奇迹"
+    ],
+    "effects": {
+      "normal": "<获得时>获得一件“谢拉格不融冰”",
+      "elite": "<获得时>获得两件“谢拉格不融冰”"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得一件“谢拉格不融冰”",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_52_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得两件“谢拉格不融冰”",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_52_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4013_kjera",
+      "chessId": "chess_char_3_08_a",
+      "eliteChessId": "chess_char_3_08_b"
+    }
+  },
+  {
+    "id": "32",
+    "name": "初雪",
+    "cost": 3,
+    "mainTrait": [
+      "谢拉格"
+    ],
+    "subTraits": [
+      "协防干员"
+    ],
+    "effects": {
+      "normal": "<战斗中>攻击范围内每有一名敌人进入冻结使已激活的【谢拉格】层数+1（每回合至多叠加16层）",
+      "elite": "<战斗中>攻击范围内每有一名敌人进入冻结使已激活的【谢拉格】层数+2（每回合至多叠加32层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人进入冻结使已激活的【谢拉格】层数+1（每回合至多叠加16层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_54_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人进入冻结使已激活的【谢拉格】层数+2（每回合至多叠加32层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_54_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_174_slbell",
+      "chessId": "chess_char_3_09_a",
+      "eliteChessId": "chess_char_3_09_b"
+    }
+  },
+  {
+    "id": "33",
+    "name": "灵知",
+    "cost": 4,
+    "mainTrait": [
+      "谢拉格"
+    ],
+    "subTraits": [
+      "迅捷"
+    ],
+    "effects": {
+      "normal": "<获得时>获得一次特殊刷新，下次刷新至少出现一名谢拉格干员",
+      "elite": "<获得时>获得一次特殊刷新，下次刷新至少出现两名谢拉格干员"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得一次特殊刷新，下次刷新至少出现一名谢拉格干员",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_SPECIAL_REFRESH_BOND_CHAR",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_55_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得一次特殊刷新，下次刷新至少出现两名谢拉格干员",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_SPECIAL_REFRESH_BOND_CHAR",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_55_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_206_gnosis",
+      "chessId": "chess_char_4_09_a",
+      "eliteChessId": "chess_char_4_09_b"
+    }
+  },
+  {
+    "id": "34",
+    "name": "圣聆初雪",
+    "cost": 5,
+    "mainTrait": [
+      "谢拉格"
+    ],
+    "subTraits": [
+      "奥术"
+    ],
+    "effects": {
+      "normal": "<战斗中>攻击范围内每有一名敌人陷入冻结自身回复1点技力，并使已激活的【谢拉格】层数+1（每回合至多叠加24层）",
+      "elite": "<战斗中>攻击范围内每有一名敌人冻结自身回复2点技力，并使已激活的【谢拉格】层数+2（每回合至多叠加48层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人陷入冻结自身回复1点技力，并使已激活的【谢拉格】层数+1（每回合至多叠加24层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_155_a"
+          ]
+        },
+        {
+          "text": "自身获得1点sp",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_154_a"
+          ]
+        },
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人进入冻结使已激活的【谢拉格】层数+1（每回合至多叠加24层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_229_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人冻结自身回复2点技力，并使已激活的【谢拉格】层数+2（每回合至多叠加48层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_155_b"
+          ]
+        },
+        {
+          "text": "自身获得2点sp",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_154_b"
+          ]
+        },
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人进入冻结使已激活的【谢拉格】层数+2（每回合至多叠加48层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_229_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1046_sbell2",
+      "chessId": "chess_char_5_07_a",
+      "eliteChessId": "chess_char_5_07_b"
+    }
+  },
+  {
+    "id": "35",
+    "name": "凛御银灰",
+    "cost": 5,
+    "mainTrait": [
+      "谢拉格"
+    ],
+    "subTraits": [
+      "灵巧",
+      "投资人"
+    ],
+    "effects": {
+      "normal": "<战斗中>身前一格【谢拉格】【灵巧】干员每场战斗的叠层上限+75%",
+      "elite": "<战斗中>身前一格【谢拉格】【灵巧】干员每场战斗的叠层上限+150%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>身前一格【谢拉格】【灵巧】干员每场战斗的叠层上限+75%",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_226_a",
+            "garrison_227_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>身前一格【谢拉格】【灵巧】干员每场战斗的叠层上限+150%",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_226_b",
+            "garrison_228_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1045_svash2",
+      "chessId": "chess_char_5_08_a",
+      "eliteChessId": "chess_char_5_08_b"
+    }
+  },
+  {
+    "id": "36",
+    "name": "幽灵鲨",
+    "cost": 1,
+    "mainTrait": [
+      "阿戈尔"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<战斗中>部署时使已激活的【阿戈尔】层数+1（每回合至多叠加1层）",
+      "elite": "<战斗中>部署时使已激活的【阿戈尔】层数+2（每回合至多叠加2层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>部署时使已激活的【阿戈尔】层数+1（每回合至多叠加1层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_57_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>部署时使已激活的【阿戈尔】层数+2（每回合至多叠加2层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_57_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_143_ghost",
+      "chessId": "chess_char_1_03_a",
+      "eliteChessId": "chess_char_1_03_b"
+    }
+  },
+  {
+    "id": "37",
+    "name": "深巡",
+    "cost": 3,
+    "mainTrait": [
+      "阿戈尔"
+    ],
+    "subTraits": [
+      "坚守"
+    ],
+    "effects": {
+      "normal": "<战斗中>部署时【阿戈尔】盟约每叠加20层，使自身及周围四格的干员攻击速度+1，持续30秒",
+      "elite": "<战斗中>部署时【阿戈尔】盟约每叠加10层，使自身及周围四格的干员攻击速度+1，持续30秒"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>部署时【阿戈尔】盟约每叠加20层，使自身及周围四格的干员攻击速度+1，持续30秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_60_a"
+          ]
+        },
+        {
+          "text": "【阿戈尔】盟约每叠加20层，使自身及周围四格的干员攻击速度+1，持续30秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_142_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>部署时【阿戈尔】盟约每叠加10层，使自身及周围四格的干员攻击速度+1，持续30秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_60_b"
+          ]
+        },
+        {
+          "text": "【阿戈尔】盟约每叠加10层，使自身及周围四格的干员攻击速度+1，持续30秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_142_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4137_udflow",
+      "chessId": "chess_char_3_10_a",
+      "eliteChessId": "chess_char_3_10_b"
+    }
+  },
+  {
+    "id": "38",
+    "name": "斯卡蒂",
+    "cost": 3,
+    "mainTrait": [
+      "阿戈尔"
+    ],
+    "subTraits": [
+      "突袭"
+    ],
+    "effects": {
+      "normal": "<战斗中>部署时使已激活的【阿戈尔】层数+4（每场战斗至多叠加8层）",
+      "elite": "<战斗中>部署时使已激活的【阿戈尔】层数+8（每场战斗至多叠加16层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>部署时使已激活的【阿戈尔】层数+4（每场战斗至多叠加8层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_225_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>部署时使已激活的【阿戈尔】层数+8（每场战斗至多叠加16层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_225_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_263_skadi",
+      "chessId": "chess_char_3_11_a",
+      "eliteChessId": "chess_char_3_11_b"
+    }
+  },
+  {
+    "id": "39",
+    "name": "歌蕾蒂娅",
+    "cost": 5,
+    "mainTrait": [
+      "阿戈尔"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<进入休整期时>若同一行有3名干员，获得1个幽灵鲨、安哲拉、深巡或斯卡蒂",
+      "elite": "<进入休整期时>获得1个幽灵鲨、安哲拉、深巡或斯卡蒂"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<进入休整期时>若同一行有3名干员，获得1个幽灵鲨、安哲拉、深巡或斯卡蒂",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "整备能力",
+          "effectType": "SERVER_POOL_CHAR",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_61_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<进入休整期时>获得1个幽灵鲨、安哲拉、深巡或斯卡蒂",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "整备能力",
+          "effectType": "SERVER_POOL_CHAR",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_61_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_474_glady",
+      "chessId": "chess_char_5_09_a",
+      "eliteChessId": "chess_char_5_09_b"
+    }
+  },
+  {
+    "id": "40",
+    "name": "归溟幽灵鲨",
+    "cost": 4,
+    "mainTrait": [
+      "阿戈尔"
+    ],
+    "subTraits": [
+      "不屈"
+    ],
+    "effects": {
+      "normal": "<战斗中>自身被击倒或与替身发生替换时使周围八格的【阿戈尔】干员回复5点技力",
+      "elite": "<战斗中>自身被击倒或与替身发生替换时使周围八格的【阿戈尔】干员回复10点技力"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>自身被击倒或与替身发生替换时使周围八格的【阿戈尔】干员回复5点技力",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_62_a"
+          ]
+        },
+        {
+          "text": "使周围八格的【阿戈尔】干员回复5点技力",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_146_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>自身被击倒或与替身发生替换时使周围八格的【阿戈尔】干员回复10点技力",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_62_b"
+          ]
+        },
+        {
+          "text": "使周围八格的【阿戈尔】干员回复10点技力",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_146_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1023_ghost2",
+      "chessId": "chess_char_4_10_a",
+      "eliteChessId": "chess_char_4_10_b"
+    }
+  },
+  {
+    "id": "41",
+    "name": "乌尔比安",
+    "cost": 5,
+    "mainTrait": [
+      "阿戈尔"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<战斗中>部署时【阿戈尔】盟约每叠加20层，使自身及周围四格的干员攻击力+1%，持续30秒",
+      "elite": "<战斗中>部署时【阿戈尔】盟约每叠加10层，使自身及周围四格的干员攻击力+1%，持续30秒"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>部署时【阿戈尔】盟约每叠加20层，使自身及周围四格的干员攻击力+1%，持续30秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_63_a"
+          ]
+        },
+        {
+          "text": "【阿戈尔】盟约每叠加20层，使自身及周围四格的干员攻击力+1%，持续30秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_144_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>部署时【阿戈尔】盟约每叠加10层，使自身及周围四格的干员攻击力+1%，持续30秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_63_b"
+          ]
+        },
+        {
+          "text": "【阿戈尔】盟约每叠加10层，使自身及周围四格的干员攻击力+1%，持续30秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_144_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4145_ulpia",
+      "chessId": "chess_char_5_10_a",
+      "eliteChessId": "chess_char_5_10_b"
+    }
+  },
+  {
+    "id": "42",
+    "name": "浊心斯卡蒂",
+    "cost": 6,
+    "mainTrait": [
+      "阿戈尔"
+    ],
+    "subTraits": [
+      "聚合"
+    ],
+    "effects": {
+      "normal": "<战斗中>攻击范围内每有一名我方干员部署使已激活的【阿戈尔】层数+2（每场战斗至多叠加20层）",
+      "elite": "<战斗中>攻击范围内每有一名我方干员部署使已激活的【阿戈尔】层数+4（每场战斗至多叠加40层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>攻击范围内每有一名我方干员部署使已激活的【阿戈尔】层数+2（每场战斗至多叠加20层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_64_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>攻击范围内每有一名我方干员部署使已激活的【阿戈尔】层数+4（每场战斗至多叠加40层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_64_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1012_skadi2",
+      "chessId": "chess_char_6_03_a",
+      "eliteChessId": "chess_char_6_03_b"
+    }
+  },
+  {
+    "id": "43",
+    "name": "克莱门莎",
+    "cost": 6,
+    "mainTrait": [
+      "阿戈尔"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<战斗开始时>【阿戈尔】盟约每叠加20层，使场上所有敌人侵蚀损伤冷却恢复速度+1%",
+      "elite": "<战斗开始时>【阿戈尔】盟约每叠加10层，使场上所有敌人侵蚀损伤冷却恢复速度+1%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗开始时>【阿戈尔】盟约每叠加20层，使场上所有敌人侵蚀损伤冷却恢复速度+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗开始时"
+          ],
+          "sourceIds": [
+            "garrison_65_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗开始时>【阿戈尔】盟约每叠加10层，使场上所有敌人侵蚀损伤冷却恢复速度+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗开始时"
+          ],
+          "sourceIds": [
+            "garrison_65_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4231_clemnt",
+      "chessId": "chess_char_6_04_a",
+      "eliteChessId": "chess_char_6_04_b"
+    }
+  },
+  {
+    "id": "44",
+    "name": "水月",
+    "cost": 4,
+    "mainTrait": [
+      "阿戈尔"
+    ],
+    "subTraits": [
+      "灵巧"
+    ],
+    "effects": {
+      "normal": "<战斗中>【阿戈尔】盟约每叠加20层，自身及周围四格干员每次造成伤害时使目标移动速度-1%，持续3秒",
+      "elite": "<战斗中>【阿戈尔】盟约每叠加10层，自身及周围四格干员每次造成伤害时使目标移动速度-1%，持续3秒"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【阿戈尔】盟约每叠加20层，自身及周围四格干员每次造成伤害时使目标移动速度-1%，持续3秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_59_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【阿戈尔】盟约每叠加10层，自身及周围四格干员每次造成伤害时使目标移动速度-1%，持续3秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_59_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_437_mizuki",
+      "chessId": "chess_char_4_11_a",
+      "eliteChessId": "chess_char_4_11_b"
+    }
+  },
+  {
+    "id": "45",
+    "name": "砾",
+    "cost": 2,
+    "mainTrait": [
+      "卡西米尔"
+    ],
+    "subTraits": [
+      "不屈"
+    ],
+    "effects": {
+      "normal": "<战斗中>部署时使已激活的【卡西米尔】【不屈】层数+2（每场战斗至多叠加12层）",
+      "elite": "<战斗中>部署时使已激活的【卡西米尔】【不屈】层数+4（每场战斗至多叠加24层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>部署时使已激活的【卡西米尔】【不屈】层数+2（每场战斗至多叠加12层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_67_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>部署时使已激活的【卡西米尔】【不屈】层数+4（每场战斗至多叠加24层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_67_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_237_gravel",
+      "chessId": "chess_char_2_06_a",
+      "eliteChessId": "chess_char_2_06_b"
+    }
+  },
+  {
+    "id": "46",
+    "name": "野鬃",
+    "cost": 1,
+    "mainTrait": [
+      "卡西米尔"
+    ],
+    "subTraits": [
+      "助力"
+    ],
+    "effects": {
+      "normal": "<战斗中>部署时使已激活的【卡西米尔】层数+1（每回合至多叠加2层）",
+      "elite": "<战斗中>部署时使已激活的【卡西米尔】层数+2（每回合至多叠加4层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>部署时使已激活的【卡西米尔】层数+1（每回合至多叠加2层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_68_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>部署时使已激活的【卡西米尔】层数+2（每回合至多叠加4层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_68_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_496_wildmn",
+      "chessId": "chess_char_1_04_a",
+      "eliteChessId": "chess_char_1_04_b"
+    }
+  },
+  {
+    "id": "47",
+    "name": "瑕光",
+    "cost": 3,
+    "mainTrait": [
+      "卡西米尔"
+    ],
+    "subTraits": [
+      "突袭"
+    ],
+    "effects": {
+      "normal": "<战斗中>部署时使自身已激活的盟约层数+3（每场战斗至多叠加9层）",
+      "elite": "<战斗中>部署时使自身已激活的盟约层数+6（每场战斗至多叠加18层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>部署时使自身已激活的盟约层数+3（每场战斗至多叠加9层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_69_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>部署时使自身已激活的盟约层数+6（每场战斗至多叠加18层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_69_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_423_blemsh",
+      "chessId": "chess_char_3_12_a",
+      "eliteChessId": "chess_char_3_12_b"
+    }
+  },
+  {
+    "id": "48",
+    "name": "远牙",
+    "cost": 4,
+    "mainTrait": [
+      "卡西米尔"
+    ],
+    "subTraits": [
+      "精准"
+    ],
+    "effects": {
+      "normal": "<战斗中>攻击范围内每有一名敌人被击倒使攻击范围内及整备区中的干员再部署时间-3秒",
+      "elite": "<战斗中>攻击范围内每有一名敌人被击倒使攻击范围内及整备区中的干员再部署时间-6秒"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使攻击范围内及整备区中的干员再部署时间-3秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_70_a"
+          ]
+        },
+        {
+          "text": "攻击范围内及整备区干员的再部署时间-3秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_150_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使攻击范围内及整备区中的干员再部署时间-6秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_70_b"
+          ]
+        },
+        {
+          "text": "攻击范围内及整备区干员的再部署时间-6秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_150_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_430_fartth",
+      "chessId": "chess_char_4_12_a",
+      "eliteChessId": "chess_char_4_12_b"
+    }
+  },
+  {
+    "id": "49",
+    "name": "玛恩纳",
+    "cost": 4,
+    "mainTrait": [
+      "卡西米尔"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<战斗中>【卡西米尔】每叠加5层，本干员部署后100秒内基础攻击力+10、基础生命上限+50",
+      "elite": "<战斗中>【卡西米尔】每叠加5层，本干员部署后100秒内基础攻击力+20、基础生命上限+100"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【卡西米尔】每叠加5层，本干员部署后100秒内基础攻击力+10、基础生命上限+50",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_71_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【卡西米尔】每叠加5层，本干员部署后100秒内基础攻击力+20、基础生命上限+100",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_71_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4064_mlynar",
+      "chessId": "chess_char_4_13_a",
+      "eliteChessId": "chess_char_4_13_b"
+    }
+  },
+  {
+    "id": "50",
+    "name": "耀骑士临光",
+    "cost": 6,
+    "mainTrait": [
+      "卡西米尔"
+    ],
+    "subTraits": [
+      "突袭"
+    ],
+    "effects": {
+      "normal": "<战斗中>被击倒时召唤整备区最右侧的【卡西米尔】【突袭】干员上场，并使自身及被召唤干员已激活的盟约层数+6（每名干员每回合至多叠加12层）",
+      "elite": "<战斗中>被击倒时召唤整备区最右侧的【卡西米尔】【突袭】干员上场，并使自身及被召唤干员已激活的盟约层数+12（每名干员每回合至多叠加24层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>被击倒时召唤整备区最右侧的【卡西米尔】【突袭】干员上场，并使自身及被召唤干员已激活的盟约层数+6（每名干员每回合至多叠加12层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_58_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>被击倒时召唤整备区最右侧的【卡西米尔】【突袭】干员上场，并使自身及被召唤干员已激活的盟约层数+12（每名干员每回合至多叠加24层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_58_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1014_nearl2",
+      "chessId": "chess_char_6_05_a",
+      "eliteChessId": "chess_char_6_05_b"
+    }
+  },
+  {
+    "id": "51",
+    "name": "薇薇安娜",
+    "cost": 5,
+    "mainTrait": [
+      "莱塔尼亚",
+      "卡西米尔"
+    ],
+    "subTraits": [
+      "奥术"
+    ],
+    "effects": {
+      "normal": "<战斗中>场上其他与自身拥有相同盟约的干员在本回合战斗期的叠层上限+7",
+      "elite": "<战斗中>场上其他与自身拥有相同盟约的干员在本回合战斗期的叠层上限+14"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>场上其他与自身拥有相同盟约的干员在本回合战斗期的叠层上限+7",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_152_a",
+            "garrison_156_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>场上其他与自身拥有相同盟约的干员在本回合战斗期的叠层上限+14",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_152_b",
+            "garrison_156_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4098_vvana",
+      "chessId": "chess_char_5_11_a",
+      "eliteChessId": "chess_char_5_11_b"
+    }
+  },
+  {
+    "id": "52",
+    "name": "复奏",
+    "cost": 2,
+    "mainTrait": [
+      "莱塔尼亚",
+      "叙拉古"
+    ],
+    "subTraits": [
+      "奇迹"
+    ],
+    "effects": {
+      "normal": "<刷新时>若为本回合首次主动刷新，使已激活的【莱塔尼亚】【叙拉古】层数+2（此干员在整备区也生效）",
+      "elite": "<刷新时>若为本回合首次主动刷新，使已激活的【叙拉古】【莱塔尼亚】层数+4（此干员在整备区也生效）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<刷新时>若为本回合首次主动刷新，使已激活的【莱塔尼亚】【叙拉古】层数+2（此干员在整备区也生效）",
+          "eventType": "SERVER_REFRESH_SHOP",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_GAIN_BOND_LAYER_BY_REFRESH_CNT",
+          "triggers": [
+            "刷新时"
+          ],
+          "sourceIds": [
+            "garrison_05_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<刷新时>若为本回合首次主动刷新，使已激活的【叙拉古】【莱塔尼亚】层数+4（此干员在整备区也生效）",
+          "eventType": "SERVER_REFRESH_SHOP",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_GAIN_BOND_LAYER_BY_REFRESH_CNT",
+          "triggers": [
+            "刷新时"
+          ],
+          "sourceIds": [
+            "garrison_05_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4031_liesel",
+      "chessId": "chess_char_2_07_a",
+      "eliteChessId": "chess_char_2_07_b"
+    }
+  },
+  {
+    "id": "53",
+    "name": "奥斯塔",
+    "cost": 2,
+    "mainTrait": [
+      "叙拉古"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<获得时>获得一次免费刷新",
+      "elite": "<获得时>获得两次免费刷新"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得一次免费刷新",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_FREE_REFRESH_COUNT",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_73_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得两次免费刷新",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_FREE_REFRESH_COUNT",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_73_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_346_aosta",
+      "chessId": "chess_char_2_08_a",
+      "eliteChessId": "chess_char_2_08_b"
+    }
+  },
+  {
+    "id": "54",
+    "name": "忍冬",
+    "cost": 3,
+    "mainTrait": [
+      "叙拉古"
+    ],
+    "subTraits": [
+      "迅捷"
+    ],
+    "effects": {
+      "normal": "<获得时> 获得1次免费刷新（触发2次后升级，至多获得3次免费刷新）",
+      "elite": "<获得时> 获得1次免费刷新（触发2次后升级，至多获得3次免费刷新）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得{showtag_value_1}次免费刷新（触发2次后升级，至多获得3次免费刷新）",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_FREE_REFRESH_UPGRADE_COUNT",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_74_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得{showtag_value_1}次免费刷新（触发2次后升级，至多获得3次免费刷新）",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_FREE_REFRESH_UPGRADE_COUNT",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_74_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4026_vulpis",
+      "chessId": "chess_char_3_13_a",
+      "eliteChessId": "chess_char_3_13_b"
+    }
+  },
+  {
+    "id": "55",
+    "name": "伺夜",
+    "cost": 3,
+    "mainTrait": [
+      "叙拉古"
+    ],
+    "subTraits": [
+      "精准"
+    ],
+    "effects": {
+      "normal": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）；\n每击倒一名敌人使已激活的【叙拉古】【精准】层数+2（每回合至多叠加8层）",
+      "elite": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）；\n每击倒一名敌人使已激活的【叙拉古】【精准】层数+4（每回合至多叠加16层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）；\n每击倒一名敌人使已激活的【叙拉古】【精准】层数+2（每回合至多叠加8层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_75_a"
+          ]
+        },
+        {
+          "text": "<战斗中>每击倒一名敌人使已激活的【叙拉古】【精准】层数+2（每回合至多叠加8层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_76_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）；\n每击倒一名敌人使已激活的【叙拉古】【精准】层数+4（每回合至多叠加16层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_75_b"
+          ]
+        },
+        {
+          "text": "<战斗中>每击倒一名敌人使已激活的【叙拉古】【精准】层数+4（每回合至多叠加16层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_76_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_427_vigil",
+      "chessId": "chess_char_3_14_a",
+      "eliteChessId": "chess_char_3_14_b"
+    }
+  },
+  {
+    "id": "56",
+    "name": "铃兰",
+    "cost": 5,
+    "mainTrait": [
+      "叙拉古"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<进入休整期时>触发身前一格的其他干员的“获得时”类效果",
+      "elite": "<进入休整期时>触发身前两格的其他干员的“获得时”类效果"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<进入休整期时>触发身前一格的其他干员的“获得时”类效果",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "特异化",
+          "effectType": "SERVER_TRIGGER_ANOTHER",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_77_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<进入休整期时>触发身前两格的其他干员的“获得时”类效果",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "特异化",
+          "effectType": "SERVER_TRIGGER_FRONT_COUNT",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_77_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_358_lisa",
+      "chessId": "chess_char_5_12_a",
+      "eliteChessId": "chess_char_5_12_b"
+    }
+  },
+  {
+    "id": "57",
+    "name": "贝洛内",
+    "cost": 5,
+    "mainTrait": [
+      "叙拉古"
+    ],
+    "subTraits": [
+      "突袭"
+    ],
+    "effects": {
+      "normal": "<战斗中>【叙拉古】【突袭】每叠加3层，本干员攻击力+1%",
+      "elite": "<战斗中>【叙拉古】【突袭】每叠加3层，本干员攻击力+2%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【叙拉古】【突袭】每叠加3层，本干员攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_78_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【叙拉古】【突袭】每叠加3层，本干员攻击力+2%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_78_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4037_demetr",
+      "chessId": "chess_char_5_13_a",
+      "eliteChessId": "chess_char_5_13_b"
+    }
+  },
+  {
+    "id": "58",
+    "name": "荒芜拉普兰德",
+    "cost": 6,
+    "mainTrait": [
+      "叙拉古"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<战斗中>每击倒一名敌人使已激活的【叙拉古】层数+2（每场战斗至多叠加20层）\n（晋升为精锐状态时，使所有【叙拉古】干员获得此效果）",
+      "elite": "<战斗中>所有【叙拉古】干员每击倒一名敌人使已激活的【叙拉古】层数+4（每场战斗至多叠加40层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>每击倒一名敌人使已激活的【叙拉古】层数+2（每场战斗至多叠加20层）\n（晋升为精锐状态时，使所有【叙拉古】干员获得此效果）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_79_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>所有【叙拉古】干员每击倒一名敌人使已激活的【叙拉古】层数+4（每场战斗至多叠加40层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_79_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1038_whitw2",
+      "chessId": "chess_char_6_06_a",
+      "eliteChessId": "chess_char_6_06_b"
+    }
+  },
+  {
+    "id": "59",
+    "name": "慕斯",
+    "cost": 1,
+    "mainTrait": [
+      "维多利亚"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<休整期结束时>使已激活的【维多利亚】层数+1",
+      "elite": "<休整期结束时>使已激活的【维多利亚】层数+2"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使已激活的【维多利亚】层数+1",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_80_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使已激活的【维多利亚】层数+2",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_80_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_185_frncat",
+      "chessId": "chess_char_1_05_a",
+      "eliteChessId": "chess_char_1_05_b"
+    }
+  },
+  {
+    "id": "60",
+    "name": "水灯心",
+    "cost": 3,
+    "mainTrait": [
+      "维多利亚"
+    ],
+    "subTraits": [
+      "独行",
+      "灵巧"
+    ],
+    "effects": {
+      "normal": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）",
+      "elite": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_176_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_176_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4177_brigid",
+      "chessId": "chess_char_3_15_a",
+      "eliteChessId": "chess_char_3_15_b"
+    }
+  },
+  {
+    "id": "61",
+    "name": "Miss.Christine",
+    "cost": 2,
+    "mainTrait": [
+      "维多利亚"
+    ],
+    "subTraits": [
+      "奥术"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使已激活的【维多利亚】【奥术】层数+3",
+      "elite": "<休整期结束时>使已激活的【维多利亚】【奥术】层数+6"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使已激活的【维多利亚】【奥术】层数+3",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_82_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使已激活的【维多利亚】【奥术】层数+6",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_82_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4198_christ",
+      "chessId": "chess_char_2_09_a",
+      "eliteChessId": "chess_char_2_09_b"
+    }
+  },
+  {
+    "id": "62",
+    "name": "涤火杰西卡",
+    "cost": 4,
+    "mainTrait": [
+      "维多利亚"
+    ],
+    "subTraits": [
+      "坚守"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>场上每有一名携带装备的干员，使已激活的【维多利亚】【坚守】层数+2",
+      "elite": "<休整期结束时>场上每有一名携带装备的干员，使已激活的【维多利亚】【坚守】层数+4"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>场上每有一名携带装备的干员，使已激活的【维多利亚】【坚守】层数+2",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_BOARD_EQUIP_CHAR",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_83_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>场上每有一名携带装备的干员，使已激活的【维多利亚】【坚守】层数+4",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_BOARD_EQUIP_CHAR",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_83_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1034_jesca2",
+      "chessId": "chess_char_4_14_a",
+      "eliteChessId": "chess_char_4_14_b"
+    }
+  },
+  {
+    "id": "63",
+    "name": "白铁",
+    "cost": 4,
+    "mainTrait": [
+      "维多利亚"
+    ],
+    "subTraits": [
+      "助力"
+    ],
+    "effects": {
+      "normal": "<进入休整期时>使自身携带的装备变为精锐版本",
+      "elite": "<进入休整期时>使自身携带的装备变为精锐版本"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<进入休整期时>使自身携带的装备变为精锐版本",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "整备能力",
+          "effectType": "SERVER_UPGRADE_SELF_EQUIP",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_84_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<进入休整期时>使自身携带的装备变为精锐版本",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "整备能力",
+          "effectType": "SERVER_UPGRADE_SELF_EQUIP",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_84_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4072_ironmn",
+      "chessId": "chess_char_4_15_a",
+      "eliteChessId": "chess_char_4_15_b"
+    }
+  },
+  {
+    "id": "64",
+    "name": "酒神",
+    "cost": 6,
+    "mainTrait": [
+      "维多利亚"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<进入休整期时>获得一件随机装备（不高于当前调度中心等级）",
+      "elite": "<进入休整期时>获得两件随机装备（不高于当前调度中心等级）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<进入休整期时>获得一件随机装备（不高于当前调度中心等级）",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_RANDOM_EQUIP",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_158_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<进入休整期时>获得两件随机装备（不高于当前调度中心等级）",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_RANDOM_EQUIP",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_158_b",
+            "garrison_159_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1042_phatm2",
+      "chessId": "chess_char_6_07_a",
+      "eliteChessId": "chess_char_6_07_b"
+    }
+  },
+  {
+    "id": "65",
+    "name": "维娜·维多利亚",
+    "cost": 5,
+    "mainTrait": [
+      "维多利亚"
+    ],
+    "subTraits": [
+      "奇迹"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>场上每有一名不同阶的【维多利亚】干员，使已激活的【维多利亚】【奇迹】层数+2",
+      "elite": "<休整期结束时>场上每有一名不同阶的【维多利亚】干员，使已激活的【维多利亚】【奇迹】层数+4"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>场上每有一名不同阶的【维多利亚】干员，使已激活的【维多利亚】【奇迹】层数+2",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_86_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>场上每有一名不同阶的【维多利亚】干员，使已激活的【维多利亚】【奇迹】层数+4",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_86_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1019_siege2",
+      "chessId": "chess_char_5_14_a",
+      "eliteChessId": "chess_char_5_14_b"
+    }
+  },
+  {
+    "id": "66",
+    "name": "角峰",
+    "cost": 1,
+    "mainTrait": [
+      "谢拉格"
+    ],
+    "subTraits": [
+      "坚守"
+    ],
+    "effects": {
+      "normal": "<战斗中>对每名敌人首次造成伤害时使目标陷入2秒寒冷",
+      "elite": "<战斗中>对每名敌人首次造成伤害时使目标陷入4秒寒冷"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>对每名敌人首次造成伤害时使目标陷入2秒寒冷",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_88_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>对每名敌人首次造成伤害时使目标陷入4秒寒冷",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_88_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_199_yak",
+      "chessId": "chess_char_1_06_a",
+      "eliteChessId": "chess_char_1_06_b"
+    }
+  },
+  {
+    "id": "67",
+    "name": "哈洛德",
+    "cost": 2,
+    "mainTrait": [
+      "维多利亚",
+      "谢拉格"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<战斗中>【维多利亚】【谢拉格】每叠加5层，本干员攻击力+1%",
+      "elite": "<战斗中>【维多利亚】【谢拉格】每叠加5层，本干员攻击力+2%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【维多利亚】【谢拉格】每叠加5层，本干员攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_89_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【维多利亚】【谢拉格】每叠加5层，本干员攻击力+2%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_89_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4114_harold",
+      "chessId": "chess_char_2_10_a",
+      "eliteChessId": "chess_char_2_10_b"
+    }
+  },
+  {
+    "id": "68",
+    "name": "斥罪",
+    "cost": 4,
+    "mainTrait": [
+      "叙拉古"
+    ],
+    "subTraits": [
+      "不屈"
+    ],
+    "effects": {
+      "normal": "<战斗中>【叙拉古】【不屈】每叠加3层，本干员攻击力+1%",
+      "elite": "<战斗中>【叙拉古】【不屈】每叠加3层，本干员攻击力+2%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【叙拉古】【不屈】每叠加3层，本干员攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_90_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【叙拉古】【不屈】每叠加3层，本干员攻击力+2%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_90_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4065_judge",
+      "chessId": "chess_char_4_16_a",
+      "eliteChessId": "chess_char_4_16_b"
+    }
+  },
+  {
+    "id": "69",
+    "name": "逻各斯",
+    "cost": 6,
+    "mainTrait": [],
+    "subTraits": [
+      "奥术",
+      "远见"
+    ],
+    "effects": {
+      "normal": "<获得时>【奥术】层数+10，【远见】层数+5\n<战斗中>【奥术】【远见】每叠加3层，本干员攻击速度+1",
+      "elite": "<获得时>【奥术】层数+20，【远见】层数+10\n<战斗中>【奥术】【远见】每叠加3层，本干员攻击速度+2"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【奥术】层数+10，【远见】层数+5\n<战斗中>【奥术】【远见】每叠加3层，本干员攻击速度+1",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "获得时",
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_92_a"
+          ]
+        },
+        {
+          "text": "<获得时>【远见】层数+5",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_213_a"
+          ]
+        },
+        {
+          "text": "<获得时>【奥术】层数+10",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_217_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【奥术】层数+20，【远见】层数+10\n<战斗中>【奥术】【远见】每叠加3层，本干员攻击速度+2",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "获得时",
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_92_b"
+          ]
+        },
+        {
+          "text": "<获得时>【远见】层数+10",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_213_b"
+          ]
+        },
+        {
+          "text": "<获得时>【奥术】层数+20",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_217_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4133_logos",
+      "chessId": "chess_char_6_08_a",
+      "eliteChessId": "chess_char_6_08_b"
+    }
+  },
+  {
+    "id": "70",
+    "name": "空弦",
+    "cost": 3,
+    "mainTrait": [],
+    "subTraits": [
+      "精准",
+      "远见"
+    ],
+    "effects": {
+      "normal": "<进入休整期时>使自身及身前一格干员已激活的盟约层数+3",
+      "elite": "<进入休整期时>使自身及身前一格干员已激活的盟约层数+6"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<进入休整期时>使自身及身前一格干员已激活的盟约层数+3",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_POSITION",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_93_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<进入休整期时>使自身及身前一格干员已激活的盟约层数+6",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_POSITION",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_93_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_332_archet",
+      "chessId": "chess_char_3_16_a",
+      "eliteChessId": "chess_char_3_16_b"
+    }
+  },
+  {
+    "id": "71",
+    "name": "迷迭香",
+    "cost": 5,
+    "mainTrait": [],
+    "subTraits": [
+      "精准",
+      "助力"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使已激活的【精准】【助力】层数+10",
+      "elite": "<休整期结束时>使已激活的【精准】【助力】层数+20"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使已激活的【精准】【助力】层数+10",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_94_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使已激活的【精准】【助力】层数+20",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_94_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_391_rosmon",
+      "chessId": "chess_char_5_15_a",
+      "eliteChessId": "chess_char_5_15_b"
+    }
+  },
+  {
+    "id": "72",
+    "name": "真言",
+    "cost": 6,
+    "mainTrait": [
+      "萨尔贡"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<战斗中>【萨尔贡】每叠加5层，本干员攻击力+1%",
+      "elite": "<战斗中>【萨尔贡】每叠加5层，本干员攻击力+2%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【萨尔贡】每叠加5层，本干员攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_48_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【萨尔贡】每叠加5层，本干员攻击力+2%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_48_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4204_mantra",
+      "chessId": "chess_char_6_09_a",
+      "eliteChessId": "chess_char_6_09_b"
+    }
+  },
+  {
+    "id": "73",
+    "name": "灰喉",
+    "cost": 1,
+    "mainTrait": [],
+    "subTraits": [
+      "精准"
+    ],
+    "effects": {
+      "normal": "<获得时>【精准】层数+2",
+      "elite": "<获得时>【精准】层数+4"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【精准】层数+2",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_206_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【精准】层数+4",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_206_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_367_swllow",
+      "chessId": "chess_char_1_07_a",
+      "eliteChessId": "chess_char_1_07_b"
+    }
+  },
+  {
+    "id": "74",
+    "name": "吉星",
+    "cost": 3,
+    "mainTrait": [],
+    "subTraits": [
+      "奇迹"
+    ],
+    "effects": {
+      "normal": "<售出时>进行一次I阶干员的免费特殊招募\n本干员合成为精锐状态后，上述特殊招募变为V阶干员",
+      "elite": "<售出时>进行一次V阶干员的免费特殊招募"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<售出时>进行一次I阶干员的免费特殊招募\n本干员合成为精锐状态后，上述特殊招募变为V阶干员",
+          "eventType": "SERVER_CHESS_SOLD",
+          "traitType": "整备能力",
+          "effectType": "SERVER_SELL_CHESS_GAIN_SPECIAL_GOODS",
+          "triggers": [
+            "售出时"
+          ],
+          "sourceIds": [
+            "garrison_98_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<售出时>进行一次V阶干员的免费特殊招募",
+          "eventType": "SERVER_CHESS_SOLD",
+          "traitType": "整备能力",
+          "effectType": "SERVER_SELL_CHESS_GAIN_SPECIAL_GOODS",
+          "triggers": [
+            "售出时"
+          ],
+          "sourceIds": [
+            "garrison_98_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4203_kichi",
+      "chessId": "chess_char_3_17_a",
+      "eliteChessId": "chess_char_3_17_b"
+    }
+  },
+  {
+    "id": "75",
+    "name": "妮芙",
+    "cost": 6,
+    "mainTrait": [],
+    "subTraits": [
+      "迅捷",
+      "远见"
+    ],
+    "effects": {
+      "normal": "<战斗中>攻击范围内每有一名敌人陷入恐惧使已激活的【迅捷】层数+4（每回合至多叠加20层）",
+      "elite": "<战斗中>攻击范围内每有一名敌人陷入恐惧使已激活的【迅捷】层数+8（每回合至多叠加40层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人陷入恐惧使已激活的【迅捷】层数+4（每回合至多叠加20层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_99_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人陷入恐惧使已激活的【迅捷】层数+8（每回合至多叠加40层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_99_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4146_nymph",
+      "chessId": "chess_char_6_10_a",
+      "eliteChessId": "chess_char_6_10_b"
+    }
+  },
+  {
+    "id": "76",
+    "name": "W",
+    "cost": 4,
+    "mainTrait": [],
+    "subTraits": [
+      "迅捷"
+    ],
+    "effects": {
+      "normal": "<战斗中>【迅捷】每叠加3层，本干员攻击力+1%",
+      "elite": "<战斗中>【迅捷】每叠加3层，本干员攻击力+2%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【迅捷】每叠加3层，本干员攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_231_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【迅捷】每叠加3层，本干员攻击力+2%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_231_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_113_cqbw",
+      "chessId": "chess_char_4_17_a",
+      "eliteChessId": "chess_char_4_17_b"
+    }
+  },
+  {
+    "id": "77",
+    "name": "霍尔海雅",
+    "cost": 4,
+    "mainTrait": [],
+    "subTraits": [
+      "奥术",
+      "精准"
+    ],
+    "effects": {
+      "normal": "<战斗中>每次开启技能时使自身已激活的盟约层数+4（每场战斗至多叠加12层）",
+      "elite": "<战斗中>每次开启技能时使自身已激活的盟约层数+8（每场战斗至多叠加24层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>每次开启技能时使自身已激活的盟约层数+4（每场战斗至多叠加12层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_101_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>每次开启技能时使自身已激活的盟约层数+8（每场战斗至多叠加24层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_101_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4027_heyak",
+      "chessId": "chess_char_4_18_a",
+      "eliteChessId": "chess_char_4_18_b"
+    }
+  },
+  {
+    "id": "78",
+    "name": "云迹",
+    "cost": 2,
+    "mainTrait": [],
+    "subTraits": [
+      "灵巧",
+      "奇迹"
+    ],
+    "effects": {
+      "normal": "<战斗中>每次开启技能时使自身已激活的盟约层数+3（每回合至多叠加6层）",
+      "elite": "<战斗中>每次开启技能时使自身已激活的盟约层数+6（每回合至多叠加12层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>每次开启技能时使自身已激活的盟约层数+3（每回合至多叠加6层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_104_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>每次开启技能时使自身已激活的盟约层数+6（每回合至多叠加12层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_104_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4165_ctrail",
+      "chessId": "chess_char_2_11_a",
+      "eliteChessId": "chess_char_2_11_b"
+    }
+  },
+  {
+    "id": "79",
+    "name": "隐德来希",
+    "cost": 5,
+    "mainTrait": [],
+    "subTraits": [
+      "灵巧",
+      "不屈"
+    ],
+    "effects": {
+      "normal": "<战斗中>【灵巧】【不屈】每叠加3层，本干员攻击力+1%",
+      "elite": "<战斗中>【灵巧】【不屈】每叠加3层，本干员攻击力+2%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【灵巧】【不屈】每叠加3层，本干员攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_105_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【灵巧】【不屈】每叠加3层，本干员攻击力+2%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_105_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4010_etlchi",
+      "chessId": "chess_char_5_16_a",
+      "eliteChessId": "chess_char_5_16_b"
+    }
+  },
+  {
+    "id": "80",
+    "name": "伊桑",
+    "cost": 3,
+    "mainTrait": [],
+    "subTraits": [
+      "奥术",
+      "突袭"
+    ],
+    "effects": {
+      "normal": "<售出时>随机获得一名当前人数最多盟约的干员（不高于当前调度中心等级；无法获得自身）",
+      "elite": "<售出时>随机获得一名当前人数最多盟约的干员（不高于当前调度中心等级；无法获得自身）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<售出时>随机获得一名当前人数最多盟约的干员（不高于当前调度中心等级；无法获得自身）",
+          "eventType": "SERVER_CHESS_SOLD",
+          "traitType": "整备能力",
+          "effectType": "SERVER_MOST_BOND",
+          "triggers": [
+            "售出时"
+          ],
+          "sourceIds": [
+            "garrison_200_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<售出时>随机获得一名当前人数最多盟约的干员（不高于当前调度中心等级；无法获得自身）",
+          "eventType": "SERVER_CHESS_SOLD",
+          "traitType": "整备能力",
+          "effectType": "SERVER_MOST_BOND",
+          "triggers": [
+            "售出时"
+          ],
+          "sourceIds": [
+            "garrison_200_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_355_ethan",
+      "chessId": "chess_char_3_18_a",
+      "eliteChessId": "chess_char_3_18_b"
+    }
+  },
+  {
+    "id": "81",
+    "name": "深靛",
+    "cost": 1,
+    "mainTrait": [
+      "伊比利亚"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<休整期结束时>使已激活的【伊比利亚】层数+2",
+      "elite": "<休整期结束时>使已激活的【伊比利亚】层数+4"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使已激活的【伊比利亚】层数+2",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_107_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使已激活的【伊比利亚】层数+4",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_107_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_469_indigo",
+      "chessId": "chess_char_1_08_a",
+      "eliteChessId": "chess_char_1_08_b"
+    }
+  },
+  {
+    "id": "82",
+    "name": "卡达",
+    "cost": 1,
+    "mainTrait": [],
+    "subTraits": [
+      "奥术"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使已激活的【奥术】层数+1",
+      "elite": "<休整期结束时>使已激活的【奥术】层数+2"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使已激活的【奥术】层数+1",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_108_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使已激活的【奥术】层数+2",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_108_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_328_cammou",
+      "chessId": "chess_char_1_09_a",
+      "eliteChessId": "chess_char_1_09_b"
+    }
+  },
+  {
+    "id": "83",
+    "name": "蛇屠箱",
+    "cost": 2,
+    "mainTrait": [],
+    "subTraits": [
+      "坚守"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使已激活的【坚守】层数+4",
+      "elite": "<休整期结束时>使已激活的【坚守】层数+8"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使已激活的【坚守】层数+4",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_201_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使已激活的【坚守】层数+8",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_201_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_150_snakek",
+      "chessId": "chess_char_2_12_a",
+      "eliteChessId": "chess_char_2_12_b"
+    }
+  },
+  {
+    "id": "84",
+    "name": "罗比菈塔",
+    "cost": 3,
+    "mainTrait": [],
+    "subTraits": [
+      "坚守",
+      "助力"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>同一行每有1名干员，使已激活的【坚守】【助力】层数+2",
+      "elite": "<休整期结束时>同一行每有1名干员，使已激活的【坚守】【助力】层数+4"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>同一行每有1名干员，使已激活的【坚守】【助力】层数+2",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_110_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>同一行每有1名干员，使已激活的【坚守】【助力】层数+4",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_110_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_484_robrta",
+      "chessId": "chess_char_3_19_a",
+      "eliteChessId": "chess_char_3_19_b"
+    }
+  },
+  {
+    "id": "85",
+    "name": "摆渡人",
+    "cost": 1,
+    "mainTrait": [],
+    "subTraits": [
+      "坚守",
+      "不屈"
+    ],
+    "effects": {
+      "normal": "<获得时>【坚守】【不屈】层数+1",
+      "elite": "<获得时>【坚守】【不屈】层数+2"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【坚守】【不屈】层数+1",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_111_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【坚守】【不屈】层数+2",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_111_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4166_varkis",
+      "chessId": "chess_char_1_10_a",
+      "eliteChessId": "chess_char_1_10_b"
+    }
+  },
+  {
+    "id": "86",
+    "name": "塞雷娅",
+    "cost": 5,
+    "mainTrait": [],
+    "subTraits": [
+      "坚守",
+      "协防干员"
+    ],
+    "effects": {
+      "normal": "身前一格干员若为“休整期结束时”特质，本干员的特质与其相同",
+      "elite": "身前一格干员若为“休整期结束时”特质，本干员的特质与其相同"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "身前一格干员若为“休整期结束时”特质，本干员的特质与其相同",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "特异化",
+          "effectType": "SERVER_FRONT_SAME_EFFECT_PREP_FIN",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_112_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "身前一格干员若为“休整期结束时”特质，本干员的特质与其相同",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "特异化",
+          "effectType": "SERVER_FRONT_SAME_EFFECT_PREP_FIN",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_112_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_202_demkni",
+      "chessId": "chess_char_5_17_a",
+      "eliteChessId": "chess_char_5_17_b"
+    }
+  },
+  {
+    "id": "87",
+    "name": "遥",
+    "cost": 6,
+    "mainTrait": [],
+    "subTraits": [
+      "聚合",
+      "奇迹"
+    ],
+    "effects": {
+      "normal": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【聚合】【奇迹】层数+1（每回合至多叠加12层）",
+      "elite": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【聚合】【奇迹】层数+2（每回合至多叠加24层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【聚合】【奇迹】层数+1（每回合至多叠加12层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_113_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【聚合】【奇迹】层数+2（每回合至多叠加24层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_113_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4202_haruka",
+      "chessId": "chess_char_6_11_a",
+      "eliteChessId": "chess_char_6_11_b"
+    }
+  },
+  {
+    "id": "88",
+    "name": "魔王",
+    "cost": 6,
+    "mainTrait": [],
+    "subTraits": [
+      "调和"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使已激活的核心盟约层数+10",
+      "elite": "<休整期结束时>使已激活的核心盟约层数+20"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使已激活的核心盟约层数+10",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_230_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使已激活的核心盟约层数+20",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_230_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4134_cetsyr",
+      "chessId": "chess_char_6_12_a",
+      "eliteChessId": "chess_char_6_12_b"
+    }
+  },
+  {
+    "id": "89",
+    "name": "波登可",
+    "cost": 2,
+    "mainTrait": [],
+    "subTraits": [
+      "聚合",
+      "迅捷"
+    ],
+    "effects": {
+      "normal": "<售出时>下回合额外获得1资金",
+      "elite": "<售出时>下回合额外获得2资金"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<售出时>下回合额外获得1资金",
+          "eventType": "SERVER_CHESS_SOLD",
+          "traitType": "整备能力",
+          "effectType": "SERVER_ONCE_GOLD",
+          "triggers": [
+            "售出时"
+          ],
+          "sourceIds": [
+            "garrison_116_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<售出时>下回合额外获得2资金",
+          "eventType": "SERVER_CHESS_SOLD",
+          "traitType": "整备能力",
+          "effectType": "SERVER_ONCE_GOLD",
+          "triggers": [
+            "售出时"
+          ],
+          "sourceIds": [
+            "garrison_116_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_258_podego",
+      "chessId": "chess_char_2_13_a",
+      "eliteChessId": "chess_char_2_13_b"
+    }
+  },
+  {
+    "id": "90",
+    "name": "史尔特尔",
+    "cost": 6,
+    "mainTrait": [],
+    "subTraits": [
+      "突袭",
+      "不屈"
+    ],
+    "effects": {
+      "normal": "<战斗中>每击倒一名敌人使已激活的【突袭】【不屈】层数+4（每回合至多叠加16层）",
+      "elite": "<战斗中>每击倒一名敌人使已激活的【突袭】【不屈】层数+8（每回合至多叠加32层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>每击倒一名敌人使已激活的【突袭】【不屈】层数+4（每回合至多叠加16层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_117_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>每击倒一名敌人使已激活的【突袭】【不屈】层数+8（每回合至多叠加32层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_117_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_350_surtr",
+      "chessId": "chess_char_6_13_a",
+      "eliteChessId": "chess_char_6_13_b"
+    }
+  },
+  {
+    "id": "91",
+    "name": "承曦格雷伊",
+    "cost": 2,
+    "mainTrait": [],
+    "subTraits": [
+      "精准",
+      "灵巧"
+    ],
+    "effects": {
+      "normal": "<获得时>获得一件精准狙击镜",
+      "elite": "<获得时>获得两件精准狙击镜"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得一件精准狙击镜",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_119_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得两件精准狙击镜",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_119_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1027_greyy2",
+      "chessId": "chess_char_2_14_a",
+      "eliteChessId": "chess_char_2_14_b"
+    }
+  },
+  {
+    "id": "92",
+    "name": "锡人",
+    "cost": 2,
+    "mainTrait": [],
+    "subTraits": [
+      "投资人"
+    ],
+    "effects": {
+      "normal": "<获得时>【投资人】层数+4",
+      "elite": "<获得时>【投资人】层数+8"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【投资人】层数+4",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_120_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【投资人】层数+8",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_120_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4151_tinman",
+      "chessId": "chess_char_2_15_a",
+      "eliteChessId": "chess_char_2_15_b"
+    }
+  },
+  {
+    "id": "93",
+    "name": "溯光星源",
+    "cost": 5,
+    "mainTrait": [],
+    "subTraits": [
+      "奥术"
+    ],
+    "effects": {
+      "normal": "<休整期结束时> 本回合每消耗3资金，使已激活的【奥术】层数+2（每回合至多叠加18层）",
+      "elite": "<休整期结束时> 本回合每消耗3资金，使已激活的【奥术】层数+4（每回合至多叠加36层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>本回合每消耗3资金(已消耗{showtag_value_1}资金)，使已激活的【奥术】层数+2（每回合至多叠加18层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_ROUND_COIN_COST",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_121_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>本回合每消耗3资金(已消耗{showtag_value_1}资金)，使已激活的【奥术】层数+4（每回合至多叠加36层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_ROUND_COIN_COST",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_121_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1047_halo2",
+      "chessId": "chess_char_5_18_a",
+      "eliteChessId": "chess_char_5_18_b"
+    }
+  },
+  {
+    "id": "94",
+    "name": "宴",
+    "cost": 2,
+    "mainTrait": [],
+    "subTraits": [
+      "不屈"
+    ],
+    "effects": {
+      "normal": "<获得时>【不屈】层数+4",
+      "elite": "<获得时>【不屈】层数+8"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【不屈】层数+4",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_123_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【不屈】层数+8",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_123_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_337_utage",
+      "chessId": "chess_char_2_16_a",
+      "eliteChessId": "chess_char_2_16_b"
+    }
+  },
+  {
+    "id": "95",
+    "name": "山",
+    "cost": 4,
+    "mainTrait": [],
+    "subTraits": [
+      "投资人"
+    ],
+    "effects": {
+      "normal": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）",
+      "elite": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_140_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_140_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_264_f12yin",
+      "chessId": "chess_char_4_19_a",
+      "eliteChessId": "chess_char_4_19_b"
+    }
+  },
+  {
+    "id": "96",
+    "name": "锏",
+    "cost": 6,
+    "mainTrait": [
+      "卡西米尔",
+      "谢拉格",
+      "莱塔尼亚"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<战斗中>【卡西米尔】【谢拉格】【莱塔尼亚】每叠加6层，本干员技力自然回复速度+0.01/秒，生命上限+1%",
+      "elite": "<战斗中>【卡西米尔】【谢拉格】【莱塔尼亚】每叠加3层，本干员技力自然回复速度+0.01/秒，生命上限+1%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【卡西米尔】【谢拉格】【莱塔尼亚】每叠加6层，本干员技力自然回复速度+0.01/秒，生命上限+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_232_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【卡西米尔】【谢拉格】【莱塔尼亚】每叠加3层，本干员技力自然回复速度+0.01/秒，生命上限+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_232_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4116_blkkgt",
+      "chessId": "chess_char_6_14_a",
+      "eliteChessId": "chess_char_6_14_b"
+    }
+  },
+  {
+    "id": "97",
+    "name": "老鲤",
+    "cost": 5,
+    "mainTrait": [
+      "炎"
+    ],
+    "subTraits": [
+      "投资人"
+    ],
+    "effects": {
+      "normal": "<战斗中>【炎】【投资人】每叠加3层，本干员攻击力+1%",
+      "elite": "<战斗中>【炎】【投资人】每叠加3层，本干员攻击力+2%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【炎】【投资人】每叠加3层，本干员攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_40_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【炎】【投资人】每叠加3层，本干员攻击力+2%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_40_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_322_lmlee",
+      "chessId": "chess_char_5_19_a",
+      "eliteChessId": "chess_char_5_19_b"
+    }
+  },
+  {
+    "id": "98",
+    "name": "淬羽赫默",
+    "cost": 4,
+    "mainTrait": [],
+    "subTraits": [
+      "助力"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使整备区每名干员已激活的盟约层数+1",
+      "elite": "<休整期结束时>使整备区每名干员已激活的盟约层数+2"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使整备区每名干员已激活的盟约层数+1",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_IN_HAND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_129_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使整备区每名干员已激活的盟约层数+2",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_IN_HAND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_129_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1031_slent2",
+      "chessId": "chess_char_4_20_a",
+      "eliteChessId": "chess_char_4_20_b"
+    }
+  },
+  {
+    "id": "99",
+    "name": "夏栎",
+    "cost": 1,
+    "mainTrait": [],
+    "subTraits": [
+      "助力"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使当前已激活且层数最多的盟约层数+1（此干员在整备区也生效）",
+      "elite": "<休整期结束时>使当前已激活且层数最多的盟约层数+2（此干员在整备区也生效）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使当前已激活且层数最多的盟约层数+1（此干员在整备区也生效）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_ACTIVATED_MOST_LAYER",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_130_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使当前已激活且层数最多的盟约层数+2（此干员在整备区也生效）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_ACTIVATED_MOST_LAYER",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_130_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_492_quercu",
+      "chessId": "chess_char_1_11_a",
+      "eliteChessId": "chess_char_1_11_b"
+    }
+  },
+  {
+    "id": "100",
+    "name": "杰克",
+    "cost": 1,
+    "mainTrait": [],
+    "subTraits": [
+      "突袭"
+    ],
+    "effects": {
+      "normal": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）",
+      "elite": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_131_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>造成的伤害变为弱点伤害（根据敌人的防御力与法术抗性变换伤害类型）",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_131_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_347_jaksel",
+      "chessId": "chess_char_1_12_a",
+      "eliteChessId": "chess_char_1_12_b"
+    }
+  },
+  {
+    "id": "101",
+    "name": "赫德雷",
+    "cost": 4,
+    "mainTrait": [],
+    "subTraits": [
+      "突袭"
+    ],
+    "effects": {
+      "normal": "<战斗中>部署时使已激活的【突袭】层数+4（每回合至多叠加16层）",
+      "elite": "<战斗中>部署时使已激活的【突袭】层数+8（每回合至多叠加32层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>部署时使已激活的【突袭】层数+4（每回合至多叠加16层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_132_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>部署时使已激活的【突袭】层数+8（每回合至多叠加32层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_132_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4088_hodrer",
+      "chessId": "chess_char_4_21_a",
+      "eliteChessId": "chess_char_4_21_b"
+    }
+  },
+  {
+    "id": "102",
+    "name": "夜莺",
+    "cost": 4,
+    "mainTrait": [],
+    "subTraits": [
+      "聚合",
+      "协防干员"
+    ],
+    "effects": {
+      "normal": "<战斗结束时>每有一名存活的我方干员，使自身已激活的盟约层数+1",
+      "elite": "<战斗结束时>每有一名存活的我方干员，使自身已激活的盟约层数+2"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗结束时>每有一名存活的我方干员，使自身已激活的盟约层数+1",
+          "eventType": "SERVER_BATTLE_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_ACTIVATED_BOND_BY_ALIVE_CHAR",
+          "triggers": [
+            "战斗结束时"
+          ],
+          "sourceIds": [
+            "garrison_163_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗结束时>每有一名存活的我方干员，使自身已激活的盟约层数+2",
+          "eventType": "SERVER_BATTLE_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_ACTIVATED_BOND_BY_ALIVE_CHAR",
+          "triggers": [
+            "战斗结束时"
+          ],
+          "sourceIds": [
+            "garrison_163_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_179_cgbird",
+      "chessId": "chess_char_4_22_a",
+      "eliteChessId": "chess_char_4_22_b"
+    }
+  },
+  {
+    "id": "103",
+    "name": "霜叶",
+    "cost": 1,
+    "mainTrait": [],
+    "subTraits": [
+      "灵巧"
+    ],
+    "effects": {
+      "normal": "<获得时>【灵巧】层数+2",
+      "elite": "<获得时>【灵巧】层数+4"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【灵巧】层数+2",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_135_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【灵巧】层数+4",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_135_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_193_frostl",
+      "chessId": "chess_char_1_13_a",
+      "eliteChessId": "chess_char_1_13_b"
+    }
+  },
+  {
+    "id": "104",
+    "name": "乌有",
+    "cost": 3,
+    "mainTrait": [
+      "炎"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<获得时>获得一枚“盟约之币”",
+      "elite": "<获得时>获得两枚“盟约之币”"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得一枚“盟约之币”",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_136_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得两枚“盟约之币”",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_136_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_455_nothin",
+      "chessId": "chess_char_3_20_a",
+      "eliteChessId": "chess_char_3_20_b"
+    }
+  },
+  {
+    "id": "105",
+    "name": "历阵锐枪芬",
+    "cost": 3,
+    "mainTrait": [
+      "卡西米尔"
+    ],
+    "subTraits": [
+      "远见"
+    ],
+    "effects": {
+      "normal": "<战斗中>被击倒时召唤整备区的一名【卡西米尔】干员（优先选择最右侧）上场，并使整备区干员的当前再部署时间-30%",
+      "elite": "<战斗中>被击倒时召唤整备区的一名【卡西米尔】干员（优先选择最右侧）上场，并使整备区干员的当前再部署时间-60%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>被击倒时召唤整备区的一名【卡西米尔】干员（优先选择最右侧）上场，并使整备区干员的当前再部署时间-30%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_170_a"
+          ]
+        },
+        {
+          "text": "整备区干员的当前再部署时间-30%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_171_a"
+          ]
+        },
+        {
+          "text": "<战斗中>被击倒时召唤整备区的一名【卡西米尔】干员（优先选择最右侧）上场",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_223_a"
+          ]
+        },
+        {
+          "text": "召唤整备区的一名【卡西米尔】干员（优先选择最右侧）上场",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_224_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>被击倒时召唤整备区的一名【卡西米尔】干员（优先选择最右侧）上场，并使整备区干员的当前再部署时间-60%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_170_b"
+          ]
+        },
+        {
+          "text": "整备区干员的当前再部署时间-60%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_171_b"
+          ]
+        },
+        {
+          "text": "<战斗中>被击倒时召唤整备区的一名【卡西米尔】干员（优先选择最右侧）上场",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_223_b"
+          ]
+        },
+        {
+          "text": "召唤整备区的一名【卡西米尔】干员（优先选择最右侧）上场",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_224_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_1036_fang2",
+      "chessId": "chess_char_3_21_a",
+      "eliteChessId": "chess_char_3_21_b"
+    }
+  },
+  {
+    "id": "106",
+    "name": "渡桥",
+    "cost": 2,
+    "mainTrait": [],
+    "subTraits": [
+      "远见"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使自身及身前一格干员已激活的盟约层数+2",
+      "elite": "<休整期结束时>使自身及身前一格干员已激活的盟约层数+4"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使自身及身前一格干员已激活的盟约层数+2",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_POSITION",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_138_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使自身及身前一格干员已激活的盟约层数+4",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_POSITION",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_138_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4147_mitm",
+      "chessId": "chess_char_2_17_a",
+      "eliteChessId": "chess_char_2_17_b"
+    }
+  },
+  {
+    "id": "107",
+    "name": "Mon3tr",
+    "cost": 5,
+    "mainTrait": [],
+    "subTraits": [
+      "协防干员"
+    ],
+    "effects": {
+      "normal": "<战斗中>周围八格干员每场战斗的叠层上限+30%",
+      "elite": "<战斗中>周围八格干员每场战斗的叠层上限+60%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>周围八格干员每场战斗的叠层上限+30%",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_153_a",
+            "garrison_157_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>周围八格干员每场战斗的叠层上限+60%",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_153_b",
+            "garrison_157_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4179_monstr",
+      "chessId": "chess_char_5_20_a",
+      "eliteChessId": "chess_char_5_20_b"
+    }
+  },
+  {
+    "id": "108",
+    "name": "凯瑟琳",
+    "cost": 3,
+    "mainTrait": [
+      "维多利亚"
+    ],
+    "subTraits": [
+      "远见"
+    ],
+    "effects": {
+      "normal": "<获得时>获得一件维式重锤，小概率获得特殊维式重锤",
+      "elite": "<获得时>获得一件特殊维式重锤，小概率获得终极维式重锤"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得一件维式重锤，小概率获得特殊维式重锤",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_POOL_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_139_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得一件特殊维式重锤，小概率获得终极维式重锤",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_POOL_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_139_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4162_cathy",
+      "chessId": "chess_char_3_22_a",
+      "eliteChessId": "chess_char_3_22_b"
+    }
+  },
+  {
+    "id": "109",
+    "name": "可露希尔",
+    "cost": 5,
+    "mainTrait": [],
+    "subTraits": [
+      "投资人"
+    ],
+    "effects": {
+      "normal": "<休整期结束时> 本回合每获得过一名干员，使已激活的【投资人】层数+2（每回合至多叠加16层）",
+      "elite": "<休整期结束时> 本回合每获得过一名干员，使已激活的【投资人】层数+4（每回合至多叠加32层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>本回合每获得过一名干员，使已激活的【投资人】层数+2(已获得{showtag_value_1}名)（每回合至多叠加16层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_125_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>本回合每获得过一名干员，使已激活的【投资人】层数+4(已获得{showtag_value_1}名)（每回合至多叠加32层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_125_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4228_closur",
+      "chessId": "chess_char_5_21_a",
+      "eliteChessId": "chess_char_5_21_b"
+    }
+  },
+  {
+    "id": "110",
+    "name": "矩",
+    "cost": 2,
+    "mainTrait": [
+      "炎"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<获得时>获得等同于当前调度中心等级的【炎】层数",
+      "elite": "<获得时>获得等同于当前调度中心等级两倍的【炎】层数"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得等同于当前调度中心等级的【炎】层数",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_35_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得等同于当前调度中心等级两倍的【炎】层数",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_35_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4221_ju",
+      "chessId": "chess_char_2_18_a",
+      "eliteChessId": "chess_char_2_18_b"
+    }
+  },
+  {
+    "id": "111",
+    "name": "拜松",
+    "cost": 1,
+    "mainTrait": [
+      "炎"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<获得时>【炎】层数+2",
+      "elite": "<获得时>【炎】层数+4"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【炎】层数+2",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_34_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【炎】层数+4",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_34_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_325_bison",
+      "chessId": "chess_char_1_14_a",
+      "eliteChessId": "chess_char_1_14_b"
+    }
+  },
+  {
+    "id": "112",
+    "name": "褐果",
+    "cost": 1,
+    "mainTrait": [],
+    "subTraits": [
+      "聚合"
+    ],
+    "effects": {
+      "normal": "<获得时>【聚合】层数+2",
+      "elite": "<获得时>【聚合】层数+4"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【聚合】层数+2",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_115_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【聚合】层数+4",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_115_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4041_chnut",
+      "chessId": "chess_char_1_15_a",
+      "eliteChessId": "chess_char_1_15_b"
+    }
+  },
+  {
+    "id": "113",
+    "name": "风丸",
+    "cost": 3,
+    "mainTrait": [],
+    "subTraits": [
+      "不屈"
+    ],
+    "effects": {
+      "normal": "<战斗中>自身被击倒或与傀儡发生替换时使已激活的【不屈】层数+2（每回合至多叠加10层）",
+      "elite": "<战斗中>自身被击倒或与傀儡发生替换时使已激活的【不屈】层数+4（每回合至多叠加20层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>自身被击倒或与傀儡发生替换时使已激活的【不屈】层数+2（每回合至多叠加10层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_124_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>自身被击倒或与傀儡发生替换时使已激活的【不屈】层数+4（每回合至多叠加20层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_124_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4016_kazema",
+      "chessId": "chess_char_3_24_a",
+      "eliteChessId": "chess_char_3_24_b"
+    }
+  },
+  {
+    "id": "114",
+    "name": "鸿雪",
+    "cost": 5,
+    "mainTrait": [
+      "萨尔贡"
+    ],
+    "subTraits": [
+      "精准"
+    ],
+    "effects": {
+      "normal": "<战斗中>每次开启技能时使已激活的【萨尔贡】【精准】层数+4（每回合至多叠加16层）",
+      "elite": "<战斗中>每次开启技能时使已激活的【萨尔贡】【精准】层数+8（每回合至多叠加32层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>每次开启技能时使已激活的【萨尔贡】【精准】层数+4（每回合至多叠加16层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_47_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>每次开启技能时使已激活的【萨尔贡】【精准】层数+8（每回合至多叠加32层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_47_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4055_bgsnow",
+      "chessId": "chess_char_5_23_a",
+      "eliteChessId": "chess_char_5_23_b"
+    }
+  },
+  {
+    "id": "115",
+    "name": "仇白",
+    "cost": 4,
+    "mainTrait": [
+      "炎"
+    ],
+    "subTraits": [
+      "灵巧"
+    ],
+    "effects": {
+      "normal": "<获得时>【炎】【灵巧】层数+6",
+      "elite": "<获得时>【炎】【灵巧】层数+12"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【炎】【灵巧】层数+6",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_37_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【炎】【灵巧】层数+12",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_37_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4082_qiubai",
+      "chessId": "chess_char_4_23_a",
+      "eliteChessId": "chess_char_4_23_b"
+    }
+  },
+  {
+    "id": "116",
+    "name": "星极",
+    "cost": 2,
+    "mainTrait": [],
+    "subTraits": [
+      "奇迹"
+    ],
+    "effects": {
+      "normal": "只需两名本干员即可合成精锐",
+      "elite": "只需两名本干员即可合成精锐"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "只需两名本干员即可合成精锐",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "NONE",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_103_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "只需两名本干员即可合成精锐",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "NONE",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_103_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_274_astesi",
+      "chessId": "chess_char_2_19_a",
+      "eliteChessId": "chess_char_2_19_b"
+    }
+  },
+  {
+    "id": "117",
+    "name": "焰尾",
+    "cost": 5,
+    "mainTrait": [
+      "卡西米尔"
+    ],
+    "subTraits": [
+      "迅捷"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>整备区每有一名干员，使已激活的【卡西米尔】【迅捷】层数+1",
+      "elite": "<休整期结束时>整备区每有一名干员，使已激活的【卡西米尔】【迅捷】层数+2"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>整备区每有一名干员，使已激活的【卡西米尔】【迅捷】层数+1",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_100_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>整备区每有一名干员，使已激活的【卡西米尔】【迅捷】层数+2",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_100_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_420_flamtl",
+      "chessId": "chess_char_5_24_a",
+      "eliteChessId": "chess_char_5_24_b"
+    }
+  },
+  {
+    "id": "118",
+    "name": "瑰盐",
+    "cost": 2,
+    "mainTrait": [
+      "伊比利亚"
+    ],
+    "subTraits": [
+      "聚合"
+    ],
+    "effects": {
+      "normal": "<战斗中>【伊比利亚】每叠加3层，本干员攻击力+1%",
+      "elite": "<战斗中>【伊比利亚】每叠加3层，本干员攻击力+2%"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【伊比利亚】每叠加3层，本干员攻击力+1%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_219_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【伊比利亚】每叠加3层，本干员攻击力+2%",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_219_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4163_rosesa",
+      "chessId": "chess_char_2_20_a",
+      "eliteChessId": "chess_char_2_20_b"
+    }
+  },
+  {
+    "id": "119",
+    "name": "烈夏",
+    "cost": 1,
+    "mainTrait": [
+      "乌萨斯"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<战斗开始时>使已激活的【乌萨斯】临时层数+4",
+      "elite": "<战斗开始时>使已激活的【乌萨斯】临时层数+8"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗开始时>使已激活的【乌萨斯】临时层数+4",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗开始时"
+          ],
+          "sourceIds": [
+            "garrison_13_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗开始时>使已激活的【乌萨斯】临时层数+8",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗开始时"
+          ],
+          "sourceIds": [
+            "garrison_13_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_194_leto",
+      "chessId": "chess_char_1_16_a",
+      "eliteChessId": "chess_char_1_16_b"
+    }
+  },
+  {
+    "id": "120",
+    "name": "至简",
+    "cost": 3,
+    "mainTrait": [
+      "萨尔贡"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "购买价格为1",
+      "elite": "购买价格为1"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "购买价格为1",
+          "eventType": "SERVER_PRICE",
+          "traitType": "整备能力",
+          "effectType": "SERVER_CHESS_PRICE",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_46_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "购买价格为1",
+          "eventType": "SERVER_PRICE",
+          "traitType": "整备能力",
+          "effectType": "SERVER_CHESS_PRICE",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_46_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4054_malist",
+      "chessId": "chess_char_3_25_a",
+      "eliteChessId": "chess_char_3_25_b"
+    }
+  },
+  {
+    "id": "121",
+    "name": "陨星",
+    "cost": 1,
+    "mainTrait": [],
+    "subTraits": [
+      "迅捷"
+    ],
+    "effects": {
+      "normal": "<战斗中>每次开启技能时使已激活的【迅捷】层数+1（每回合至多叠加2层）",
+      "elite": "<战斗中>每次开启技能时使已激活的【迅捷】层数+2（每回合至多叠加4层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>每次开启技能时使已激活的【迅捷】层数+1（每回合至多叠加2层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_102_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>每次开启技能时使已激活的【迅捷】层数+2（每回合至多叠加4层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_102_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_219_meteo",
+      "chessId": "chess_char_1_17_a",
+      "eliteChessId": "chess_char_1_17_b"
+    }
+  },
+  {
+    "id": "122",
+    "name": "机械师",
+    "cost": 6,
+    "mainTrait": [],
+    "subTraits": [
+      "协防干员",
+      "坚守"
+    ],
+    "effects": {
+      "normal": "<进入休整期时>若同一行至少有三名干员，获得一名当前人数最多盟约的干员",
+      "elite": "<进入休整期时>获得一名当前人数最多盟约的干员"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<进入休整期时>若同一行至少有三名干员，获得一名当前人数最多盟约的干员",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "整备能力",
+          "effectType": "SERVER_MOST_BOND",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_174_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<进入休整期时>获得一名当前人数最多盟约的干员",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "整备能力",
+          "effectType": "SERVER_MOST_BOND",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_174_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4230_mcnist",
+      "chessId": "chess_char_6_15_a",
+      "eliteChessId": "chess_char_6_15_b"
+    }
+  },
+  {
+    "id": "123",
+    "name": "异客",
+    "cost": 4,
+    "mainTrait": [
+      "萨尔贡"
+    ],
+    "subTraits": [
+      "奥术"
+    ],
+    "effects": {
+      "normal": "<进入休整期时>获得1件“盟约之币”或“萨尔贡浓茶”，有小概率发现“拟态物质”",
+      "elite": "<进入休整期时>获得2件“盟约之币”或“萨尔贡浓茶”，有小概率发现“拟态物质”"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<进入休整期时>获得1件“盟约之币”或“萨尔贡浓茶”，有小概率发现“拟态物质”",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "整备能力",
+          "effectType": "SERVER_POOL_EQUIP",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_161_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<进入休整期时>获得2件“盟约之币”或“萨尔贡浓茶”，有小概率发现“拟态物质”",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "整备能力",
+          "effectType": "SERVER_POOL_EQUIP",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_161_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_472_pasngr",
+      "chessId": "chess_char_4_24_a",
+      "eliteChessId": "chess_char_4_24_b"
+    }
+  },
+  {
+    "id": "124",
+    "name": "塔露拉",
+    "cost": 6,
+    "mainTrait": [
+      "乌萨斯"
+    ],
+    "subTraits": [
+      "奥术",
+      "协防干员"
+    ],
+    "effects": {
+      "normal": "<战斗中>【乌萨斯】盟约获得强化：击倒单位时叠加的临时层数提升至4层；在场6名不同【乌萨斯】干员时，提升至6层",
+      "elite": "<战斗中>【乌萨斯】盟约获得强化：击倒单位时叠加的临时层数提升至6层；在场6名不同【乌萨斯】干员时，提升至8层"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【乌萨斯】盟约获得强化：击倒单位时叠加的临时层数提升至4层；在场6名不同【乌萨斯】干员时，提升至6层",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_23_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【乌萨斯】盟约获得强化：击倒单位时叠加的临时层数提升至6层；在场6名不同【乌萨斯】干员时，提升至8层",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_23_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4247_oxi",
+      "chessId": "chess_char_6_16_a",
+      "eliteChessId": "chess_char_6_16_b"
+    }
+  },
+  {
+    "id": "125",
+    "name": "真理",
+    "cost": 2,
+    "mainTrait": [
+      "乌萨斯"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "购买价格为1",
+      "elite": "购买价格为1"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "购买价格为1",
+          "eventType": "SERVER_PRICE",
+          "traitType": "整备能力",
+          "effectType": "SERVER_CHESS_PRICE",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_18_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "购买价格为1",
+          "eventType": "SERVER_PRICE",
+          "traitType": "整备能力",
+          "effectType": "SERVER_CHESS_PRICE",
+          "triggers": [],
+          "sourceIds": [
+            "garrison_18_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_195_glassb",
+      "chessId": "chess_char_2_21_a",
+      "eliteChessId": "chess_char_2_21_b"
+    }
+  },
+  {
+    "id": "126",
+    "name": "奥尔佳",
+    "cost": 3,
+    "mainTrait": [
+      "乌萨斯"
+    ],
+    "subTraits": [
+      "灵巧"
+    ],
+    "effects": {
+      "normal": "<获得时>获得一件乌萨斯呼吸器",
+      "elite": "<获得时>获得两件乌萨斯呼吸器"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得一件乌萨斯呼吸器",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_22_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得两件乌萨斯呼吸器",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_22_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4245_alga",
+      "chessId": "chess_char_3_26_a",
+      "eliteChessId": "chess_char_3_26_b"
+    }
+  },
+  {
+    "id": "127",
+    "name": "安洁莉娜",
+    "cost": 4,
+    "mainTrait": [
+      "叙拉古"
+    ],
+    "subTraits": [
+      "奇迹"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>本回合每进行过1次刷新，使已激活的【叙拉古】层数+2（每回合至多叠加8层），【奇迹】层数+1（每回合至多叠加4层）",
+      "elite": "<休整期结束时>本回合每进行过1次刷新，使已激活的【叙拉古】层数+4（每回合至多叠加16层），【奇迹】层数+2（每回合至多叠加8层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>本回合每进行过1次刷新(已刷新{showtag_value_1}次)，使已激活的【叙拉古】层数+2（每回合至多叠加8层），【奇迹】层数+1（每回合至多叠加4层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_REFRESH_CNT_MULTIPLIER_BOND_LAYER",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_91_a"
+          ]
+        },
+        {
+          "text": "<休整期结束时>本回合每进行过1次刷新(已刷新{showtag_value_1}次)，使已激活的【奇迹】层数+1（每回合至多叠加4层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_REFRESH_CNT_MULTIPLIER_BOND_LAYER",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_236_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>本回合每进行过1次刷新(已刷新{showtag_value_1}次)，使已激活的【叙拉古】层数+4（每回合至多叠加16层），【奇迹】层数+2（每回合至多叠加8层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_REFRESH_CNT_MULTIPLIER_BOND_LAYER",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_91_b"
+          ]
+        },
+        {
+          "text": "<休整期结束时>本回合每进行过1次刷新(已刷新{showtag_value_1}次)，使已激活的【奇迹】层数+2（每回合至多叠加8层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_REFRESH_CNT_MULTIPLIER_BOND_LAYER",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_236_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_291_aglina",
+      "chessId": "chess_char_4_25_a",
+      "eliteChessId": "chess_char_4_25_b"
+    }
+  },
+  {
+    "id": "128",
+    "name": "夕",
+    "cost": 6,
+    "mainTrait": [
+      "炎"
+    ],
+    "subTraits": [
+      "奥术"
+    ],
+    "effects": {
+      "normal": "<休整期结束时> 本回合每获得过一名干员，使已激活的【炎】【奥术】层数+2（每回合至多叠加24层）",
+      "elite": "<休整期结束时> 本回合每获得过一名干员，使已激活的【炎】【奥术】层数+4（每回合至多叠加48层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>本回合每获得过一名干员(已获得{showtag_value_1}名)，使已激活的【炎】【奥术】层数+2（每回合至多叠加24层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_128_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>本回合每获得过一名干员(已获得{showtag_value_1}名)，使已激活的【炎】【奥术】层数+4（每回合至多叠加48层）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_METHOD",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_128_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_2015_dusk",
+      "chessId": "chess_char_6_17_a",
+      "eliteChessId": "chess_char_6_17_b"
+    }
+  },
+  {
+    "id": "129",
+    "name": "冻河",
+    "cost": 5,
+    "mainTrait": [
+      "乌萨斯"
+    ],
+    "subTraits": [
+      "迅捷"
+    ],
+    "effects": {
+      "normal": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【乌萨斯】【迅捷】层数+1（每场战斗至多叠加16层）",
+      "elite": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【乌萨斯】【迅捷】层数+2（每场战斗至多叠加32层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【乌萨斯】【迅捷】层数+1（每场战斗至多叠加16层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_190_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【乌萨斯】【迅捷】层数+2（每场战斗至多叠加32层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_190_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4244_tocka",
+      "chessId": "chess_char_5_25_a",
+      "eliteChessId": "chess_char_5_25_b"
+    }
+  },
+  {
+    "id": "130",
+    "name": "青枳",
+    "cost": 3,
+    "mainTrait": [],
+    "subTraits": [
+      "坚守",
+      "迅捷"
+    ],
+    "effects": {
+      "normal": "<进入休整期时>使自身及身后一格干员已激活的盟约层数+3",
+      "elite": "<进入休整期时>使自身及身后一格干员已激活的盟约层数+6"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<进入休整期时>使自身及身后一格干员已激活的盟约层数+3",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_POSITION",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_207_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<进入休整期时>使自身及身后一格干员已激活的盟约层数+6",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_POSITION",
+          "triggers": [
+            "进入休整期时"
+          ],
+          "sourceIds": [
+            "garrison_207_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_488_buildr",
+      "chessId": "chess_char_3_27_a",
+      "eliteChessId": "chess_char_3_27_b"
+    }
+  },
+  {
+    "id": "131",
+    "name": "铸铁",
+    "cost": 2,
+    "mainTrait": [],
+    "subTraits": [
+      "突袭"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使已激活的【突袭】层数+3",
+      "elite": "<休整期结束时>使已激活的【突袭】层数+6"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使已激活的【突袭】层数+3",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_209_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使已激活的【突袭】层数+6",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_209_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_333_sidero",
+      "chessId": "chess_char_2_22_a",
+      "eliteChessId": "chess_char_2_22_b"
+    }
+  },
+  {
+    "id": "132",
+    "name": "华法琳",
+    "cost": 4,
+    "mainTrait": [],
+    "subTraits": [
+      "灵巧",
+      "聚合"
+    ],
+    "effects": {
+      "normal": "<战斗开始时>使身前一格干员获得特质“<开启技能时>使自身已激活的盟约层数+1（每回合至多叠加7层）”",
+      "elite": "<战斗开始时>使身前一格干员获得特质“<开启技能时>使自身已激活的盟约层数+2（每回合至多叠加14层）”"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗开始时>使身前一格干员获得特质“<开启技能时>使自身已激活的盟约层数+1（每回合至多叠加7层）”",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗开始时",
+            "开启技能时"
+          ],
+          "sourceIds": [
+            "garrison_122_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗开始时>使身前一格干员获得特质“<开启技能时>使自身已激活的盟约层数+2（每回合至多叠加14层）”",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗开始时",
+            "开启技能时"
+          ],
+          "sourceIds": [
+            "garrison_122_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_171_bldsk",
+      "chessId": "chess_char_4_26_a",
+      "eliteChessId": "chess_char_4_26_b"
+    }
+  },
+  {
+    "id": "133",
+    "name": "拉普兰德",
+    "cost": 1,
+    "mainTrait": [
+      "叙拉古"
+    ],
+    "subTraits": [],
+    "effects": {
+      "normal": "<获得时>【叙拉古】层数+2",
+      "elite": "<获得时>【叙拉古】层数+4"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>【叙拉古】层数+2",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_211_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>【叙拉古】层数+4",
+          "eventType": "SERVER_GAIN",
+          "traitType": "单次叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_211_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_140_whitew",
+      "chessId": "chess_char_1_18_a",
+      "eliteChessId": "chess_char_1_18_b"
+    }
+  },
+  {
+    "id": "134",
+    "name": "蕾缪安",
+    "cost": 6,
+    "mainTrait": [],
+    "subTraits": [
+      "精准"
+    ],
+    "effects": {
+      "normal": "<战斗中>【精准】每叠加4层，本干员技力自然回复速度+0.01/秒",
+      "elite": "<战斗中>【精准】每叠加2层，本干员技力自然回复速度+0.01/秒"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>【精准】每叠加4层，本干员技力自然回复速度+0.01/秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_234_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>【精准】每叠加2层，本干员技力自然回复速度+0.01/秒",
+          "eventType": "IN_BATTLE",
+          "traitType": "作战能力",
+          "effectType": "GAIN_BUFF",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_234_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_4193_lemuen",
+      "chessId": "chess_char_6_18_a",
+      "eliteChessId": "chess_char_6_18_b"
+    }
+  },
+  {
+    "id": "135",
+    "name": "星源",
+    "cost": 2,
+    "mainTrait": [],
+    "subTraits": [
+      "助力"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使当前已激活且层数最多的盟约层数+2（此干员在整备区也生效）",
+      "elite": "<休整期结束时>使当前已激活且层数最多的盟约层数+4（此干员在整备区也生效）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使当前已激活且层数最多的盟约层数+2（此干员在整备区也生效）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_ACTIVATED_MOST_LAYER",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_215_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使当前已激活且层数最多的盟约层数+4（此干员在整备区也生效）",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_ACTIVATED_MOST_LAYER",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_215_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_135_halo",
+      "chessId": "chess_char_2_23_a",
+      "eliteChessId": "chess_char_2_23_b"
+    }
+  },
+  {
+    "id": "136",
+    "name": "寒檀",
+    "cost": 4,
+    "mainTrait": [],
+    "subTraits": [
+      "远见"
+    ],
+    "effects": {
+      "normal": "<休整期结束时><休整期开始时>使已激活的【远见】层数+3",
+      "elite": "<休整期结束时><休整期开始时>使已激活的【远见】层数+6"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时><休整期开始时>使已激活的【远见】层数+3",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时",
+            "休整期开始时"
+          ],
+          "sourceIds": [
+            "garrison_166_a"
+          ]
+        },
+        {
+          "text": "<休整期开始时>使已激活的【远见】层数+3",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期开始时"
+          ],
+          "sourceIds": [
+            "garrison_212_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时><休整期开始时>使已激活的【远见】层数+6",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期结束时",
+            "休整期开始时"
+          ],
+          "sourceIds": [
+            "garrison_166_b"
+          ]
+        },
+        {
+          "text": "<休整期开始时>使已激活的【远见】层数+6",
+          "eventType": "SERVER_PREP_START",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND",
+          "triggers": [
+            "休整期开始时"
+          ],
+          "sourceIds": [
+            "garrison_212_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_341_sntlla",
+      "chessId": "chess_char_4_27_a",
+      "eliteChessId": "chess_char_4_27_b"
+    }
+  },
+  {
+    "id": "137",
+    "name": "地灵",
+    "cost": 1,
+    "mainTrait": [
+      "莱塔尼亚"
+    ],
+    "subTraits": [
+      "独行"
+    ],
+    "effects": {
+      "normal": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】层数+1（每回合至多叠加1层）",
+      "elite": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】层数+2（每回合至多叠加2层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】层数+1（每回合至多叠加1层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_01_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>攻击范围内每有一名敌人被击倒使已激活的【莱塔尼亚】层数+2（每回合至多叠加2层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_01_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_183_skgoat",
+      "chessId": "chess_char_1_19_a",
+      "eliteChessId": "chess_char_1_19_b"
+    }
+  },
+  {
+    "id": "138",
+    "name": "缪尔赛思",
+    "cost": 6,
+    "mainTrait": [],
+    "subTraits": [
+      "协防干员"
+    ],
+    "effects": {
+      "normal": "<获得时>获得一个“变形同构体”",
+      "elite": "<获得时>获得两个“变形同构体”"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<获得时>获得一个“变形同构体”",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_197_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<获得时>获得两个“变形同构体”",
+          "eventType": "SERVER_GAIN",
+          "traitType": "整备能力",
+          "effectType": "SERVER_GAIN_EQUIP",
+          "triggers": [
+            "获得时"
+          ],
+          "sourceIds": [
+            "garrison_197_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_249_mlyss",
+      "chessId": "chess_char_6_19_a",
+      "eliteChessId": "chess_char_6_19_b"
+    }
+  },
+  {
+    "id": "139",
+    "name": "阿米娅",
+    "cost": 5,
+    "mainTrait": [],
+    "subTraits": [
+      "奇迹"
+    ],
+    "effects": {
+      "normal": "<战斗中>身前一格干员提升盟约层数时，每次提升的层数额外+1（不受叠层上限影响）",
+      "elite": "<战斗中>身前一格干员提升盟约层数时，每次提升的层数额外+2（不受叠层上限影响）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>身前一格干员提升盟约层数时，每次提升的层数额外+1（不受叠层上限影响）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_114_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>身前一格干员提升盟约层数时，每次提升的层数额外+2（不受叠层上限影响）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_114_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_002_amiya",
+      "chessId": "chess_char_5_26_a",
+      "eliteChessId": "chess_char_5_26_b"
+    }
+  },
+  {
+    "id": "140",
+    "name": "安哲拉",
+    "cost": 2,
+    "mainTrait": [
+      "阿戈尔"
+    ],
+    "subTraits": [
+      "助力"
+    ],
+    "effects": {
+      "normal": "<战斗中>每击倒一名敌人或我方干员使已激活的【阿戈尔】【助力】层数+3（每回合至多叠加9层）",
+      "elite": "<战斗中>每击倒一名敌人或我方干员使已激活的【阿戈尔】【助力】层数+6（每回合至多叠加18层）"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<战斗中>每击倒一名敌人或我方干员使已激活的【阿戈尔】【助力】层数+3（每回合至多叠加9层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_66_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<战斗中>每击倒一名敌人或我方干员使已激活的【阿戈尔】【助力】层数+6（每回合至多叠加18层）",
+          "eventType": "IN_BATTLE",
+          "traitType": "持续叠加",
+          "effectType": "ADD_BOND",
+          "triggers": [
+            "战斗中"
+          ],
+          "sourceIds": [
+            "garrison_66_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_218_cuttle",
+      "chessId": "chess_char_2_24_a",
+      "eliteChessId": "chess_char_2_24_b"
+    }
+  },
+  {
+    "id": "141",
+    "name": "帕拉斯",
+    "cost": 6,
+    "mainTrait": [],
+    "subTraits": [
+      "灵巧",
+      "助力"
+    ],
+    "effects": {
+      "normal": "<休整期结束时>使自身以及身前一格干员已激活的盟约层数+9",
+      "elite": "<休整期结束时>使自身以及身前一格干员已激活的盟约层数+18"
+    },
+    "abilities": {
+      "normal": [
+        {
+          "text": "<休整期结束时>使自身以及身前一格干员已激活的盟约层数+9",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_POSITION",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_177_a"
+          ]
+        }
+      ],
+      "elite": [
+        {
+          "text": "<休整期结束时>使自身以及身前一格干员已激活的盟约层数+18",
+          "eventType": "SERVER_PREP_FIN",
+          "traitType": "持续叠加",
+          "effectType": "SERVER_ADD_BOND_POSITION",
+          "triggers": [
+            "休整期结束时"
+          ],
+          "sourceIds": [
+            "garrison_177_b"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "charId": "char_485_pallas",
+      "chessId": "chess_char_6_20_a",
+      "eliteChessId": "chess_char_6_20_b"
+    }
+  }
 ]

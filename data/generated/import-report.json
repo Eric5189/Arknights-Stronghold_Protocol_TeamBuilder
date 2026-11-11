@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-11-11T02:54:54.184331+00:00",
+  "season": "act3autochess",
+  "version": "V3_1",
+  "sources": {
+    "activity_table.json": {
+      "url": "https://torappu.prts.wiki/gamedata/latest/excel/activity_table.json",
+      "sha256": "5a40a41e4523a3ce84cbee1b60477fff9813d954510e9c42dea192dc3b56864e"
+    },
+    "character_table.json": {
+      "url": "https://torappu.prts.wiki/gamedata/latest/excel/character_table.json",
+      "sha256": "bf578356c458a03242eb82568b82f1e24391767990e57d25d480c465fd7d2267"
+    }
+  },
+  "counts": {
+    "operators": 141,
+    "mainTraits": 10,
+    "subTraits": 15
+  },
+  "dataPath": "activity.AUTOCHESS.act3autochess.V3_1",
+  "excludedBonds": [
+    {
+      "id": "suntShip",
+      "name": "绝技",
+      "type": "REGULAR",
+      "noSelect": true
+    }
+  ],
+  "excludedHiddenOrUnlistedChess": [
+    "chess_char_3_23_a",
+    "chess_char_5_22_a"
+  ],
+  "notes": [
+    "Hidden and DIY chess excluded; freely selected DIY operators are not included.",
+    "Head-count tiers parsed from descriptions; layer milestones remain inside effects.",
+    "Exact duplicate abilities merged with sourceIds retained.",
+    "effects contains the full in-game chess description; abilities retains garrison metadata. Some internal garrisons have null text.",
+    "No speculative economic / stacking search tags added."
+  ]
+}

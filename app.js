@@ -9,6 +9,8 @@
 
 const SQUAD_SIZE_DEFAULT = 8;
 const SQUAD_SIZE_MAX     = 9;
+const BAN_TRAIT_LIMIT    = 5;
+const STORAGE_PREFIX    = 'tb_act3autochess_V3_1';
 
 // 当前小队上限，默认 8，解锁道具后为 9
 let squadMaxSize = SQUAD_SIZE_DEFAULT;
@@ -16,26 +18,127 @@ let squadMaxSize = SQUAD_SIZE_DEFAULT;
 let allOperators = [];
 let squad = [];
 let traitConfig = {};   // 从 traits_real.json 加载，key 为羁绊名称
+let traitOrder = { main: [], sub: [] };
+
+function getOrderedTraits(type) {
+  const used = new Set(allOperators.flatMap(op => type === 'main' ? op.mainTrait : op.subTraits));
+  // 配置中的顺序为准；未配置的名称保留数据顺序并放在末尾。
+  return [...new Set([...traitOrder[type], ...used])];
+}
+
+// 按字符比较中文，完整数字作为一个单元，避免把12→24拆成多段。
+function getEffectDiff(normal, elite) {
+  const tokenize = text => text.match(/\d+(?:\.\d+)?%?|[^\d]/gu) || [];
+  const a = tokenize(normal), b = tokenize(elite);
+  const lengths = Array.from({ length: a.length + 1 }, () => new Uint32Array(b.length + 1));
+  for (let i = a.length - 1; i >= 0; i--) {
+    for (let j = b.length - 1; j >= 0; j--) {
+      lengths[i][j] = a[i] === b[j] ? lengths[i + 1][j + 1] + 1
+        : Math.max(lengths[i + 1][j], lengths[i][j + 1]);
+    }
+  }
+  const parts = [];
+  let i = 0, j = 0, removed = '', added = '';
+  const flush = () => {
+    if (removed || added) parts.push({ normal: removed, elite: added, changed: true });
+    removed = added = '';
+  };
+  while (i < a.length || j < b.length) {
+    if (i < a.length && j < b.length && a[i] === b[j]) {
+      flush();
+      parts.push({ normal: a[i], elite: b[j], changed: false });
+      i++; j++;
+    } else if (i < a.length && (j === b.length || lengths[i + 1][j] >= lengths[i][j + 1])) {
+      removed += a[i++];
+    } else {
+      added += b[j++];
+    }
+  }
+  flush();
+  return parts;
+}
+
+function buildEffectHTML(op) {
+  const normal = op.effects?.normal || '';
+  const elite = op.effects?.elite || '';
+  if (!normal) return elite ? `精锐：${escHtml(elite)}` : '暂无效果数据';
+  if (!elite || elite === normal) return escHtml(normal);
+  return getEffectDiff(normal, elite).map(part => {
+    if (!part.changed) return escHtml(part.normal);
+    const change = part.elite || '精锐移除';
+    return `${escHtml(part.normal)}<span class="elite-effect-diff">（${escHtml(change)}）</span>`;
+  }).join('');
+}
+
+let effectTooltip = null;
+let tooltipTarget = null;
+let tooltipHideTimer = null;
+
+function hideEffectTooltip() {
+  clearTimeout(tooltipHideTimer);
+  effectTooltip?.classList.add('hidden');
+  tooltipTarget?.removeAttribute('aria-describedby');
+  tooltipTarget = null;
+}
+
+function attachOperatorTooltip(card, op) {
+  card.tabIndex = 0;
+  const show = () => {
+    if (!effectTooltip) {
+      effectTooltip = document.createElement('div');
+      effectTooltip.id = 'operator-effect-tooltip';
+      effectTooltip.className = 'operator-effect-tooltip hidden';
+      effectTooltip.setAttribute('role', 'tooltip');
+      effectTooltip.addEventListener('mouseenter', () => clearTimeout(tooltipHideTimer));
+      effectTooltip.addEventListener('mouseleave', hideEffectTooltip);
+      document.body.appendChild(effectTooltip);
+    }
+    hideEffectTooltip();
+    tooltipTarget = card;
+    card.setAttribute('aria-describedby', effectTooltip.id);
+    const differs = op.effects?.normal && op.effects?.elite && op.effects.normal !== op.effects.elite;
+    effectTooltip.innerHTML = `<strong>${escHtml(op.name)}</strong>
+      ${differs ? '<div class="effect-tooltip-hint">普通效果 · 黄色括号为精锐差异</div>' : ''}
+      <div class="effect-tooltip-text">${buildEffectHTML(op)}</div>`;
+    effectTooltip.classList.remove('hidden');
+    const rect = card.getBoundingClientRect();
+    const box = effectTooltip.getBoundingClientRect();
+    const left = Math.max(12, Math.min(rect.left, window.innerWidth - box.width - 12));
+    const below = rect.bottom + 8;
+    const top = below + box.height <= window.innerHeight - 12 ? below
+      : Math.max(12, rect.top - box.height - 8);
+    effectTooltip.style.left = `${left}px`;
+    effectTooltip.style.top = `${top}px`;
+  };
+  card.addEventListener('mouseenter', show);
+  card.addEventListener('focusin', show);
+  card.addEventListener('mouseleave', event => {
+    if (!effectTooltip?.contains(event.relatedTarget)) {
+      tooltipHideTimer = setTimeout(hideEffectTooltip, 120);
+    }
+  });
+  card.addEventListener('focusout', hideEffectTooltip);
+}
 
 // 模式：'squad' | 'ban'
 let currentMode = 'squad';
 
 // 禁用干员集合（存 id），从 localStorage 恢复
-const bannedIds = new Set(JSON.parse(localStorage.getItem('tb_banned') || '[]'));
+const bannedIds = new Set(JSON.parse(localStorage.getItem(`${STORAGE_PREFIX}_banned`) || '[]'));
 
 function saveBanned() {
-  localStorage.setItem('tb_banned', JSON.stringify([...bannedIds]));
+  localStorage.setItem(`${STORAGE_PREFIX}_banned`, JSON.stringify([...bannedIds]));
 }
 
-// 羁绊禁用：被选中的主/副羁绊名称集合（max 主3，副4）
+// 羁绊禁用：被选中的主/副羁绊名称集合（各最多5个）
 const bannedTraits = {
-  main: new Set(JSON.parse(localStorage.getItem('tb_banned_main_traits') || '[]')),
-  sub:  new Set(JSON.parse(localStorage.getItem('tb_banned_sub_traits')  || '[]')),
+  main: new Set(JSON.parse(localStorage.getItem(`${STORAGE_PREFIX}_banned_main_traits`) || '[]')),
+  sub:  new Set(JSON.parse(localStorage.getItem(`${STORAGE_PREFIX}_banned_sub_traits`)  || '[]')),
 };
 
 function saveBannedTraits() {
-  localStorage.setItem('tb_banned_main_traits', JSON.stringify([...bannedTraits.main]));
-  localStorage.setItem('tb_banned_sub_traits',  JSON.stringify([...bannedTraits.sub]));
+  localStorage.setItem(`${STORAGE_PREFIX}_banned_main_traits`, JSON.stringify([...bannedTraits.main]));
+  localStorage.setItem(`${STORAGE_PREFIX}_banned_sub_traits`,  JSON.stringify([...bannedTraits.sub]));
 }
 
 /** 若干员所有羁绊词条均被 bannedTraits 覆盖，则该干员被自动禁用 */
@@ -76,7 +179,33 @@ const activeFilters = {
   cost:      new Set(),
   mainTrait: new Set(),
   subTrait:  new Set(),
+  tag:       new Set(),
 };
+
+// 同时收集普通与精锐特质，兼容尚无特质数据的旧赛季。
+function getOperatorTags(op) {
+  const abilities = [...(op.abilities?.normal || []), ...(op.abilities?.elite || [])];
+  return [...new Set([
+    ...(op.tags || []),
+    ...abilities.flatMap(ability => [ability.traitType, ...(ability.triggers || [])]),
+  ].filter(Boolean))];
+}
+
+function buildOperatorTagsHTML(op) {
+  return getOperatorTags(op)
+    .map(tag => `<span class="trait ability-tag">${escHtml(tag)}</span>`).join('');
+}
+
+function refreshBannedFilterTags() {
+  [['main', 'filter-tags-main'], ['sub', 'filter-tags-sub']].forEach(([type, id]) => {
+    document.querySelectorAll(`#${id} .filter-tag`).forEach(tag => {
+      const isBanned = bannedTraits[type].has(tag.dataset.trait);
+      tag.classList.toggle('is-trait-banned', isBanned);
+      tag.title = isBanned ? `${tag.dataset.trait}：本局已禁用，仍可点击筛选` : tag.dataset.trait;
+      tag.setAttribute('aria-label', `${tag.dataset.trait}${isBanned ? '（本局已禁用）' : ''}`);
+    });
+  });
+}
 
 function getFilterSummaryHint(category, isOpen) {
   const count = activeFilters[category]?.size || 0;
@@ -114,8 +243,12 @@ function resetFilters() {
   activeFilters.cost.clear();
   activeFilters.mainTrait.clear();
   activeFilters.subTrait.clear();
-  document.querySelectorAll('.filter-tag.active').forEach(tag => {
+  activeFilters.tag.clear();
+  document.querySelectorAll('#filter-bar .filter-tag.active').forEach(tag => {
     tag.classList.remove('active');
+  });
+  document.querySelectorAll('#filter-tags-ability .filter-tag').forEach(tag => {
+    tag.setAttribute('aria-pressed', 'false');
   });
   renderOperators();
   refreshFilterSectionStates();
@@ -233,6 +366,10 @@ async function init() {
 
     if (traitsRes.ok) {
       const raw = await traitsRes.json();
+      traitOrder = {
+        main: (raw['主羁绊'] || []).map(t => t.name),
+        sub: (raw['子羁绊'] || []).map(t => t.name),
+      };
       // 将主羁绊和子羁绊展平为以 name 为 key 的查找表
       [...(raw['主羁绊'] || []), ...(raw['子羁绊'] || [])].forEach(t => {
         traitConfig[t.name] = { thresholds: t.thresholds, effects: t.effects, special: t.special || null };
@@ -249,6 +386,13 @@ async function init() {
   }
 
   populateFilterOptions();
+  document.addEventListener('scroll', event => {
+    if (!effectTooltip?.contains(event.target)) hideEffectTooltip();
+  }, true);
+  window.addEventListener('resize', hideEffectTooltip);
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') hideEffectTooltip();
+  });
   populateBanTraitTags();
   refreshFilterSectionStates();
   renderOperators();
@@ -349,24 +493,42 @@ function populateFilterOptions() {
     costContainer.appendChild(tag);
   });
 
-  const mainTraits = [...new Set(allOperators.flatMap(op => op.mainTrait))].sort();
+  const mainTraits = getOrderedTraits('main');
   const mainContainer = document.getElementById('filter-tags-main');
   mainTraits.forEach(t => {
     const tag = document.createElement('span');
     tag.className = 'filter-tag';
     tag.textContent = t;
+    tag.dataset.trait = t;
     tag.addEventListener('click', () => toggleFilterTag('mainTrait', t, tag));
     mainContainer.appendChild(tag);
   });
 
-  const subTraits = [...new Set(allOperators.flatMap(op => op.subTraits))].sort();
+  const subTraits = getOrderedTraits('sub');
   const subContainer = document.getElementById('filter-tags-sub');
   subTraits.forEach(t => {
     const tag = document.createElement('span');
     tag.className = 'filter-tag';
     tag.textContent = t;
+    tag.dataset.trait = t;
     tag.addEventListener('click', () => toggleFilterTag('subTrait', t, tag));
     subContainer.appendChild(tag);
+  });
+
+  const tags = [...new Set(allOperators.flatMap(getOperatorTags))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+  const tagContainer = document.getElementById('filter-tags-ability');
+  tags.forEach(value => {
+    const tag = document.createElement('button');
+    tag.type = 'button';
+    tag.className = 'filter-tag ability-filter-tag';
+    tag.textContent = value;
+    tag.title = '来自普通或精锐特质；多选时需同时具备所选 Tag';
+    tag.setAttribute('aria-pressed', 'false');
+    tag.addEventListener('click', () => {
+      toggleFilterTag('tag', value, tag);
+      tag.setAttribute('aria-pressed', String(activeFilters.tag.has(value)));
+    });
+    tagContainer.appendChild(tag);
   });
 }
 
@@ -376,6 +538,7 @@ function getFilteredOperators() {
   const costs = activeFilters.cost;
   const mains = activeFilters.mainTrait;
   const subs  = activeFilters.subTrait;
+  const tags  = activeFilters.tag;
   const hideBanned = document.getElementById('chk-hide-banned')?.checked ?? false;
 
   return allOperators.filter(op => {
@@ -383,11 +546,13 @@ function getFilteredOperators() {
     if (costs.size > 0 && !costs.has(String(op.cost))) return false;
     if (mains.size > 0 && ![...mains].every(t => op.mainTrait.includes(t))) return false;
     if (subs.size  > 0 && ![...subs].every(t => op.subTraits.includes(t)))  return false;
+    if (tags.size > 0 && ![...tags].every(tag => getOperatorTags(op).includes(tag))) return false;
     return true;
-  });
+  }).sort((a, b) => a.cost - b.cost);
 }
 
 function renderOperators() {
+  hideEffectTooltip();
   const filtered  = getFilteredOperators();
   const container = document.getElementById('operator-list');
   const countBar  = document.getElementById('operator-count-bar');
@@ -427,10 +592,12 @@ function renderOperators() {
         ${op.mainTrait.map(t => `<span class="trait main-trait">${escHtml(t)}</span>`).join('')}
         ${subTraitHTML}
       </div>
+      <div class="op-ability-tags">${buildOperatorTagsHTML(op)}</div>
       ${banOverlay}
     `;
 
     card.dataset.id = op.id;
+    attachOperatorTooltip(card, op);
     if (currentMode === 'ban') {
       // 自动禁用的卡片不允许手动点击切换（羁绊决定）
       if (!isTraitBanned) {
@@ -446,8 +613,8 @@ function renderOperators() {
 // ─── 羁绊禁用管理 ───────────────────────────────────────────────────────────
 
 function populateBanTraitTags() {
-  const mainTraits = [...new Set(allOperators.flatMap(op => op.mainTrait))].sort();
-  const subTraits  = [...new Set(allOperators.flatMap(op => op.subTraits))].sort();
+  const mainTraits = getOrderedTraits('main');
+  const subTraits  = getOrderedTraits('sub');
 
   const mainContainer = document.getElementById('ban-tags-main');
   mainContainer.innerHTML = '';
@@ -476,7 +643,7 @@ function populateBanTraitTags() {
 
 function toggleBanTrait(type, trait, el) {
   const set   = bannedTraits[type];
-  const limit = type === 'main' ? 3 : 4;
+  const limit = BAN_TRAIT_LIMIT;
   if (set.has(trait)) {
     set.delete(trait);
     el.classList.remove('active');
@@ -496,14 +663,15 @@ function toggleBanTrait(type, trait, el) {
 }
 
 function updateBanTraitUI() {
+  refreshBannedFilterTags();
   document.getElementById('ban-main-count').textContent = bannedTraits.main.size;
   document.getElementById('ban-sub-count').textContent  = bannedTraits.sub.size;
   document.querySelectorAll('#ban-tags-main .ban-main-tag').forEach(el => {
-    const atLimit = bannedTraits.main.size >= 3 && !bannedTraits.main.has(el.dataset.trait);
+    const atLimit = bannedTraits.main.size >= BAN_TRAIT_LIMIT && !bannedTraits.main.has(el.dataset.trait);
     el.classList.toggle('ban-tag-disabled', atLimit);
   });
   document.querySelectorAll('#ban-tags-sub .ban-sub-tag').forEach(el => {
-    const atLimit = bannedTraits.sub.size >= 4 && !bannedTraits.sub.has(el.dataset.trait);
+    const atLimit = bannedTraits.sub.size >= BAN_TRAIT_LIMIT && !bannedTraits.sub.has(el.dataset.trait);
     el.classList.toggle('ban-tag-disabled', atLimit);
   });
 }
@@ -574,6 +742,7 @@ function toggleSquad(id) {
 // ─── 小队面板渲染 ────────────────────────────────────────────────────────────
 
 function renderSquad() {
+  hideEffectTooltip();
   const container = document.getElementById('squad-list');
   const badge     = document.getElementById('squad-count-badge');
 
@@ -602,7 +771,9 @@ function renderSquad() {
         ${op.mainTrait.map(t => `<span class="trait main-trait">${escHtml(t)}</span>`).join('')}
         ${subTraitHTML}
       </div>
+      <div class="op-ability-tags">${buildOperatorTagsHTML(op)}</div>
     `;
+    attachOperatorTooltip(card, op);
     container.appendChild(card);
   });
 

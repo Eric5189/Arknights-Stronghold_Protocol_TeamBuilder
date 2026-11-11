@@ -154,6 +154,45 @@ main {
   color: #93c5fd;
 }
 
+.filter-tag.is-trait-banned {
+  color: #fca5a5;
+  border-color: #ef4444;
+  border-style: dashed;
+  background: #451a1a;
+}
+
+.filter-tag.is-trait-banned::after {
+  content: '已禁用';
+  font-size: 0.65rem;
+  margin-left: 5px;
+}
+
+.filter-tag.is-trait-banned.active {
+  background: #7f1d1d;
+  border-style: solid;
+  box-shadow: 0 0 0 1px #fca5a5;
+}
+
+.ability-filter-tag:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+}
+
+.op-ability-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.op-ability-tags:empty {
+  display: none;
+}
+
+.ability-tag {
+  color: #c4b5fd;
+  background: #2e2145;
+}
+
 /* cost tags get cost-colors when active */
 .filter-tag.active.cost-tag-1 { background: #374151; border-color: #9ca3af; color: #e5e7eb; }
 .filter-tag.active.cost-tag-2 { background: #064e3b; border-color: #6ee7b7; color: #6ee7b7; }
@@ -228,6 +267,45 @@ button:hover {
 }
 
 /* ===== Operator Card ===== */
+.operator-effect-tooltip {
+  position: fixed;
+  z-index: 1000;
+  width: 420px;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  padding: 14px 16px;
+  border: 1px solid #64748b;
+  border-radius: 8px;
+  background: #0f172af5;
+  color: #e5e7eb;
+  box-shadow: 0 8px 28px #0008;
+  font-size: 0.85rem;
+  line-height: 1.75;
+}
+
+.effect-tooltip-hint {
+  color: #94a3b8;
+  font-size: 0.72rem;
+  margin-top: 3px;
+}
+
+.effect-tooltip-text {
+  margin-top: 7px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.elite-effect-diff {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.operator-card:focus-visible, .squad-card:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: -2px;
+}
+
 .operator-card {
   background: #1f2937;
   border: 1px solid #374151;
