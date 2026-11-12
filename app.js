@@ -141,12 +141,12 @@ function saveBannedTraits() {
   localStorage.setItem(`${STORAGE_PREFIX}_banned_sub_traits`,  JSON.stringify([...bannedTraits.sub]));
 }
 
-/** 若干员所有羁绊词条均被 bannedTraits 覆盖，则该干员被自动禁用 */
+/** 有主羁绊时仅检查主羁绊；没有主羁绊时，才检查副羁绊。 */
 function isAutoBanned(op) {
-  if (bannedTraits.main.size === 0 && bannedTraits.sub.size === 0) return false;
-  const allOpTraits = [...op.mainTrait, ...op.subTraits];
-  if (allOpTraits.length === 0) return false;
-  return allOpTraits.every(t => bannedTraits.main.has(t) || bannedTraits.sub.has(t));
+  if (op.mainTrait.length > 0) {
+    return op.mainTrait.every(trait => bannedTraits.main.has(trait));
+  }
+  return op.subTraits.length > 0 && op.subTraits.every(trait => bannedTraits.sub.has(trait));
 }
 
 // 切换模式
