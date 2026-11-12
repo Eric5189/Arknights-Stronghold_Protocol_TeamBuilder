@@ -394,6 +394,29 @@ async function init() {
     if (event.key === 'Escape') hideEffectTooltip();
   });
   populateBanTraitTags();
+  window.BanOcr?.init({
+    main: traitOrder.main,
+    sub: traitOrder.sub,
+    isBanMode: () => currentMode === 'ban',
+    onApply: selection => {
+      for (const type of ['main', 'sub']) {
+        const allowed = new Set(traitOrder[type]);
+        if (selection[type].length !== BAN_TRAIT_LIMIT || new Set(selection[type]).size !== BAN_TRAIT_LIMIT ||
+            selection[type].some(name => !allowed.has(name))) {
+          throw new Error('每类需选择5个有效羁绊');
+        }
+      }
+      bannedTraits.main = new Set(selection.main);
+      bannedTraits.sub = new Set(selection.sub);
+      saveBannedTraits();
+      squad = squad.filter(op => !isAutoBanned(op));
+      populateBanTraitTags();
+      renderOperators();
+      renderSquad();
+      renderBanAutoOps();
+      updateBanBadge();
+    },
+  });
   refreshFilterSectionStates();
   renderOperators();
   renderSquad();

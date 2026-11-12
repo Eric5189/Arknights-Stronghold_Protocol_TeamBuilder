@@ -75,6 +75,28 @@
             <div class="ban-trait-section-title">副羁绊 &nbsp;<span id="ban-sub-count">0</span>/5</div>
             <div class="filter-tag-group" id="ban-tags-sub"></div>
           </div>
+          <details id="ban-ocr-module">
+            <summary>截图识别禁用羁绊</summary>
+            <div id="ban-ocr-drop" tabindex="0" aria-label="上传或粘贴本局盟约截图">
+              <button type="button" id="btn-ocr-upload">选择截图</button>
+              <span>也可拖入图片，或在禁用模式下 Ctrl+V 粘贴</span>
+              <input id="ban-ocr-file" type="file" accept="image/*" hidden>
+            </div>
+            <p class="ocr-help">本机识别，不上传图片。请包含完整核心、附加盟约列表；绝技不参与禁用。</p>
+            <img id="ban-ocr-preview" alt="待识别截图" hidden>
+            <p id="ban-ocr-status" role="status" aria-live="polite">首次识别需加载中文模型。</p>
+            <button type="button" id="btn-ocr-cancel" hidden>取消识别</button>
+            <div id="ban-ocr-review" hidden>
+              <p id="ban-ocr-notice" class="ocr-help"></p>
+              <details class="ocr-help"><summary>查看识别文字</summary><pre id="ban-ocr-raw"></pre></details>
+              <div class="ban-trait-section-title">核对主羁绊 <span id="ocr-main-count">0</span>/5</div>
+              <div id="ocr-review-main" class="ocr-review-tags"></div>
+              <div class="ban-trait-section-title">核对副羁绊 <span id="ocr-sub-count">0</span>/5</div>
+              <div id="ocr-review-sub" class="ocr-review-tags"></div>
+              <p class="ocr-help">可点击修正。应用将替换羁绊禁用选择，保留手动禁用的干员。</p>
+              <button type="button" id="btn-ocr-apply" disabled>应用本局禁用</button>
+            </div>
+          </details>
         </div>
         <div id="ban-trait-result">
           <div class="ban-trait-result-title">自动禁用干员 &nbsp;<span id="ban-auto-count">0</span> 人</div>
@@ -115,6 +137,8 @@
 
   </main>
 
+  <script src="ocr-core.js"></script>
+  <script src="ban-ocr.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
